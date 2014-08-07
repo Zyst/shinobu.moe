@@ -1,8 +1,4 @@
 body {
-    background-image:url("../images/404.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: bottom center;
     background-color: #ffffff;
     font:13px "Open Sans", "Segoe UI", "Verdana", "Arial";
     color:#e7e7e7;
@@ -12,8 +8,12 @@ body {
     width:70%;
     height:100%;
     background-color: rgba(214, 218, 243, 1);
-    position:fixed;
+    position:fixed center;
     top:0px;
+    background-image:url("../images/404.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom center;
 }
 
 #error{
