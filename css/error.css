@@ -1,34 +1,31 @@
 body {
-    background-color: #ffffff;
+    background-color: rgba(214, 218, 243, 1);
     font:13px "Open Sans", "Segoe UI", "Verdana", "Arial";
     color:#e7e7e7;
-}
-
-#centerbg{
-    width:70%;
-    height:100%;
-    position: center;
-    background-color: rgba(214, 218, 243, 1);
-    background-image:url("../images/404.png");
+    background-image:url("../images/404.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center;
+    background-position: center bottom;
 }
 
 #error{
-    font:20px "Open Sans", "Segoe UI", "Verdana", "Arial";
+    font:40px "Open Sans", "Segoe UI", "Verdana", "Arial";
     color: #880000;
     margin-left: auto;
     margin-right: auto;
-    width: 300px;
+    width: 500px;
     margin-top: 100px;
 }
 
 #miniError{
-    font:13px "Open Sans", "Segoe UI", "Verdana", "Arial";
+    font:23px "Open Sans", "Segoe UI", "Verdana", "Arial";
     color: #880000;
     margin-left: auto;
     margin-right: auto;
-    width: 300px;
+    width: 600px;
     margin-top: relative;
+}
+
+a{
+    text-decoration:none;
 }
