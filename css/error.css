@@ -8,7 +8,7 @@ body {
     width:70%;
     height:100%;
     background-color: rgba(214, 218, 243, 1);
-    position:fixed center;
+    position:absolute center;
     top:0px;
     background-image:url("../images/404.png");
     background-repeat: no-repeat;
