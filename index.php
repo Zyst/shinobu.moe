@@ -35,23 +35,23 @@
                             Display DJ, DJ Image, Song playing and button to start stream -->
             <genericpad>Place Holder for Listening<genericpad><br>
 
-<!-- //             <?php
+             <?php
 //                while(true) {
-//                    $chandle = curl_init();
-//                    $url = "http://r-a-d.io/api";
-//                    curl_setopt($chandle, CURLOPT_URL, $url);
-//                    curl_setopt($chandle, CURLOPT_RETURNTRANSFER, 1);
-//                    curl_setopt($chandle, CURLOPT_CONNECTTIMEOUT, 5);
-//
-//                    $curlResult = curl_exec($chandle);
-//                    curl_close($chandle);
+                    $chandle = curl_init();
+                    $url = "http://r-a-d.io/api";
+                    curl_setopt($chandle, CURLOPT_URL, $url);
+                    curl_setopt($chandle, CURLOPT_RETURNTRANSFER, 1);
+                    curl_setopt($chandle, CURLOPT_CONNECTTIMEOUT, 5);
+
+                    $curlResult = curl_exec($chandle);
+                    curl_close($chandle);
 
                     // Edit this out soon
-//                    echo $curlResult;
+                    echo $curlResult;
 //                    sleep(10);
                     
 //                }
-//            ?> -->
+            ?>
             
             
             
