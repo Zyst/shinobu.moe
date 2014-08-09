@@ -47,7 +47,7 @@
                     curl_close($chandle);
 
                     // We don't want PHP to actually output, leave as is.
-                   echo $curlResult;
+//                   echo $curlResult;
 //                    sleep(10);
                     
 //                }
