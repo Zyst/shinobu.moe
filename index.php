@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        
+
         <link rel="icon" href="images/4chon.ico">
         <link rel='stylesheet' href='css/style.css' type='text/css'>
         <script src="js/togglerandomBG.js"></script>
