@@ -33,7 +33,7 @@
                     Else:
                         Check what r/a/dio is playing:
                             Display DJ, DJ Image, Song playing and button to start stream -->
-            <genericpad>Listening<genericpad><br>
+            <genericpad>馬鹿<genericpad><br>
 
              <?php
 //                while(true) {
