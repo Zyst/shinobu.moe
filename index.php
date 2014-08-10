@@ -36,12 +36,9 @@
                     curl_setopt($chandle, CURLOPT_CONNECTTIMEOUT, 5);
 
                     $curlResult = curl_exec($chandle);
-                    // Check why this is failing
-                    // $curlResult html_entity_decode(preg_replace("/U\+([0-9A-F]{4})/", "&#x\\1;", $string), ENT_NOQUOTES, 'UTF-8');
-
                     $decodedString = html_entity_decode(preg_replace("/U\+([0-9A-F]{4})/", "&#x\\1;", $curlResult), ENT_NOQUOTES, 'UTF-8');
 
-                    // We don't want PHP to actually output, leave as is.
+                    // We'll edit this out when we don't want PHP to output
                     echo $decodedString;
                     
                     curl_close($chandle);
@@ -53,6 +50,9 @@
 
                 <!-- Now playing block -->
                 <div id = "nowPlaying">
+                    <script type="text/javascript">
+                        loadAPI();
+                    </script>
                 </div>
             
             </div>
