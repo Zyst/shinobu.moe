@@ -8,10 +8,9 @@ function loadAPI() {
 
     var nowPlaying = radioAPIString.match("\"np\":\".*\"?,\"listeners\"");
     // alert(nowPlaying);
+    nowPlaying = String(nowPlaying);
     nowPlaying = nowPlaying.replace("\"np\":\"", "");
     nowPlaying = nowPlaying.replace("\",\"listeners\"", "");
-    alert("nowPlaying");
 
-    document.getElementById("nowPlaying").innerHTML = "Placeholder";
-
+    document.getElementById("nowPlaying").innerHTML = nowPlaying;
 }
