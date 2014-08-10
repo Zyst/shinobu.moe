@@ -92,6 +92,8 @@ a{
     font:34px 'Source Sans Pro Bold',Helvetica,Arial,sans-serif;
     text-align:center;
     color: #787878;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .topcolor{

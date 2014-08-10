@@ -53,22 +53,17 @@
                 </div>
 
                 <!-- Now playing block start -->
-                <div id = "container" class="playing">
-                    <div id = "nowPlaying" class="genericpad">
-                    </div>
-                </div>
+                <div id = "nowPlaying" class="playing"></div>
                 <!-- Now playing block end   -->
 
                 <!-- Listeners and time block start -->
-                <div id = "listenersAndTime" class="genericpad">
-                </div>
+                <div id = "listenersAndTime" class="genericpad"></div>
                 <!-- Listeners and time block end   -->
 
                 
                 <!-- DJ block start -->
                 <br>
-                <div id = "DJ" class="genericpad">
-                </div>
+                <div id = "DJ" class="genericpad"></div>
                 <!-- DJ block end   -->
             
             </div>
