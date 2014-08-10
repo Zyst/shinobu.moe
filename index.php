@@ -28,7 +28,7 @@
             <genericpad>Listening Placeholder</genericpad><br>
 
              <?php
-//                while(true) {
+                // while(true) {
                     $chandle = curl_init();
                     $url = "http://r-a-d.io/api";
                     curl_setopt($chandle, CURLOPT_URL, $url);
@@ -37,21 +37,20 @@
 
                     $curlResult = curl_exec($chandle);
                     // Check why this is failing
-//                    $curlResult html_entity_decode(preg_replace("/U\+([0-9A-F]{4})/", "&#x\\1;", $string), ENT_NOQUOTES, 'UTF-8');
+                    // $curlResult html_entity_decode(preg_replace("/U\+([0-9A-F]{4})/", "&#x\\1;", $string), ENT_NOQUOTES, 'UTF-8');
 
                     // We don't want PHP to actually output, leave as is.
-                    echo $curlResult html_entity_decode(preg_replace("/U\+([0-9A-F]{4})/", "&#x\\1;", $string), ENT_NOQUOTES, 'UTF-8');
+                    // echo $curlResult;
                     
                     curl_close($chandle);
-//                    sleep(10);
+                    // sleep(10);
 
                     
-//                }
+                // }
             ?>
 
                 <!-- Now playing block -->
                 <div id = "nowPlaying">
-                    Shouldn't show
                 </div>
             
             </div>
