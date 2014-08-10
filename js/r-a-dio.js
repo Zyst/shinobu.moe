@@ -3,12 +3,14 @@ function loadAPI() {
     var getPHPString = document.getElementById("hidePHP");
     var radioAPIString = getPHPString.textContent;
 
-    alert(radioAPIString);
+    // This is gonna go the way of the dodo soon. Leaving it for testing.
+    // alert(radioAPIString);
+
     var nowPlaying = radioAPIString.match("\"np\":\".*\"?,\"listeners\"");
-    alert(nowPlaying);
+    // alert(nowPlaying);
+    nowPlaying = nowPlaying.replace("\"np\":\"", "");
+    nowPlaying = nowPlaying.replace("\",\"listeners\"", "");
 
-    var placeholder = "Temporary Listening Placeholder";
-
-    document.getElementById("nowPlaying").innerHTML = placeholder;
+    document.getElementById("nowPlaying").innerHTML = nowPlaying;
 
 }
