@@ -49,7 +49,7 @@
                 </div>
 
                 <!-- Now playing block start -->
-                <div id = "nowPlaying">
+                <div id = "nowPlaying" class="genericpad">
                     <script type="text/javascript">
                         loadAPI();
                     </script>
@@ -57,7 +57,7 @@
                 <!-- Now playing block end -->
 
                 <!-- DJ block start -->
-                <div id = "DJ">
+                <div id = "DJ" class="genericpad">
                 </div>
                 <!-- DJ block end -->
             
