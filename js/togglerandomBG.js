@@ -14,5 +14,3 @@ function randomBG(){
 	var randomnumber = Math.floor((Math.random() * (7)) + 1);
 	bg.style.backgroundImage = "url('images/"+randomnumber+".png')";
 }
-
-// Something

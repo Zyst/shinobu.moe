@@ -24,15 +24,6 @@
 
         <div id="leftbottom">
             <div id="lefturls">
-            <br>
-            <br>
-            <!-- Will make a script 
-                    Check if:
-                        Last.fm is playing something:
-                            Display whatever is playing with artwork if possible.
-                    Else:
-                        Check what r/a/dio is playing:
-                            Display DJ, DJ Image, Song playing and button to start stream -->
             <genericpad>Listening Placeholder<genericpad><br>
 
              <?php
@@ -52,9 +43,12 @@
                     
 //                }
             ?>
+            <!-- Now playing block -->
+            <div id = "nowPlaying">
+                <script src="js/r-a-dio.js">loadAPI();</script>
+            </div>
             
-            
-            
+            </div>
         </div>
 
         <div id="alldivs">
