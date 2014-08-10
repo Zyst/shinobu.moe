@@ -40,7 +40,7 @@
                             // We'll edit this out when we don't want PHP to output
                             // echo htmlspecialchars($decodedString);
 
-                            echo html_entity_decode($decodedString, ENT_COMPAT, 'UTF-8');
+                            $decodedString = html_entity_decode($decodedString, ENT_COMPAT, 'UTF-8');
 
                             echo $decodedString;
 
