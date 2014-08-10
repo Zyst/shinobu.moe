@@ -53,9 +53,6 @@
 
                 <!-- Now playing block start -->
                 <div id = "nowPlaying" class="genericpad">
-                    <script type="text/javascript">
-                        loadAPI();
-                    </script>
                 </div>
                 <!-- Now playing block end -->
 
@@ -109,5 +106,8 @@
                 </div>
             </div>
         </div>
+            <script type="text/javascript">
+                loadAPI();
+            </script>
     </body>
 </html>
