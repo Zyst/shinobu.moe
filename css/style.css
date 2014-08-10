@@ -4,7 +4,7 @@ body {
     background-attachment: fixed;
     background-position: bottom right;
     background-color: #4c4c4c;
-    font:13px "Open Sans", "Segoe UI", "Verdana", "Arial";
+    font:13px "Source Sans Pro", "Segoe UI", "Verdana", "Arial";
     color:#e7e7e7;
 }
 
@@ -27,7 +27,7 @@ a{
     margin-left:auto;
     margin-right:auto;
     margin-top: 50px;
-    font:40px "Open Sans", "Segoe UI", "Verdana", "Arial";
+    font:40px "Source Sans Pro", "Segoe UI", "Verdana", "Arial";
     text-align:center;
 }
 
@@ -74,7 +74,7 @@ a{
     bottom: 10px;
     right: 10px;
     color:#e7e7e7;
-    font:22px "Open Sans", "Segoe UI", "Verdana", "Arial";
+    font:22px "Source Sans Pro", "Segoe UI", "Verdana", "Arial";
 }
 
 #random{
@@ -82,7 +82,7 @@ a{
     bottom: 10px;
     left: 10px;
     color:#e7e7e7;
-    font:22px "Open Sans", "Segoe UI", "Verdana", "Arial";
+    font:22px "Source Sans Pro", "Segoe UI", "Verdana", "Arial";
 }
 
 .topcolor{
