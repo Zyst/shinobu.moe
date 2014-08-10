@@ -19,9 +19,16 @@ function loadAPI() {
     DJ = String(DJ);
     DJ = DJ.replace("\"djname\":\"", "");
     DJ = DJ.replace("\",\"djtext\"", "");
+    DJ = DJ.replace(".*\",\"dj\":{\"id\":.*,\"djname\":\"");
     alert(DJ);
+
 
     // These actually update the divs with the content
     document.getElementById("nowPlaying").innerHTML = nowPlaying;
     document.getElementById("DJ").innerHTML = DJ;
+
+
+
+
+    var random = "djname":"Hanyuu","dj":{"id":18,"djname":"Hanyuu-sama","djtext";
 }
