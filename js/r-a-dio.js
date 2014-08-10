@@ -10,7 +10,8 @@ function loadAPI() {
     // alert(nowPlaying);
     nowPlaying = nowPlaying.replace("\"np\":\"", "");
     nowPlaying = nowPlaying.replace("\",\"listeners\"", "");
+    alert("nowPlaying");
 
-    document.getElementById("nowPlaying").innerHTML = nowPlaying;
+    document.getElementById("nowPlaying").innerHTML = "Placeholder";
 
 }
