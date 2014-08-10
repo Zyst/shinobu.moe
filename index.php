@@ -40,7 +40,7 @@
 //                    $curlResult html_entity_decode(preg_replace("/U\+([0-9A-F]{4})/", "&#x\\1;", $string), ENT_NOQUOTES, 'UTF-8');
 
                     // We don't want PHP to actually output, leave as is.
-//                    echo $curlResult;
+                    echo $curlResult html_entity_decode(preg_replace("/U\+([0-9A-F]{4})/", "&#x\\1;", $string), ENT_NOQUOTES, 'UTF-8');
                     
                     curl_close($chandle);
 //                    sleep(10);
