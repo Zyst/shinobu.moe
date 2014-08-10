@@ -53,9 +53,6 @@
                 </div>
                 <!-- Now playing block end -->
                 <br>
-                <br>
-                <br>
-                <br>
                 <!-- DJ block start -->
                 <div id = "DJ" class="genericpad">
                 </div>

@@ -24,6 +24,6 @@ function loadAPI() {
 
 
     // These actually update the divs with the content
-    document.getElementById("nowPlaying").innerHTML = nowPlaying + "<br />";
+    document.getElementById("nowPlaying").innerHTML = nowPlaying;
     document.getElementById("DJ").innerHTML = "DJ " + DJ;
 }
