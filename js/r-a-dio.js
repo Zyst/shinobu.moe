@@ -8,6 +8,6 @@ function loadAPI() {
     // Regex for catching the "NP" thing, hopefully.
     var nowPlaying = radioAPIString.match("\"np\":\"*\",");
 
-    document.getElementById('nowPlaying').innerHTML = nowPlaying;
+    document.getElementById("nowPlaying").innerHTML = nowPlaying;
 
 }
