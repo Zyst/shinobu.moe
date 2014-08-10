@@ -58,7 +58,6 @@
 
                 <!-- DJ block start -->
                 <div id = "DJ">
-                    <br>
                 </div>
                 <!-- DJ block end -->
             
