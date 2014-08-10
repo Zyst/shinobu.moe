@@ -39,6 +39,9 @@
 
                             // We'll edit this out when we don't want PHP to output
                             // echo htmlspecialchars($decodedString);
+
+                            $decodedString = utf8_encode($decodedString);
+
                             echo $decodedString;
 
                             curl_close($chandle);
