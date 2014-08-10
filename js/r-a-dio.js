@@ -19,7 +19,7 @@ function loadAPI() {
     DJ = String(DJ);
     DJ = DJ.replace("\"djname\":\"", "");
     DJ = DJ.replace("\",\"djtext\"", "");
-    DJ = DJ.replace(".*\",\"dj\":{\"id\":.*,\"djname\":\"");
+    DJ = DJ.replace(".*\",\"dj\":\{\"id\":.*,\"djname\":\"");
     alert(DJ);
 
 
