@@ -39,8 +39,10 @@
                     // Check why this is failing
                     // $curlResult html_entity_decode(preg_replace("/U\+([0-9A-F]{4})/", "&#x\\1;", $string), ENT_NOQUOTES, 'UTF-8');
 
+                    $decodedString = html_entity_decode(preg_replace("/U\+([0-9A-F]{4})/", "&#x\\1;", $curlResult), ENT_NOQUOTES, 'UTF-8');
+
                     // We don't want PHP to actually output, leave as is.
-                    // echo $curlResult;
+                    echo $decodedString;
                     
                     curl_close($chandle);
                     // sleep(10);
