@@ -38,8 +38,9 @@
                             $decodedString = html_entity_decode(preg_replace("/U\+([0-9A-F]{4})/", "&#x\\1;", $curlResult), ENT_NOQUOTES, 'UTF-8');
 
                             // We'll edit this out when we don't want PHP to output
-                            echo htmlspecialchars($decodedString);
-                            
+                            // echo htmlspecialchars($decodedString);
+                            echo $decodedString;
+
                             curl_close($chandle);
                             // sleep(10);
 
@@ -51,12 +52,19 @@
                 <!-- Now playing block start -->
                 <div id = "nowPlaying" class="genericpad">
                 </div>
-                <!-- Now playing block end -->
-                <br>
+                <!-- Now playing block end   -->
+
+                <!-- Listeners and time block start -->
+                <div id = "listenersAndTime" class="genericpad">
+                </div>
+                <!-- Listeners and time block end   -->
+
+                
                 <!-- DJ block start -->
+                <br>
                 <div id = "DJ" class="genericpad">
                 </div>
-                <!-- DJ block end -->
+                <!-- DJ block end   -->
             
             </div>
 

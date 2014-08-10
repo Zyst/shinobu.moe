@@ -102,6 +102,13 @@ a{
     transition: opacity 0.5s;
 }
 
+.alignleft {
+    float: left;
+}
+.alignright {
+    float: right;
+}
+
 .urlcolor:link {color: #eeeeee;}
 .urlcolor:visited{color: #eeeeee;}
 .urlcolor:hover{color: #eeeeee; opacity:1.0;}
