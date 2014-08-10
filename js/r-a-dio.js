@@ -18,5 +18,7 @@ function loadAPI() {
     DJ = DJ.replace("\"djname\":\"", "");
     DJ = DJ.replace("\",\"djtext\"", "");
 
+    // These actually update the divs with the content
     document.getElementById("nowPlaying").innerHTML = nowPlaying;
+    document.getElementById("DJ").innerHTML = DJ;
 }

@@ -48,12 +48,18 @@
                     ?>
                 </div>
 
-                <!-- Now playing block -->
+                <!-- Now playing block start -->
                 <div id = "nowPlaying">
                     <script type="text/javascript">
                         loadAPI();
                     </script>
                 </div>
+                <!-- Now playing block end -->
+
+                <!-- DJ block start -->
+                <div id = "DJ">
+                </div>
+                <!-- DJ block end -->
             
             </div>
 
