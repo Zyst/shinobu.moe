@@ -53,7 +53,9 @@
                 </div>
 
                 <!-- Now playing block start -->
-                <div id = "nowPlaying" class="genericpad">
+                <div id = "container" class="playing">
+                    <div id = "nowPlaying" class="genericpad">
+                    </div>
                 </div>
                 <!-- Now playing block end   -->
 
