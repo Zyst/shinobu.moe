@@ -37,7 +37,7 @@
                     $decodedString = html_entity_decode(preg_replace("/U\+([0-9A-F]{4})/", "&#x\\1;", $curlResult), ENT_NOQUOTES, 'UTF-8');
 
                     // We'll edit this out when we don't want PHP to output
-                    // echo $decodedString;
+                    echo $decodedString;
                     
                     curl_close($chandle);
                     // sleep(10);
