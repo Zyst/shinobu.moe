@@ -49,7 +49,6 @@
             </div>
             
             </div>
-        </div>
 
         <div id="alldivs">
             <div id="anotherdiv">
