@@ -25,26 +25,28 @@
 
         <div id="leftbottom">
             <div id="lefturls">
-            <?php
-                // while(true) {
-                    $chandle = curl_init();
-                    $url = "http://r-a-d.io/api";
-                    curl_setopt($chandle, CURLOPT_URL, $url);
-                    curl_setopt($chandle, CURLOPT_RETURNTRANSFER, 1);
-                    curl_setopt($chandle, CURLOPT_CONNECTTIMEOUT, 5);
+                <div id="hidePHP" style="display: none;">
+                    <?php
+                        // while(true) {
+                            $chandle = curl_init();
+                            $url = "http://r-a-d.io/api";
+                            curl_setopt($chandle, CURLOPT_URL, $url);
+                            curl_setopt($chandle, CURLOPT_RETURNTRANSFER, 1);
+                            curl_setopt($chandle, CURLOPT_CONNECTTIMEOUT, 5);
 
-                    $curlResult = curl_exec($chandle);
-                    $decodedString = html_entity_decode(preg_replace("/U\+([0-9A-F]{4})/", "&#x\\1;", $curlResult), ENT_NOQUOTES, 'UTF-8');
+                            $curlResult = curl_exec($chandle);
+                            $decodedString = html_entity_decode(preg_replace("/U\+([0-9A-F]{4})/", "&#x\\1;", $curlResult), ENT_NOQUOTES, 'UTF-8');
 
-                    // We'll edit this out when we don't want PHP to output
-                    // echo $decodedString;
-                    
-                    curl_close($chandle);
-                    // sleep(10);
+                            // We'll edit this out when we don't want PHP to output
+                            echo htmlspecialchars($decodedString);
+                            
+                            curl_close($chandle);
+                            // sleep(10);
 
-                    
-                // }
-            ?>
+                            
+                        // }
+                    ?>
+                </div>
 
                 <!-- Now playing block -->
                 <div id = "nowPlaying">
