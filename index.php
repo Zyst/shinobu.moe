@@ -25,9 +25,7 @@
 
         <div id="leftbottom">
             <div id="lefturls">
-            <genericpad>Listening Placeholder</genericpad><br>
-
-             <?php
+            <?php
                 // while(true) {
                     $chandle = curl_init();
                     $url = "http://r-a-d.io/api";
