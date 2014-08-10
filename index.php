@@ -38,11 +38,12 @@
                     $curlResult = curl_exec($chandle);
                     $curlResult = html_entity_decode(preg_replace("/U\+([0-9A-F]{4})/", "&#x\\1;", $string), ENT_NOQUOTES, 'UTF-8');
 
-                    curl_close($chandle);
-
                     // We don't want PHP to actually output, leave as is.
                     echo $curlResult;
 //                    sleep(10);
+                    
+                    curl_close($chandle);
+
                     
 //                }
             ?>
