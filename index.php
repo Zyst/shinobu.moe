@@ -47,6 +47,9 @@
                         // }
                     ?>
                 </div>
+                
+                <br>
+                <br>
 
                 <!-- Now playing block start -->
                 <div id = "nowPlaying" class="genericpad">
