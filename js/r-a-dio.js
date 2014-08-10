@@ -14,16 +14,16 @@ function loadAPI() {
 
 
     // Updates "DJ" (WIP)
-    // var DJ = radioAPIString.match("\"djname\":\".*\"?,\"djtext\"");
+    var DJ = radioAPIString.match("\"djname\":\".*\"?,\"djtext\"");
 
-    // DJ = String(DJ);
-    // DJ = DJ.replace("\"djname\":\"", "");
-    // DJ = DJ.replace("\",\"djtext\"", "");
-    // DJ = DJ.replace("((.*),\"djname\":\")", "");
+    DJ = String(DJ);
+    DJ = DJ.replace("\"djname\":\"", "");
+    DJ = DJ.replace("\",\"djtext\"", "");
+    DJ = DJ.replace(/.*\"/, "");
     // alert(DJ);
 
 
     // These actually update the divs with the content
     document.getElementById("nowPlaying").innerHTML = nowPlaying;
-    // document.getElementById("DJ").innerHTML = DJ;
+    document.getElementById("DJ").innerHTML = DJ;
 }
