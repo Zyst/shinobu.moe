@@ -45,7 +45,7 @@
             ?>
             <!-- Now playing block -->
             <div id = "nowPlaying">
-                <script src="js/r-a-dio.js">loadAPI();</script>
+                <script src="js/r-a-dio.js">document.write(loadAPI());</script>
             </div>
             
             </div>
