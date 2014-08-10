@@ -1,8 +1,13 @@
+function encode_utf8( s ){
+    return unescape( encodeURIComponent( s ) );
+}
+
 function loadAPI() {
     // This gets the PHP Code
     var getPHPString = document.getElementById("hidePHP");
     var radioAPIString = getPHPString.textContent;
     
+    radioAPIString = encode_utf8( radioAPIString );
     // Updates "Now Playing"
     // Regex, like honestly if anyone says they understand Regexes
     // they are filthy lying whores
