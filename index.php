@@ -35,7 +35,7 @@
                             curl_setopt($chandle, CURLOPT_CONNECTTIMEOUT, 5);
 
                             $curlResult = curl_exec($chandle);
-                            // $decodedString = html_entity_decode(preg_replace("/U\+([0-9A-F]{4})/", "&#x\\1;", $curlResult), ENT_NOQUOTES, 'UTF-8');
+                            $decodedString = html_entity_decode(preg_replace("/U\+([0-9A-F]{4})/", "&#x\\1;", $curlResult), ENT_NOQUOTES, 'UTF-8');
 
                             // We'll edit this out when we don't want PHP to output
                             // echo htmlspecialchars($decodedString);
