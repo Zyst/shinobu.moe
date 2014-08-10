@@ -1,7 +1,7 @@
 function loadAPI() {
 
     // Goes to r-a-d.io/api, gets content
-    var radioAPIString = "<?php echo json_encode($curlResult); ?>";
+    var radioAPIString = "<?php Print($curlResult); ?>";
 
     // The Div that contains "Now Playing"
     // Do I need this?
