@@ -47,7 +47,9 @@
 
                 <!-- Now playing block -->
                 <div id = "nowPlaying">
-                    loadAPI();
+                    <script>
+                        loadAPI();
+                    </script>
                 </div>
             
             </div>
