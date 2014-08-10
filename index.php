@@ -6,6 +6,7 @@
         <link rel="icon" href="images/4chon.ico">
         <link rel='stylesheet' href='css/style.css' type='text/css'>
         <script src="js/togglerandomBG.js"></script>
+        <script src="js/r-a-dio.js"></script>
         <title>Love</title>
     </head>
     <body onload="randomBG();">
@@ -43,8 +44,11 @@
                     
 //                }
             ?>
-            <!-- Now playing block -->
-            <div id = "nowPlaying"></div>
+
+                <!-- Now playing block -->
+                <div id = "nowPlaying">
+                    loadAPI();
+                </div>
             
             </div>
 
