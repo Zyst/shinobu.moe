@@ -37,3 +37,4 @@ Hosted on shinobu.moe
 ![alt tag](http://puu.sh/aNE23/c4172bafa3.jpg)
 
 
+Distributed under the [MIT License](http://opensource.org/licenses/MIT) feel free to use this code however you want.
