@@ -8,7 +8,7 @@ function loadAPI() {
     var radioAPIString = getPHPString.textContent;
     
     // radioAPIString = encode_utf8( radioAPIString );
-    
+
     // Updates "Now Playing"
     var nowPlaying = radioAPIString.match("\"np\":\".*\"?,\"listeners\"");
     nowPlaying = String(nowPlaying);
@@ -27,5 +27,5 @@ function loadAPI() {
 
     // These actually update the divs with the content
     document.getElementById("nowPlaying").innerHTML = nowPlaying;
-    document.getElementById("DJ").innerHTML = "DJ " + DJ;
+    document.getElementById("DJ").innerHTML = DJ;
 }
