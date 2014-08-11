@@ -15,8 +15,13 @@ function loadAPI() {
     nowPlaying = nowPlaying.replace("\"np\":\"", "");
     nowPlaying = nowPlaying.replace("\",\"listeners\"", "");
 
+    // Gonna do a function to escape the unicode characters
+    var regex = /\\u([\d\w]{4})/gi;
+    nowPlaying = nowPlaying.replace(regex, function (match, grp) {
+    return String.fromCharCode(parseInt(grp, 16)); } );
+    nowPlaying = unescape(nowPlaying);
 
-    // Updates "DJ" (WIP)
+    // Updates "DJ"
     var DJ = radioAPIString.match("\"djname\":\".*\"?,\"djtext\"");
 
     DJ = String(DJ);
