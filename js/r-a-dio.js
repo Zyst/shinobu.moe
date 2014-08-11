@@ -32,6 +32,8 @@ function loadAPI() {
     if (DJ == "Hanyuu-sama") {
         changeImage("../images/DJs/Hanyuu.png");
     } else if (DJ == "Shotacon") {
+        changeImage("../images/DJs/Shotacon.png");
+    } else if (DJ == "Kilim") {
         changeImage("../images/DJs/Kilim.png");
     } else if (DJ == "ed") {
         changeImage("../images/DJs/ed.png");
