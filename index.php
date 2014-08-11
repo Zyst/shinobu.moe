@@ -60,7 +60,7 @@
                 <div id="DIV_1">
                     <div id="DIV_2">
                         <!-- Image goes here -->
-                        <img id="IMG_3" src="/images/DJs/shinobu.png" alt='' />
+                        <img id="IMG_3" src="/images/DJs/Shotacon.png" alt='' />
                         <h4 id="DJ">
                         </h4>
                     </div>
