@@ -13,7 +13,7 @@ function loadAPI() {
 
     // Gonna do a function to escape the unicode characters
     var regex = /\\u([\d\w]{4})/gi;
-    nowPlaying = nowPlaying.replace(regex, function (match, grp) {
+    nowPlaying = nowPlaying.replace(regex, function(match, grp) {
         return String.fromCharCode(parseInt(grp, 16));
     });
     nowPlaying = unescape(nowPlaying);
@@ -56,15 +56,17 @@ function loadAPI() {
     listeners = String(listeners);
     listeners = listeners.replace(/.*\":/, "");
     listeners = listeners.replace(/,.*/, "");
-
-    // These actually update the divs with the content parsed
-    // with the wizardry above.
+    
+    /**
+     * Updates the inner html using the black
+     *   magic regexes above.
+     */
     document.getElementById("nowPlaying").innerHTML = nowPlaying;
     document.getElementById("DJ").innerHTML = DJ;
     document.getElementById("listeners").innerHTML = "Listeners: " + listeners;
 }
 
 // Changes DJ Images
-function changeImage(a) {
-    document.getElementById("IMG_3").src = a;
+function changeImage(picture) {
+    document.getElementById("IMG_3").src = picture;
 }

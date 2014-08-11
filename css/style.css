@@ -1,101 +1,91 @@
 body {
-    background-image:url("../images/0.png");
+    background-image: url("../images/0.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: bottom right;
     background-color: #4c4c4c;
-    font:13px 'Source Sans Pro Regular',Helvetica,Arial,sans-serif;
-    color:#e7e7e7;
+    font: 13px'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
+    color: #e7e7e7;
 }
-
-a{
-    text-decoration:none;
+a {
+    text-decoration: none;
 }
-
-#leftbg{
-    margin-left:0px;
-    margin-top:0px;
-    width:30%;
-    height:40%;
+#leftbg {
+    margin-left: 0px;
+    margin-top: 0px;
+    width: 30%;
+    height: 40%;
     background-color: rgba(25, 25, 25, 1);
-    position:fixed;
-    top:0px;
-    left:0px;
-}
-
-#lefturls{
-    margin-left:auto;
-    margin-right:auto;
-    margin-top: 20px;
-    font:40px 'Source Sans Pro Regular',Helvetica,Arial,sans-serif;
-    text-align:center;
-}
-
-#leftbottom{
-    margin-left:0px;
-    margin-top:0px;
-    width:30%;
-    height:60%;
-    background-color: rgba(25, 25, 25, 1);
-    position:fixed;
-    bottom:0px;
-    left:0px;
-}
-
-#alldivs{
     position: fixed;
-    margin-left:30%;
-    height:100%;
-    width:25%;
-    background-color:#282828;
-    opacity: 1.0;
-    top:0px;
+    top: 0px;
+    left: 0px;
 }
-
-#anotherdiv{
+#lefturls {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    font: 40px'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+#leftbottom {
+    margin-left: 0px;
+    margin-top: 0px;
+    width: 30%;
+    height: 60%;
+    background-color: rgba(25, 25, 25, 1);
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+}
+#alldivs {
+    position: fixed;
+    margin-left: 30%;
+    height: 100%;
+    width: 25%;
+    background-color: #282828;
+    opacity: 1.0;
+    top: 0px;
+}
+#anotherdiv {
     margin-left: auto;
     margin-right: auto;
     min-width: 200px;
     max-width: 380px;
 }
-
-.divurls{
-    margin-top:20px;
-    margin-bottom:20px;
-    padding:20px;
+.divurls {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
     min-width: 150px;
-    min-height:170px;
+    min-height: 170px;
     float: left;
-    font-size:20px;
+    font-size: 20px;
 }
-
-#toggle{
+#toggle {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    color:#e7e7e7;
-    font:22px 'Source Sans Pro Regular',Helvetica,Arial,sans-serif;
+    color: #e7e7e7;
+    font: 22px'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
 }
-
-#random{
+#random {
     position: absolute;
     bottom: 10px;
     left: 10px;
-    color:#e7e7e7;
-    font:22px 'Source Sans Pro Regular',Helvetica,Arial,sans-serif;
+    color: #e7e7e7;
+    font: 22px'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
 }
-
-#playing{
+#playing {
     color: #787878;
     margin-top: 50px;
-    font:34px 'Source Sans Pro Bold',Helvetica,Arial,sans-serif;
-    text-align:center;
+    font: 34px'Source Sans Pro Bold', Helvetica, Arial, sans-serif;
+    text-align: center;
     padding-left: 30px;
     padding-right: 30px;
 }
-
 /* I outright took these from r-a-d.io,
     claim 0 credit. */
+
 #DIV_1 {
     box-sizing: border-box;
     color: rgb(120, 120, 120);
@@ -110,10 +100,11 @@ a{
     perspective-origin: 131.25px 136px;
     transform-origin: 131.25px 136px;
     border: 0px none rgb(120, 120, 120);
-    font: normal normal normal 16px/22.85714340209961px 'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
+    font: normal normal normal 16px/22.85714340209961px'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
     outline: rgb(120, 120, 120) none 0px;
     padding: 0px 15px;
-}/*#DIV_1*/
+}
+/*#DIV_1*/
 
 #DIV_2 {
     box-sizing: border-box;
@@ -126,12 +117,13 @@ a{
     background: rgb(27, 27, 27) none repeat scroll 0% 0% / auto padding-box border-box;
     border: 1px solid rgba(27, 27, 27, 0.0980392);
     border-radius: 4px 4px 4px 4px;
-    font: normal normal normal 16px/22.85714340209961px 'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
+    font: normal normal normal 16px/22.85714340209961px'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
     margin: 0px 0px 22px;
     outline: rgb(120, 120, 120) none 0px;
     padding: 4px;
     transition: all 0.2s ease-in-out 0s;
-}/*#DIV_2*/
+}
+/*#DIV_2*/
 
 #IMG_3 {
     box-sizing: border-box;
@@ -147,10 +139,11 @@ a{
     transform-origin: 90px 90px;
     border: 0px none rgb(120, 120, 120);
     border-radius: 6px 6px 6px 6px;
-    font: normal normal normal 16px/22.85714340209961px 'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
+    font: normal normal normal 16px/22.85714340209961px'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
     margin: 16px 21.25px 0px;
     outline: rgb(120, 120, 120) none 0px;
-}/*#IMG_3*/
+}
+/*#IMG_3*/
 
 #DJ {
     box-sizing: border-box;
@@ -162,10 +155,11 @@ a{
     perspective-origin: 111.25px 11px;
     transform-origin: 111.25px 11px;
     border: 0px none rgb(120, 120, 120);
-    font: normal normal 500 20px/22px 'Source Sans Pro Bold', Helvetica, Arial, sans-serif;
+    font: normal normal 500 20px/22px'Source Sans Pro Bold', Helvetica, Arial, sans-serif;
     margin: 11px 0px;
     outline: rgb(120, 120, 120) none 0px;
-}/*#DJ*/
+}
+/*#DJ*/
 
 #listeners {
     box-sizing: border-box;
@@ -173,40 +167,54 @@ a{
     text-align: center;
     text-decoration: none solid rgb(153, 153, 153);
     border: 0px none rgb(153, 153, 153);
-    font: normal normal normal 16px/22.85714340209961px 'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
+    font: normal normal normal 16px/22.85714340209961px'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
     outline: rgb(153, 153, 153) none 0px;
-}/*#listeners*/
-
-.topcolor{
-    opacity:0.5;
-    transition: opacity 0.5s;
-    padding-left:16px;
-    padding-right:16px;
 }
+/*#listeners*/
 
-.genericpad{
+.topcolor {
+    opacity: 0.5;
+    transition: opacity 0.5s;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.genericpad {
     padding-left: 30px;
     padding-right: 30px;
 }
-
-.urlcolor{
-    opacity:0.5;
+.urlcolor {
+    opacity: 0.5;
     transition: opacity 0.5s;
 }
-
 .alignleft {
     float: left;
 }
 .alignright {
     float: right;
 }
-
-.urlcolor:link {color: #eeeeee;}
-.urlcolor:visited{color: #eeeeee;}
-.urlcolor:hover{color: #eeeeee; opacity:1.0;}
-.urlcolor:active{color: #eeeeee;}
-
-.topcolor:link {color: #e7e7e7;}
-.topcolor:visited{color: #e7e7e7;}
-.topcolor:hover{color: #e7e7e7; opacity:1.0;}
-.topcolor:active{color: #e7e7e7;}
+.urlcolor:link {
+    color: #eeeeee;
+}
+.urlcolor:visited {
+    color: #eeeeee;
+}
+.urlcolor:hover {
+    color: #eeeeee;
+    opacity: 1.0;
+}
+.urlcolor:active {
+    color: #eeeeee;
+}
+.topcolor:link {
+    color: #e7e7e7;
+}
+.topcolor:visited {
+    color: #e7e7e7;
+}
+.topcolor:hover {
+    color: #e7e7e7;
+    opacity: 1.0;
+}
+.topcolor:active {
+    color: #e7e7e7;
+}
