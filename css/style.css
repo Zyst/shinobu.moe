@@ -99,7 +99,6 @@ a{
 #DIV_1 {
     box-sizing: border-box;
     color: rgb(120, 120, 120);
-    float: center;
     height: 272px;
     min-height: 1px;
     position: absolute center;
