@@ -7,12 +7,10 @@ function loadAPI() {
     var getPHPString = document.getElementById("hidePHP");
     var radioAPIString = getPHPString.textContent;
     
-    radioAPIString = encode_utf8( radioAPIString );
+    // radioAPIString = encode_utf8( radioAPIString );
+    
     // Updates "Now Playing"
-    // Regex, like honestly if anyone says they understand Regexes
-    // they are filthy lying whores
     var nowPlaying = radioAPIString.match("\"np\":\".*\"?,\"listeners\"");
-
     nowPlaying = String(nowPlaying);
     nowPlaying = nowPlaying.replace("\"np\":\"", "");
     nowPlaying = nowPlaying.replace("\",\"listeners\"", "");
