@@ -17,6 +17,8 @@ function loadAPI() {
         return String.fromCharCode(parseInt(grp, 16)); 
     });
     nowPlaying = unescape(nowPlaying);
+    // Removes unescaped slashes that shouldn't be there
+    nowPlaying = nowPlaying.replace(/\\(?=\/)/, "");
 
     // Updates "DJ"
     var DJ = radioAPIString.match("\"djname\":\".*\"?,\"djtext\"");
