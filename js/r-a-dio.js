@@ -30,7 +30,7 @@ function loadAPI() {
 
     // Finds DJ and changes to appropriate portrait
     if (DJ == "Hanyuu-sama") {
-        changeImage("../images/DJs/Hanyuu.png");
+        changeImage("../images/DJs/shinobu.png");
     } else if (DJ == "Shotacon") {
         changeImage("../images/DJs/Shotacon.png");
     } else if (DJ == "Kilim") {
