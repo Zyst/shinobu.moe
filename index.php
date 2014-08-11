@@ -63,7 +63,7 @@
                 <!-- DJ block end   -->
 
                 <!-- Listeners and time block start -->
-                <div id = "listenersAndTime" class="genericpad">
+                <div id = "listenersAndTime">
                     <!-- Listening count start -->
                     <span id="listeners"></span>
                     <!-- Listening count end   -->
