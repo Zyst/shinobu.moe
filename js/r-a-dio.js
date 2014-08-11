@@ -1,8 +1,3 @@
-// Changes DJ Images
-function changeImage(a) {
-    document.getElementById("IMG_3").src = a;
-}
-
 function loadAPI() {
 
     // This gets the PHP Code
@@ -58,4 +53,9 @@ function loadAPI() {
     // with the wizardry above.
     document.getElementById("nowPlaying").innerHTML = nowPlaying;
     document.getElementById("DJ").innerHTML = DJ;
+}
+
+// Changes DJ Images
+function changeImage(a) {
+    document.getElementById("IMG_3").src = a;
 }
