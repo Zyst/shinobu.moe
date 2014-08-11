@@ -42,11 +42,11 @@
                             curl_close($chandle);
                             // sleep(10);
 
-                            
+
                         // }
                     ?>
                 </div>
-                
+
                 <!-- Now playing block start -->
                 <div id = "nowPlaying" class="playing"></div>
                 <!-- Now playing block end   -->
@@ -55,7 +55,7 @@
                 <div id = "listenersAndTime" class="genericpad"></div>
                 <!-- Listeners and time block end   -->
 
-                
+
                 <!-- DJ block start -->
                 <div id="DIV_1">
                     <div id="DIV_2">
@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 <!-- DJ block end   -->
-            
+
             </div>
 
         <div id="alldivs">
