@@ -16,6 +16,7 @@ function loadAPI() {
     nowPlaying = String(nowPlaying);
     nowPlaying = nowPlaying.replace("\"np\":\"", "");
     nowPlaying = nowPlaying.replace("\",\"listeners\"", "");
+    nowPlaying = String(nowPlaying);
 
 
     // Updates "DJ" (WIP)
@@ -25,6 +26,7 @@ function loadAPI() {
     DJ = DJ.replace("\"djname\":\"", "");
     DJ = DJ.replace("\",\"djtext\"", "");
     DJ = DJ.replace(/.*\"/, "");
+    DJ = String(DJ);
     // alert(DJ);
 
 
