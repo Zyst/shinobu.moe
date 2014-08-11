@@ -51,13 +51,11 @@ function loadAPI() {
         changeImage("../images/DJs/shinobu.png");
     }
 
-    var listening = radioAPIString.match("\"listeners\":.*,\"bitrate\"");
+    var listeners = radioAPIString.match("\"listeners\":.*,\"bitrate\"");
 
-    listening = String(listening);
-    alert(listening);
-    listening = listening.replace(/.*\":/, "");
-    listening = listening.replace(/,.*/, "");
-    alert(listening);
+    listeners = String(listeners);
+    listeners = listeners.replace(/.*\":/, "");
+    listeners = listeners.replace(/,.*/, "");
 
     // These actually update the divs with the content parsed
     // with the wizardry above.
