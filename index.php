@@ -51,8 +51,7 @@
                         // }
                     ?>
                 </div>
-
-                儶  儷  儸  儹  儺  儻  儼  儽  儾  儿 
+                
                 <!-- Now playing block start -->
                 <div id = "nowPlaying" class="playing"></div>
                 <!-- Now playing block end   -->
