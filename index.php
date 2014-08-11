@@ -57,8 +57,6 @@
 
                 
                 <!-- DJ block start -->
-                <br>
-                <div id = "DJ" class="genericpad"></div>
                 <div id="DIV_1">
                     <div id="DIV_2">
                         <!-- Image goes here -->
