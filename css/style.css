@@ -101,7 +101,7 @@ a{
     color: rgb(120, 120, 120);
     height: 272px;
     min-height: 1px;
-    position: absolute center;
+    position: fixed center;
     text-decoration: none solid rgb(120, 120, 120);
     width: 262.5px;
     perspective-origin: 131.25px 136px;
