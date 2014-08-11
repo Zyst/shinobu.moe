@@ -59,6 +59,15 @@
                 <!-- DJ block start -->
                 <br>
                 <div id = "DJ" class="genericpad"></div>
+                <div id="DIV_1">
+                    <div id="DIV_2">
+                        <!-- Image goes here -->
+                        <img id="IMG_3" src="/images/DJs/shinobu.png" alt='' />
+                        <h4 id="DJ">
+                            Hanyuu-sama
+                        </h4>
+                    </div>
+                </div>
                 <!-- DJ block end   -->
             
             </div>

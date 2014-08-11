@@ -1,5 +1,5 @@
 function loadAPI() {
-    
+
     // This gets the PHP Code
     var getPHPString = document.getElementById("hidePHP");
     var radioAPIString = getPHPString.textContent;
@@ -14,7 +14,8 @@ function loadAPI() {
     // Gonna do a function to escape the unicode characters
     var regex = /\\u([\d\w]{4})/gi;
     nowPlaying = nowPlaying.replace(regex, function (match, grp) {
-    return String.fromCharCode(parseInt(grp, 16)); } );
+        return String.fromCharCode(parseInt(grp, 16)); 
+    });
     nowPlaying = unescape(nowPlaying);
 
     // Updates "DJ"

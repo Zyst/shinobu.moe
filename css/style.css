@@ -94,6 +94,77 @@ a{
     padding-right: 30px;
 }
 
+/* I outright took these from r-a-d.io,
+    claim 0 credit. */
+#DIV_1 {
+    box-sizing: border-box;
+    color: rgb(120, 120, 120);
+    float: left;
+    height: 272px;
+    min-height: 1px;
+    position: relative;
+    text-decoration: none solid rgb(120, 120, 120);
+    width: 262.5px;
+    perspective-origin: 131.25px 136px;
+    transform-origin: 131.25px 136px;
+    border: 0px none rgb(120, 120, 120);
+    font: normal normal normal 16px/22.85714340209961px 'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
+    outline: rgb(120, 120, 120) none 0px;
+    padding: 0px 15px;
+}/*#DIV_1*/
+
+#DIV_2 {
+    box-sizing: border-box;
+    color: rgb(120, 120, 120);
+    height: 250px;
+    text-decoration: none solid rgb(120, 120, 120);
+    width: 232.5px;
+    perspective-origin: 116.25px 125px;
+    transform-origin: 116.25px 125px;
+    background: rgb(27, 27, 27) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 1px solid rgba(27, 27, 27, 0.0980392);
+    border-radius: 4px 4px 4px 4px;
+    font: normal normal normal 16px/22.85714340209961px 'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
+    margin: 0px 0px 22px;
+    outline: rgb(120, 120, 120) none 0px;
+    padding: 4px;
+    transition: all 0.2s ease-in-out 0s;
+}/*#DIV_2*/
+
+#IMG_3 {
+    box-sizing: border-box;
+    color: rgb(120, 120, 120);
+    display: block;
+    height: 180px;
+    max-height: 180px;
+    max-width: 100%;
+    text-decoration: none solid rgb(120, 120, 120);
+    vertical-align: middle;
+    width: 180px;
+    perspective-origin: 90px 90px;
+    transform-origin: 90px 90px;
+    border: 0px none rgb(120, 120, 120);
+    border-radius: 6px 6px 6px 6px;
+    font: normal normal normal 16px/22.85714340209961px 'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
+    margin: 16px 21.25px 0px;
+    outline: rgb(120, 120, 120) none 0px;
+}/*#IMG_3*/
+
+#DJ {
+    box-sizing: border-box;
+    color: rgb(120, 120, 120);
+    height: 22px;
+    text-align: center;
+    text-decoration: none solid rgb(120, 120, 120);
+    width: 222.5px;
+    perspective-origin: 111.25px 11px;
+    transform-origin: 111.25px 11px;
+    border: 0px none rgb(120, 120, 120);
+    font: normal normal 500 20px/22px 'Source Sans Pro Bold', Helvetica, Arial, sans-serif;
+    margin: 11px 0px;
+    outline: rgb(120, 120, 120) none 0px;
+}/*#DJ*/
+
 .topcolor{
     opacity:0.5;
     transition: opacity 0.5s;
