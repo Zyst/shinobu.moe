@@ -16,8 +16,7 @@ function loadAPI() {
     nowPlaying = String(nowPlaying);
     nowPlaying = nowPlaying.replace("\"np\":\"", "");
     nowPlaying = nowPlaying.replace("\",\"listeners\"", "");
-    // nowPlaying = String(nowPlaying);
-    nowPlaying = unescape(nowPlaying);
+    nowPlaying = "\uff12\u00f7\u3059 - Au Au Au"
 
 
     // Updates "DJ" (WIP)
@@ -27,8 +26,6 @@ function loadAPI() {
     DJ = DJ.replace("\"djname\":\"", "");
     DJ = DJ.replace("\",\"djtext\"", "");
     DJ = DJ.replace(/.*\"/, "");
-    DJ = String(DJ);
-    // DJ = unescape(DJ);
 
 
     // These actually update the divs with the content
