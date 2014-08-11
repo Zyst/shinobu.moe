@@ -62,7 +62,6 @@
                         <!-- Image goes here -->
                         <img id="IMG_3" src="/images/DJs/shinobu.png" alt='' />
                         <h4 id="DJ">
-                            Hanyuu-sama
                         </h4>
                     </div>
                 </div>
