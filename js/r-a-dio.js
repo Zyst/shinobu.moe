@@ -56,7 +56,7 @@ function loadAPI() {
     listening = String(listening);
     listening = listening.replace("\"listeners\":\"", "");
     listening = listening.replace("\",\"bitrate\"", "");
-
+    alert(listening);
 
     // These actually update the divs with the content parsed
     // with the wizardry above.
