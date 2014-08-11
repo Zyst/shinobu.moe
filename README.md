@@ -22,11 +22,9 @@ Hosted on shinobu.moe
 
 ## Screenshots
 
-![alt tag](http://puu.sh/aND9N/7af55cbe5f.jpg)
+![alt tag](http://puu.sh/aNE83/f2b97ab2ba.jpg)
 
 ![alt tag](http://puu.sh/aNE0s/5564224226.jpg)
-
-![alt tag](http://puu.sh/aNE23/c4172bafa3.jpg)
 
 ![alt tag](http://puu.sh/aNE3k/fe6cfc441c.jpg)
 
@@ -36,4 +34,6 @@ Hosted on shinobu.moe
 
 ![alt tag](http://puu.sh/aNE6T/1597ed61c6.jpg)
 
-![alt tag](http://puu.sh/aNE83/f2b97ab2ba.jpg)
+![alt tag](http://puu.sh/aNE23/c4172bafa3.jpg)
+
+
