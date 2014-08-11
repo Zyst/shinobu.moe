@@ -4,14 +4,14 @@ It cycles backgrounds randomly on load using togglerandomBG.js from the images n
 
 Hosted on shinobu.moe
 
-#Current Goals:
+##Current Goals:
 <ul>
     <li>More interaction with API</li>
     <li>Ultimately auto-updates from API</li>
     <li>Possibly a mobile/smaller resolution version, as this is my personal site it doesn't really display well with small resolutions.</li>
 </ul>
 
-#Completed Goals:
+##Completed Goals:
 <ul>
     <li>Base Site</li>
     <li>404 Page</li>
