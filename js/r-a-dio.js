@@ -16,7 +16,6 @@ function loadAPI() {
     nowPlaying = String(nowPlaying);
     nowPlaying = nowPlaying.replace("\"np\":\"", "");
     nowPlaying = nowPlaying.replace("\",\"listeners\"", "");
-    nowPlaying = "\\uff12\\u00f7\\u3059 - Au Au Au"
 
 
     // Updates "DJ" (WIP)
