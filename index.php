@@ -51,11 +51,6 @@
                 <div id = "nowPlaying" class="playing"></div>
                 <!-- Now playing block end   -->
 
-                <!-- Listeners and time block start -->
-                <div id = "listenersAndTime" class="genericpad"></div>
-                <!-- Listeners and time block end   -->
-
-
                 <!-- DJ block start -->
                 <div id="DIV_1">
                     <div id="DIV_2">
@@ -66,6 +61,18 @@
                     </div>
                 </div>
                 <!-- DJ block end   -->
+
+                <!-- Listeners and time block start -->
+                <div id = "listenersAndTime" class="genericpad">
+                    <!-- Listening count start -->
+                    <span id="listeners"></span>
+                    <!-- Listening count end   -->
+                </div>
+                <!-- Listeners and time block end   -->
+
+
+
+
 
             </div>
 

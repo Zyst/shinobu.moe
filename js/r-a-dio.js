@@ -28,7 +28,7 @@ function loadAPI() {
     DJ = DJ.replace("\",\"djtext\"", "");
     DJ = DJ.replace(/.*\"/, "");
 
-
+    // Finds DJ and changes to appropriate portrait
     if (DJ == "Hanyuu-sama") {
         changeImage("../images/DJs/Hanyuu.png");
     } else if (DJ == "Shotacon") {
@@ -51,10 +51,18 @@ function loadAPI() {
         changeImage("../images/DJs/shinobu.png");
     }
 
+    var listening = radioAPIString.match("\"listeners\":\".*\"?,\"bitrate\"");
+
+    listening = String(listening);
+    listening = listening.replace("\"listeners\":\"", "");
+    listening = listening.replace("\",\"bitrate\"", "");
+
+
     // These actually update the divs with the content parsed
     // with the wizardry above.
     document.getElementById("nowPlaying").innerHTML = nowPlaying;
     document.getElementById("DJ").innerHTML = DJ;
+    document.getElementById("listeners").innerHTML = "Listeners: " + listeners;
 }
 
 // Changes DJ Images

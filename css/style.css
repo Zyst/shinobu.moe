@@ -167,6 +167,16 @@ a{
     outline: rgb(120, 120, 120) none 0px;
 }/*#DJ*/
 
+#listeners {
+    box-sizing: border-box;
+    color: rgb(153, 153, 153);
+    text-align: center;
+    text-decoration: none solid rgb(153, 153, 153);
+    border: 0px none rgb(153, 153, 153);
+    font: normal normal normal 16px/22.85714340209961px 'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
+    outline: rgb(153, 153, 153) none 0px;
+}/*#listeners*/
+
 .topcolor{
     opacity:0.5;
     transition: opacity 0.5s;
