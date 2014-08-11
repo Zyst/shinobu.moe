@@ -33,17 +33,17 @@ function loadAPI() {
         changeImage("../images/DJs/Hanyuu.png");
     } else if (DJ == "Shotacon") {
         changeImage("../images/DJs/Kilim.png");
-    } else if (DJ) == "ed") {
+    } else if (DJ == "ed") {
         changeImage("../images/DJs/ed.png");
-    } else if (DJ) == "Eggmun") {
+    } else if (DJ == "Eggmun") {
         changeImage("../images/DJs/Eggmun.png");
-    } else if (DJ) == "Ekureiru") {
+    } else if (DJ == "Ekureiru") {
         changeImage("../images/DJs/Ekureiru.png");
-    } else if (DJ) == "Kilim") {
+    } else if (DJ == "Kilim") {
         changeImage("../images/DJs/Kilim.png");
-    } else if (DJ) == "oru") {
+    } else if (DJ == "oru") {
         changeImage("../images/DJs/oru.png");
-    } else if (DJ) == "Wessie") {
+    } else if (DJ == "Wessie") {
         changeImage("../images/DJs/Wessie.png");
     } else {
         changeImage("../images/DJs/shinobu.png");
