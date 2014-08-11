@@ -1,7 +1,7 @@
 body {
     background-image:url("../images/0.png");
     background-repeat: no-repeat;
-    background-attachment: absolute;
+    background-attachment: fixed;
     background-position: bottom right;
     background-color: #4c4c4c;
     font:13px 'Source Sans Pro Regular',Helvetica,Arial,sans-serif;
