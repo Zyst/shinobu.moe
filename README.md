@@ -6,7 +6,10 @@ Hosted on shinobu.moe
 
 ##Current Goals:
 <ul>
-    <li>More interaction with API</li>
+    <li>A button that launches Foobar with the r/a/dio stream or the r/a/dio stream in-browser after the button press</li>
+    <li>Starting time/Ending Time (Song)</li>
+    <li>Make Starting time tick 'up' with JS</li>
+    <li>Progress bar based on Starting time progress</li>
     <li>Ultimately auto-updates from API</li>
     <li>Possibly a mobile/smaller resolution version, as this is my personal site it doesn't really display well with small resolutions.</li>
 </ul>
@@ -16,7 +19,10 @@ Hosted on shinobu.moe
     <li>Base Site</li>
     <li>404 Page</li>
     <li>PHP cURL script to obtain info from the r/a/dio api</li>
-    <li>JS to show some of that information (WIP)</li>
+    <li>JS to display the aforementioned information (WIP)</li>
+    <li>Now Playing r/a/dio</li>
+    <li>DJ Box with images r/a/dio</li>
+    <li>Listener Count</li>
 </ul>
 
 
