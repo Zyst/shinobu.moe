@@ -1,6 +1,6 @@
-function encode_utf8( s ){
-    return unescape( encodeURIComponent( s ) );
-}
+// function encode_utf8( s ){
+//     return unescape( encodeURIComponent( s ) );
+// }
 
 function loadAPI() {
     // This gets the PHP Code
