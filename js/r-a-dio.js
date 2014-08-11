@@ -16,8 +16,8 @@ function loadAPI() {
     nowPlaying = String(nowPlaying);
     nowPlaying = nowPlaying.replace("\"np\":\"", "");
     nowPlaying = nowPlaying.replace("\",\"listeners\"", "");
-    nowPlaying = String(nowPlaying);
-    // nowPlaying = unescape(nowPlaying);
+    // nowPlaying = String(nowPlaying);
+    nowPlaying = unescape(nowPlaying);
 
 
     // Updates "DJ" (WIP)
