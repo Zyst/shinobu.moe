@@ -99,9 +99,12 @@ a{
 #DIV_1 {
     box-sizing: border-box;
     color: rgb(120, 120, 120);
+    float: center;
     height: 272px;
     min-height: 1px;
-    position: fixed center;
+    position: absolute center;
+    margin-left: auto;
+    margin-right: auto;
     text-decoration: none solid rgb(120, 120, 120);
     width: 262.5px;
     perspective-origin: 131.25px 136px;
