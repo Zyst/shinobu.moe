@@ -102,7 +102,7 @@ a{
     float: center;
     height: 272px;
     min-height: 1px;
-    position: relative;
+    position: center;
     text-decoration: none solid rgb(120, 120, 120);
     width: 262.5px;
     perspective-origin: 131.25px 136px;
