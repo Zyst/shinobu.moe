@@ -89,6 +89,19 @@ function loadAPI() {
     endTime = endTime - startTime;
 
     /**
+     * Song Current Time
+     *  we turn seconds to minutes and seconds
+     */
+    var currentTimeMinutes = Math.floor(currentTime / 60);
+    var currentTimeSeconds = currentTime % 60;
+    // We'll add a 0 pad
+    currentTimeSeconds = String(currentTimeSeconds);
+    currentTimeSeconds = zeroPadding(currentTimeSeconds);
+
+    document.getElementById("time").innerHTML = currentTimeMinutes + ":" + currentTimeSeconds +
+                                          "/" + endTimeMinutes     + ":" + endTimeSeconds;
+
+    /**
      * Song End Time
      *  we turn seconds to minutes and seconds
      */
@@ -105,6 +118,8 @@ function loadAPI() {
     document.getElementById("nowPlaying").innerHTML = nowPlaying;
     document.getElementById("DJ").innerHTML = DJ;
     document.getElementById("listeners").innerHTML = "Listeners: " + listeners; 
+    document.getElementById("time").innerHTML = currentTimeMinutes + ":" + currentTimeSeconds +
+                                          "/" + endTimeMinutes     + ":" + endTimeSeconds;
 
     // Starts the Timer
     setInterval(increaseTime, 1000);
@@ -126,8 +141,8 @@ function increaseTime() {
      * Song Current Time
      *  we turn seconds to minutes and seconds
      */
-    var currentTimeMinutes = Math.floor(currentTime / 60);
-    var currentTimeSeconds = currentTime % 60;
+    currentTimeMinutes = Math.floor(currentTime / 60);
+    currentTimeSeconds = currentTime % 60;
     // We'll add a 0 pad
     currentTimeSeconds = String(currentTimeSeconds);
     currentTimeSeconds = zeroPadding(currentTimeSeconds);
