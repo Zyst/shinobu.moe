@@ -141,7 +141,7 @@ function loadAPI() {
 
         ++currentTime;
 
-        if (currentTime >= endTime) {
+        if (currentTime > endTime) {
             clearInterval(countUp);
         }
     }
