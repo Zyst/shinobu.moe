@@ -95,7 +95,6 @@ function loadAPI() {
     var currentTimeMinutes = Math.floor(currentTime / 60);
     var currentTimeSeconds = currentTime % 60;
     // We'll add a 0 pad
-    currentTimeSeconds = String(currentTimeSeconds);
     currentTimeSeconds = zeroPadding(currentTimeSeconds);
 
     document.getElementById("time").innerHTML = currentTimeMinutes + ":" + currentTimeSeconds +
@@ -144,7 +143,6 @@ function increaseTime() {
     currentTimeMinutes = Math.floor(currentTime / 60);
     currentTimeSeconds = currentTime % 60;
     // We'll add a 0 pad
-    currentTimeSeconds = String(currentTimeSeconds);
     currentTimeSeconds = zeroPadding(currentTimeSeconds);
 
     document.getElementById("time").innerHTML = currentTimeMinutes + ":" + currentTimeSeconds +
@@ -161,7 +159,7 @@ function increaseTime() {
 
 /**
  * Adds a 0 if the seconds are in the 0X range
- * @param  {String} seconds Initial Seconds input
+ * @param  {int} seconds    Initial Seconds input
  * @return {String}         First case: Same as input
  *                          Second case: 0+X with X = input
  */
