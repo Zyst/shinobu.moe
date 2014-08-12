@@ -117,8 +117,8 @@ function loadAPI() {
     document.getElementById("time").innerHTML = currentTimeMinutes + ":" + currentTimeSeconds +
                                           "/" + endTimeMinutes     + ":" + endTimeSeconds;
 
-    // Justifying the ~1.5 - 2 second time delay
-    currentTime = currentTime + 2;
+    // Justifying the ~1 second time delay
+    ++currentTime;
 
     // Starts the Timer
     var countUp = setInterval(increaseTime, 1000);
