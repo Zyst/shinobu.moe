@@ -114,6 +114,12 @@ function changeImage(picture) {
     document.getElementById("IMG_3").src = picture;
 }
 
+/**
+ * Adds a 0 if the seconds are in the 0X range
+ * @param  {String} seconds Initial Seconds input
+ * @return {String}         First case: Same as input
+ *                          Second case: 0+X with X = input
+ */
 function zeroPadding(seconds) {
     if (seconds.length > 1) {
         // Basically do nothing
