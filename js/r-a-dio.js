@@ -66,6 +66,7 @@ function loadAPI() {
     startTime = String(startTime);
     startTime = startTime.replace(/.*\":/, "");
     startTime = startTime.replace(/,.*/, "");
+    startTime = parseInt(startTime);
     // We get startTime, we will use this as a base to calculate
     //   time in actual minutes and seconds.
   
@@ -73,15 +74,22 @@ function loadAPI() {
     currentTime = String(currentTime);
     currentTime = currentTime.replace(/.*\":/, "");
     currentTime = currentTime.replace(/,.*/, "");
+    currentTime = parseInt(currentTime);
+    currentTime = currentTime - startTime;
 
     // End Time
     endTime = String(endTime);
     endTime = endTime.replace(/.*\":/, "");
     endTime = endTime.replace(/,.*/, "");
+    endTime = parseInt(endTime);
+    endTime = endTime - startTime;
 
-    alert("Start Time = " + startTime);
-    alert("Current Time = " + currentTime);
-    alert("End Time = " + endTime);
+
+    var currentTimeMinutes = Math.floor(currentTime / 60);
+    var currentTimeSeconds = currentTime % 60;
+
+    var endTimeMinutes = Math.floor(endTime / 60);;
+    var endTimeSeconds = endTime % 60;
 
     /**
      * Updates the inner html using the black
@@ -90,6 +98,9 @@ function loadAPI() {
     document.getElementById("nowPlaying").innerHTML = nowPlaying;
     document.getElementById("DJ").innerHTML = DJ;
     document.getElementById("listeners").innerHTML = "Listeners: " + listeners; 
+    
+    document.getElementById("time").innerHTML = currentTimeMinutes + ":" + currentTimeSeconds +
+                                          "/" + endTimeMinutes     + ":" + endTimeSeconds;
 }
 
 // Changes DJ Images
