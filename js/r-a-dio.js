@@ -97,8 +97,32 @@ function loadAPI() {
     // We'll add a 0 pad
     currentTimeSeconds = zeroPadding(currentTimeSeconds);
 
-    document.getElementById("time").innerHTML = currentTimeMinutes + ":" + currentTimeSeconds +
-                                          "/" + endTimeMinutes     + ":" + endTimeSeconds;
+    /**
+ * Increases time in 1 second increments
+ * @return {void} Will just keep going until
+ *                  it's equal to endtime.
+ */
+
+    function increaseTime() {
+        /**
+         * Song Current Time
+         *  we turn seconds to minutes and seconds
+         */
+        currentTimeMinutes = Math.floor(currentTime / 60);
+        currentTimeSeconds = currentTime % 60;
+        // We'll add a 0 pad
+        currentTimeSeconds = zeroPadding(currentTimeSeconds);
+
+        document.getElementById("time").innerHTML = currentTimeMinutes + ":" + currentTimeSeconds +
+                                              "/" + endTimeMinutes     + ":" + endTimeSeconds;
+
+
+        ++currentTime;
+
+        // if (currentTime >= endTime) {
+        //     break;
+        // }
+    }
 
     /**
      * Song End Time
@@ -129,33 +153,6 @@ function loadAPI() {
 function changeImage(picture) {
     document.getElementById("IMG_3").src = picture;
 }
-
-/**
- * Increases time in 1 second increments
- * @return {void} Will just keep going until
- *                  it's equal to endtime.
- */
-function increaseTime() {
-    /**
-     * Song Current Time
-     *  we turn seconds to minutes and seconds
-     */
-    currentTimeMinutes = Math.floor(currentTime / 60);
-    currentTimeSeconds = currentTime % 60;
-    // We'll add a 0 pad
-    currentTimeSeconds = zeroPadding(currentTimeSeconds);
-
-    document.getElementById("time").innerHTML = currentTimeMinutes + ":" + currentTimeSeconds +
-                                          "/" + endTimeMinutes     + ":" + endTimeSeconds;
-
-
-    ++currentTime;
-
-    // if (currentTime >= endTime) {
-    //     break;
-    // }
-}
-
 
 /**
  * Adds a 0 if the seconds are in the 0X range
