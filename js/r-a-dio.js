@@ -138,9 +138,9 @@ function increaseTime() {
 
     ++currentTime;
 
-    if (currentTime >= endTime) {
-        break;
-    }
+    // if (currentTime >= endTime) {
+    //     break;
+    // }
 }
 
 
