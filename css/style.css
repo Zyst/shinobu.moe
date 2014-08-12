@@ -86,9 +86,8 @@ a {
 }
 
 .playing {
-    color: #787878;
-    margin-top: 50px;
-    font: 34px'Source Sans Pro Bold', Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    font: 34px'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
