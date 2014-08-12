@@ -189,6 +189,8 @@ a {
     margin: 0px 0px 22px;
     outline: rgb(120, 120, 120) none 0px;
     overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
 }
 /*#outsideBar*/
 
