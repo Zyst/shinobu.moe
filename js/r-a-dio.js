@@ -75,6 +75,8 @@ function loadAPI() {
     currentTime = currentTime.replace(/.*\":/, "");
     currentTime = currentTime.replace(/,.*/, "");
     currentTime = parseInt(currentTime);
+    // We turn this from a long ass number to
+    //  a smaller one
     currentTime = currentTime - startTime;
 
     // End Time
@@ -82,15 +84,24 @@ function loadAPI() {
     endTime = endTime.replace(/.*\":/, "");
     endTime = endTime.replace(/,.*/, "");
     endTime = parseInt(endTime);
+    // We turn this from a long ass number to
+    //  a smaller one
     endTime = endTime - startTime;
 
-
+    /**
+     * Song Current Time
+     *  we turn seconds to minutes and seconds
+     */
     var currentTimeMinutes = Math.floor(currentTime / 60);
     var currentTimeSeconds = currentTime % 60;
     // We'll add a 0 pad
     currentTimeSeconds = String(currentTimeSeconds);
     currentTimeSeconds = zeroPadding(currentTimeSeconds);
 
+    /**
+     * Song End Time
+     *  we turn seconds to minutes and seconds
+     */
     var endTimeMinutes = Math.floor(endTime / 60);
     var endTimeSeconds = endTime % 60;
     // We'll add a 0 pad
@@ -104,12 +115,8 @@ function loadAPI() {
     document.getElementById("nowPlaying").innerHTML = nowPlaying;
     document.getElementById("DJ").innerHTML = DJ;
     document.getElementById("listeners").innerHTML = "Listeners: " + listeners; 
-
     document.getElementById("time").innerHTML = currentTimeMinutes + ":" + currentTimeSeconds +
                                           "/" + endTimeMinutes     + ":" + endTimeSeconds;
-
-    // Gonna see if this "Cleans" the source code.
-    document.getElementById("hidePHP").innerHTML = "PHP Clearing success";
 }
 
 // Changes DJ Images
