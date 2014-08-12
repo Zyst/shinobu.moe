@@ -149,7 +149,7 @@ function increaseTime() {
                                           "/" + endTimeMinutes     + ":" + endTimeSeconds;
 
 
-    window.++currentTime;
+    window.currentTime = window.currentTime + 1;
 
     // if (currentTime >= endTime) {
     //     break;
