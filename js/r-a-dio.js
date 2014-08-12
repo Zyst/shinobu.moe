@@ -140,7 +140,7 @@ function increaseTime() {
      * Song Current Time
      *  we turn seconds to minutes and seconds
      */
-    currentTimeMinutes = Math.floor(currentTime / 60);
+    currentTimeMinutes = Math.floor(window.currentTime / 60);
     currentTimeSeconds = currentTime % 60;
     // We'll add a 0 pad
     currentTimeSeconds = zeroPadding(currentTimeSeconds);
