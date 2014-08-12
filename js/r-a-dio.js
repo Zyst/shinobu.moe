@@ -107,6 +107,9 @@ function loadAPI() {
 
     document.getElementById("time").innerHTML = currentTimeMinutes + ":" + currentTimeSeconds +
                                           "/" + endTimeMinutes     + ":" + endTimeSeconds;
+
+    // Gonna see if this "Cleans" the source code.
+    document.getElementById("hidePHP").innerHTML = "";
 }
 
 // Changes DJ Images
