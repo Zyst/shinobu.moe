@@ -141,7 +141,7 @@ function increaseTime() {
      *  we turn seconds to minutes and seconds
      */
     currentTimeMinutes = Math.floor(window.currentTime / 60);
-    currentTimeSeconds = currentTime % 60;
+    currentTimeSeconds = window.currentTime % 60;
     // We'll add a 0 pad
     currentTimeSeconds = zeroPadding(currentTimeSeconds);
 
@@ -149,7 +149,7 @@ function increaseTime() {
                                           "/" + endTimeMinutes     + ":" + endTimeSeconds;
 
 
-    ++currentTime;
+    window.++currentTime;
 
     // if (currentTime >= endTime) {
     //     break;
