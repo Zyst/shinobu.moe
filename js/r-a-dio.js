@@ -123,7 +123,7 @@ function changeImage(picture) {
  */
 function increaseTime() {
     // Error catcher
-    if (currentTime !== undefined) {
+    if (increaseTime.currentTime !== undefined) {
         increaseTime.currentTime = currentTime;
     }
 
