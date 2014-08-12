@@ -166,6 +166,7 @@ a {
 #listeners {
     box-sizing: border-box;
     color: rgb(153, 153, 153);
+    float: left;
     text-align: center;
     text-decoration: none solid rgb(153, 153, 153);
     border: 0px none rgb(153, 153, 153);
@@ -177,6 +178,7 @@ a {
 #time {
     box-sizing: border-box;
     color: rgb(153, 153, 153);
+    float: right;
     text-align: center;
     text-decoration: none solid rgb(153, 153, 153);
     border: 0px none rgb(153, 153, 153);
