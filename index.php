@@ -63,6 +63,13 @@
                 </div>
                 <!-- DJ block end   -->
 
+                <!-- Playing bar start -->
+                <div id="outsideBar">
+                    <div id="playingBar">
+                    </div>
+                </div>
+                <!-- Playing bar end   -->
+
                 <!-- Listeners and time block start -->
                 <div id = "listenersAndTime">
                     <!-- Listening count start -->
