@@ -144,7 +144,7 @@ function loadAPI() {
          *   Percentage based and laws of threes
          */
         var playingPercentage = currentTime * 100 / endTime;
-        document.getElementById("playingBar").style.width = currentTime + "%";
+        document.getElementById("playingBar").style.width = playingPercentage + "%";
 
         if (currentTime > endTime) {
             clearInterval(countUp);
