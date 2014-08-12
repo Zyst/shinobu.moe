@@ -87,9 +87,15 @@ function loadAPI() {
 
     var currentTimeMinutes = Math.floor(currentTime / 60);
     var currentTimeSeconds = currentTime % 60;
+    // We'll add a 0 pad
+    currentTimeSeconds = String(currentTimeSeconds);
+    currentTimeSeconds = zeroPadding(currentTimeSeconds);
 
-    var endTimeMinutes = Math.floor(endTime / 60);;
+    var endTimeMinutes = Math.floor(endTime / 60);
     var endTimeSeconds = endTime % 60;
+    // We'll add a 0 pad
+    endTimeSeconds = String(endTimeSeconds);
+    endTimeSeconds = zeroPadding(endTimeSeconds);
 
     /**
      * Updates the inner html using the black
@@ -98,7 +104,7 @@ function loadAPI() {
     document.getElementById("nowPlaying").innerHTML = nowPlaying;
     document.getElementById("DJ").innerHTML = DJ;
     document.getElementById("listeners").innerHTML = "Listeners: " + listeners; 
-    
+
     document.getElementById("time").innerHTML = currentTimeMinutes + ":" + currentTimeSeconds +
                                           "/" + endTimeMinutes     + ":" + endTimeSeconds;
 }
@@ -106,4 +112,13 @@ function loadAPI() {
 // Changes DJ Images
 function changeImage(picture) {
     document.getElementById("IMG_3").src = picture;
+}
+
+function zeroPadding(seconds) {
+    if seconds.length > 1 {
+        // Do nothing if length is greater than 1
+    } else {
+        var padded = "0" + seconds;
+        return padded;
+    }
 }
