@@ -129,10 +129,6 @@ function loadAPI() {
      *                  it's equal to endtime.
      */
     function increaseTime() {
-        /**
-         * Song Current Time
-         *  we turn seconds to minutes and seconds
-         */
         currentTimeMinutes = Math.floor(currentTime / 60);
         currentTimeSeconds = currentTime % 60;
         // We'll add a 0 pad
@@ -141,8 +137,14 @@ function loadAPI() {
         document.getElementById("time").innerHTML = currentTimeMinutes + ":" + currentTimeSeconds +
                                               "/" + endTimeMinutes     + ":" + endTimeSeconds;
 
-
         ++currentTime;
+
+        /**
+         * We are now going to do the playing bar width adjustments.
+         *   Percentage based and laws of threes
+         */
+        var playingPercentage = currentTime * 100 / endTime;
+        document.getElementById("playingBar").style.width = currentTime + "%";
 
         if (currentTime > endTime) {
             clearInterval(countUp);
