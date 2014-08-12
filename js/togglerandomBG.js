@@ -1,6 +1,6 @@
 function toggleBG(){
 	var bg = document.body;
-	var randomnumber = Math.floor((Math.random() * (14)) + 1);
+	var randomnumber = Math.floor((Math.random() * (13)) + 1);
     if (bg.style.backgroundImage !== "none") {
         bg.style.backgroundImage = "none";
     }
@@ -11,6 +11,6 @@ function toggleBG(){
 
 function randomBG(){
 	var bg = document.body;
-	var randomnumber = Math.floor((Math.random() * (14)) + 1);
+	var randomnumber = Math.floor((Math.random() * (13)) + 1);
 	bg.style.backgroundImage = "url('images/"+randomnumber+".png')";
 }
