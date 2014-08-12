@@ -115,7 +115,7 @@ function changeImage(picture) {
 }
 
 function zeroPadding(seconds) {
-    if seconds.length > 1 {
+    if (seconds.length > 1) {
         // Do nothing if length is greater than 1
     } else {
         var padded = "0" + seconds;
