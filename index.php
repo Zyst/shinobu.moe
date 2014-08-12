@@ -67,6 +67,7 @@
                 <div id = "listenersAndTime">
                     <!-- Listening count start -->
                     <span id="listeners"></span>
+                    <span id="time"></span>
                     <!-- Listening count end   -->
                 </div>
                 <!-- Listeners and time block end   -->

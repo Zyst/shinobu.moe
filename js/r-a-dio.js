@@ -51,19 +51,45 @@ function loadAPI() {
         changeImage("../images/DJs/shinobu.png");
     }
 
+    // Get the listener count
     var listeners = radioAPIString.match("\"listeners\":.*,\"bitrate\"");
-
     listeners = String(listeners);
     listeners = listeners.replace(/.*\":/, "");
     listeners = listeners.replace(/,.*/, "");
     
+    // Time Area
+    var startTime = radioAPIString.match("\"isstreamdesk\":.*,\"end_time\"");
+    var currentTime = radioAPIString.match("\"current\":.*,\"queue\"");
+    var endTime = radioAPIString.match("\"start_time\":.*,\"lastset\"");
+
+    // Start Time area
+    startTime = String(startTime);
+    startTime = startTime.replace(/.*\":/, "");
+    startTime = startTime.replace(/,.*/, "");
+    // We get startTime, we will use this as a base to calculate
+    //   time in actual minutes and seconds.
+  
+    // Current Time Area
+    currentTime = String(currentTime);
+    currentTime = currentTime.replace(/.*\":/, "");
+    currentTime = currentTime.replace(/,.*/, "");
+
+    // End Time
+    endTime = String(endTime);
+    endTime = endTime.replace(/.*\":/, "");
+    endTime = endTime.replace(/,.*/, "");
+
+    alert("Start Time = " + startTime);
+    alert("Current Time = " + currentTime);
+    alert("End Time = " + endTime);
+
     /**
      * Updates the inner html using the black
      *   magic regexes above.
      */
     document.getElementById("nowPlaying").innerHTML = nowPlaying;
     document.getElementById("DJ").innerHTML = DJ;
-    document.getElementById("listeners").innerHTML = "Listeners: " + listeners;
+    document.getElementById("listeners").innerHTML = "Listeners: " + listeners; 
 }
 
 // Changes DJ Images
