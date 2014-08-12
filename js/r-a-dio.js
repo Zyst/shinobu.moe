@@ -89,23 +89,13 @@ function loadAPI() {
     endTime = endTime - startTime;
 
     /**
-     * Song Current Time
-     *  we turn seconds to minutes and seconds
-     */
-    var currentTimeMinutes = Math.floor(currentTime / 60);
-    var currentTimeSeconds = currentTime % 60;
-    // We'll add a 0 pad
-    currentTimeSeconds = String(currentTimeSeconds);
-    currentTimeSeconds = zeroPadding(currentTimeSeconds);
-
-    /**
      * Song End Time
      *  we turn seconds to minutes and seconds
      */
     var endTimeMinutes = Math.floor(endTime / 60);
     var endTimeSeconds = endTime % 60;
     // We'll add a 0 pad
-    endTimeSeconds = String(endTimeSeconds);
+    // endTimeSeconds = String(endTimeSeconds);
     endTimeSeconds = zeroPadding(endTimeSeconds);   
 
     /**
@@ -115,14 +105,44 @@ function loadAPI() {
     document.getElementById("nowPlaying").innerHTML = nowPlaying;
     document.getElementById("DJ").innerHTML = DJ;
     document.getElementById("listeners").innerHTML = "Listeners: " + listeners; 
-    document.getElementById("time").innerHTML = currentTimeMinutes + ":" + currentTimeSeconds +
-                                          "/" + endTimeMinutes     + ":" + endTimeSeconds;
+
+    // Starts the Timer
+    setInterval(increaseTime, 1000);
 }
+
 
 // Changes DJ Images
 function changeImage(picture) {
     document.getElementById("IMG_3").src = picture;
 }
+
+/**
+ * Increases time in 1 second increments
+ * @return {void} Will just keep going until
+ *                  it's equal to endtime.
+ */
+function increaseTime() {
+    /**
+     * Song Current Time
+     *  we turn seconds to minutes and seconds
+     */
+    var currentTimeMinutes = Math.floor(currentTime / 60);
+    var currentTimeSeconds = currentTime % 60;
+    // We'll add a 0 pad
+    currentTimeSeconds = String(currentTimeSeconds);
+    currentTimeSeconds = zeroPadding(currentTimeSeconds);
+
+    document.getElementById("time").innerHTML = currentTimeMinutes + ":" + currentTimeSeconds +
+                                          "/" + endTimeMinutes     + ":" + endTimeSeconds;
+
+
+    ++currentTime;
+
+    if (currentTime >= endTime) {
+        break;
+    }
+}
+
 
 /**
  * Adds a 0 if the seconds are in the 0X range
@@ -131,6 +151,9 @@ function changeImage(picture) {
  *                          Second case: 0+X with X = input
  */
 function zeroPadding(seconds) {
+
+    seconds = String(seconds);
+
     if (seconds.length > 1) {
         // Basically do nothing
         return seconds;
@@ -139,3 +162,5 @@ function zeroPadding(seconds) {
         return padded;
     }
 }
+
+
