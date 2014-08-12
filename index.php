@@ -17,8 +17,8 @@
                 <a class="topcolor" href="https://boards.4chan.org/a/">/a/</a>
                 <a class="topcolor" href="https://boards.4chan.org/g/">/g/</a>
                 <a class="topcolor" href="https://boards.4chan.org/tg/">/tg/</a><br>
-                <a class="topcolor" href="https://app.roll20.net/home">Roll20</a><br>
                 <a class="topcolor" href="https://www.youtube.com/">Youtube</a><br>
+                <a class="topcolor" href="https://app.roll20.net/home">Roll20</a><br>
                 <a class="topcolor" href="https://mail.google.com/">Gmail</a><br>
                 <a class="topcolor" href="http://bbsistema.tecmilenio.edu.mx/">School</a>
             </div>
@@ -71,11 +71,6 @@
                     <!-- Listening count end   -->
                 </div>
                 <!-- Listeners and time block end   -->
-
-
-
-
-
             </div>
 
         <div id="alldivs">
