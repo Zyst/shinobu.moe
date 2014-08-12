@@ -6,7 +6,6 @@ Hosted on shinobu.moe
 
 ##Current Goals:
 <ul>
-    <li>Progress bar based on Starting time progress</li>
     <li>A button that launches Foobar with the r/a/dio stream or the r/a/dio stream in-browser after the button press</li>
     <li>Ultimately auto-updates from API</li>
     <li>Possibly a mobile/smaller resolution version, as this is my personal site it doesn't really display well with small resolutions.</li>
@@ -23,6 +22,7 @@ Hosted on shinobu.moe
     <li>Listener Count</li>
     <li>Starting time/Ending Time (Song)</li>
     <li>Make Starting time tick 'up' with JS</li>
+    <li>Progress bar based on Starting time progress</li>
 </ul>
 
 
