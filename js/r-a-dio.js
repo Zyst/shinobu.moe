@@ -146,7 +146,7 @@ function increaseTime() {
     currentTimeSeconds = zeroPadding(currentTimeSeconds);
 
     document.getElementById("time").innerHTML = currentTimeMinutes + ":" + currentTimeSeconds +
-                                          "/" + endTimeMinutes     + ":" + endTimeSeconds;
+                                          "/" + window.endTimeMinutes     + ":" + window.endTimeSeconds;
 
 
     window.currentTime = window.currentTime + 1;
