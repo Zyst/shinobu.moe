@@ -122,11 +122,6 @@ function changeImage(picture) {
  *                  it's equal to endtime.
  */
 function increaseTime() {
-    // Error catcher
-    if (increaseTime.currentTime !== undefined) {
-        increaseTime.currentTime = currentTime;
-    }
-
     /**
      * Song Current Time
      *  we turn seconds to minutes and seconds
