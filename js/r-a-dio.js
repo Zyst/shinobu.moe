@@ -89,13 +89,13 @@ function loadAPI() {
     var currentTimeSeconds = currentTime % 60;
     // We'll add a 0 pad
     currentTimeSeconds = String(currentTimeSeconds);
-    // currentTimeSeconds = zeroPadding(currentTimeSeconds);
+    currentTimeSeconds = zeroPadding(currentTimeSeconds);
 
     var endTimeMinutes = Math.floor(endTime / 60);
     var endTimeSeconds = endTime % 60;
     // We'll add a 0 pad
     endTimeSeconds = String(endTimeSeconds);
-    endTimeSeconds = zeroPadding(endTimeSeconds);
+    endTimeSeconds = zeroPadding(endTimeSeconds);   
 
     /**
      * Updates the inner html using the black
@@ -116,7 +116,8 @@ function changeImage(picture) {
 
 function zeroPadding(seconds) {
     if (seconds.length > 1) {
-        // Do nothing if length is greater than 1
+        // Basically do nothing
+        return seconds;
     } else {
         var padded = "0" + seconds;
         return padded;
