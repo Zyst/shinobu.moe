@@ -47,6 +47,11 @@
                         // }
                     ?>
                 </div>
+                
+                <!-- Play button block start -->
+                <button id = "playButton">
+                    Play Stream
+                </button>
 
                 <!-- Now playing block start -->
                 <div id = "nowPlaying" class="playing"></div>

@@ -213,6 +213,29 @@ a {
 }
 /*#insideBar*/
 
+#playButton {
+    color: rgb(209, 209, 209);
+    cursor: pointer;
+    display: block;
+    height: 34px;
+    text-decoration: none solid rgb(209, 209, 209);
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 262.5px;
+    perspective-origin: 131.25px 17px;
+    transform-origin: 131.25px 17px;
+    background: rgb(73, 102, 127) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(209, 209, 209);
+    border-radius: 4px 4px 4px 4px;
+    font: normal normal normal 16px/22.85714340209961px 'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
+    margin: 0px;
+    outline: rgb(209, 209, 209) none 0px;
+    padding: 6px 0px;
+}
+/*#playButton*/
+
+
+
 #listeners {
     box-sizing: border-box;
     color: rgb(153, 153, 153);
