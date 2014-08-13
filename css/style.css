@@ -231,6 +231,8 @@ a {
     margin: 0px;
     outline: rgb(209, 209, 209) none 0px;
     padding: 6px 0px;
+    padding-right: auto;
+    padding-left: auto;
 }
 /*#playButton*/
 
