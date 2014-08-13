@@ -118,6 +118,10 @@ function loadAPI() {
     document.getElementById("listeners").innerHTML = "Listeners: " + listeners; 
     document.getElementById("time").innerHTML = currentTimeMinutes + ":" + currentTimeSeconds +
                                           "/" + endTimeMinutes     + ":" + endTimeSeconds;
+    
+    // Added this so it updates on pageload because my OCD was killing me
+    var playingPercentage = currentTime * 100 / endTime;
+    document.getElementById("playingBar").style.width = playingPercentage + "%";
 
     // Justifying the ~1 second time delay
     ++currentTime;
@@ -150,7 +154,7 @@ function loadAPI() {
          * We are now going to do the playing bar width adjustments.
          *   Percentage based and laws of threes
          */
-        var playingPercentage = currentTime * 100 / endTime;
+        playingPercentage = currentTime * 100 / endTime;
         document.getElementById("playingBar").style.width = playingPercentage + "%";
 
         if (currentTime > endTime) {
