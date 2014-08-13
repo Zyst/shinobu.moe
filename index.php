@@ -25,7 +25,7 @@
         </div>
 
         <div id="leftbottom">
-            <div id="lefturls">
+            <div id="bottomlefturls">
                 <div id="hidePHP" style="display: none;">
                     <?php
                         // while(true) {
