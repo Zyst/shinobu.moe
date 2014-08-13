@@ -51,8 +51,6 @@
                 <!-- Play button block start -->
                 <button id = "playButton" style="display:block">
                     Play Stream
-                    <br>
-                    <br>
                 </button>
 
                 <button id = "playButton" style="display:none">
