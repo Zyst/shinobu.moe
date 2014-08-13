@@ -1,13 +1,15 @@
 #My homepage
 
+Loads r/a/dio currently playing info. currently updates everything with JS and thus cannot 'change' tracks dynamically. Fixing that is one of the current goals.
+
 It cycles backgrounds randomly on load using togglerandomBG.js from the images numbered 1 - n in the /images folder.
 
-Hosted on shinobu.moe
+Hosted on [shinobu.moe](shinobu.moe)
 
 ##Current Goals:
 <ul>
-    <li>A button that launches Foobar with the r/a/dio stream or the r/a/dio stream in-browser after the button press</li>
-    <li>Ultimately auto-updates from API</li>
+    <li>A button that launches Foobar/AIMP3 with the r/a/dio stream or the r/a/dio stream in-browser after the button press</li>
+    <li>Ultimately auto-updates from API (Song Changes and time updates)</li>
     <li>Possibly a mobile/smaller resolution version, as this is my personal site it doesn't really display well with small resolutions.</li>
 </ul>
 
@@ -27,6 +29,8 @@ Hosted on shinobu.moe
 
 
 ## Screenshots
+
+There are now old, will update them soon. 
 
 ![alt tag](http://puu.sh/aNE83/f2b97ab2ba.jpg)
 
