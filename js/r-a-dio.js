@@ -152,7 +152,6 @@ function loadAPI() {
             clearInterval(countUp);
         }
     }
-
 }
 
 

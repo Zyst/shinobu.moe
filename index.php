@@ -28,28 +28,22 @@
             <div id="bottomlefturls">
                 <div id="hidePHP" style="display: none;">
                     <?php
-                        // while(true) {
-                            $chandle = curl_init();
-                            $url = "http://r-a-d.io/api";
-                            curl_setopt($chandle, CURLOPT_URL, $url);
-                            curl_setopt($chandle, CURLOPT_RETURNTRANSFER, 1);
-                            curl_setopt($chandle, CURLOPT_CONNECTTIMEOUT, 5);
+                        $chandle = curl_init();
+                        $url = "http://r-a-d.io/api";
+                        curl_setopt($chandle, CURLOPT_URL, $url);
+                        curl_setopt($chandle, CURLOPT_RETURNTRANSFER, 1);
+                        curl_setopt($chandle, CURLOPT_CONNECTTIMEOUT, 5);
 
-                            $curlResult = curl_exec($chandle);
-                            $decodedString = html_entity_decode($curlResult, ENT_COMPAT, 'UTF-8');
+                        $curlResult = curl_exec($chandle);
+                        $decodedString = html_entity_decode($curlResult, ENT_COMPAT, 'UTF-8');
 
-                            echo $decodedString;
-
-                            curl_close($chandle);
-                            // sleep(10);
-
-
-                        // }
+                        echo $decodedString;
+                        curl_close($chandle);
                     ?>
                 </div>
                 
                 <!-- Play button block start -->
-                <button id = "playButton" style="display:block">
+                <button id = "playButton" style="display:none">
                     Play Stream
                 </button>
 
