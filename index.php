@@ -59,7 +59,6 @@
                 <!-- Play button block end   -->
                 
                 <!-- Now playing block start -->
-                <br>
                 <div id = "nowPlaying" class="playing"></div>
                 <!-- Now playing block end   -->
 
