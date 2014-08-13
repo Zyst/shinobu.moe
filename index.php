@@ -49,8 +49,13 @@
                 </div>
                 
                 <!-- Play button block start -->
-                <button id = "playButton">
+                <button id = "playButton" style="display:block">
                     Play Stream
+                    <br>
+                </button>
+
+                <button id = "playButton" style="display:none">
+                    Stop Stream
                     <br>
                 </button>
 

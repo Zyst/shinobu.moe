@@ -213,7 +213,7 @@ a {
 }
 /*#insideBar*/
 
-#playButton {
+.playButton {
     color: rgb(209, 209, 209);
     cursor: pointer;
     display: block;
