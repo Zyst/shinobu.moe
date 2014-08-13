@@ -18,7 +18,7 @@ Hosted on [shinobu.moe](shinobu.moe)
     <li>Base Site</li>
     <li>404 Page</li>
     <li>PHP cURL script to obtain info from the r/a/dio api</li>
-    <li>JS to display the aforementioned information (WIP)</li>
+    <li>JS to display the aforementioned information</li>
     <li>Now Playing r/a/dio</li>
     <li>DJ Box with images r/a/dio</li>
     <li>Listener Count</li>
