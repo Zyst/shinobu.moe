@@ -129,6 +129,11 @@ function loadAPI() {
      * Increases time in 1 second increments
      * @return {void} Will just keep going until
      *                  it's equal to endtime.
+     *
+     * This also handles the playing bar now.
+     *   It multiplies by laws of threes to get percentages,
+     *     so it multiplies Current Time by 100 and divides it by Endtime.
+     * 
      */
     function increaseTime() {
         currentTimeMinutes = Math.floor(currentTime / 60);
@@ -167,7 +172,7 @@ function changeImage(picture) {
  *                          Second case: 0+X with X = input
  */
 function zeroPadding(seconds) {
-
+    
     seconds = String(seconds);
 
     if (seconds.length > 1) {
