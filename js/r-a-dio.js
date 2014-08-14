@@ -108,7 +108,6 @@ function loadAPI() {
     var endTimeMinutes = Math.floor(endTime / 60);
     var endTimeSeconds = endTime % 60;
     // We'll add a 0 pad
-    // endTimeSeconds = String(endTimeSeconds);
     endTimeSeconds = zeroPadding(endTimeSeconds);   
 
     /**
