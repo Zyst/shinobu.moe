@@ -157,12 +157,19 @@ function loadAPI() {
          *   Percentage based and laws of threes
          */
         if (endTime > 0) {
+            // If the 'endTime' of song is above 0 update as normal
             playingPercentage = currentTime * 100 / endTime;
         } else {
+            // If the endTime is 0 which some DJs do pretty often
+            //   it'll just show a full bar. This is mostly a stylistic choice.
             playingPercentage = 100;
         }
         document.getElementById("playingBar").style.width = playingPercentage + "%";
 
+        // If time reaches end time this stops.
+        //   It also makes sure endtime is not zero so it keeps going even if
+        //     DJ didn't pass time metadata or for whatever reason that happens.
+        //     otherwise it gets stuck after the first update when time is 0
         if ((currentTime > endTime) && (endTime > 0)) {
             clearInterval(countUp);
         }
