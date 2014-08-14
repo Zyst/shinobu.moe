@@ -156,10 +156,14 @@ function loadAPI() {
          * We are now going to do the playing bar width adjustments.
          *   Percentage based and laws of threes
          */
-        playingPercentage = currentTime * 100 / endTime;
+        if (endTime > 0) {
+            playingPercentage = currentTime * 100 / endTime;
+        } else {
+            playingPercentage = 100;
+        }
         document.getElementById("playingBar").style.width = playingPercentage + "%";
 
-        if (currentTime > endTime) {
+        if ((currentTime > endTime) && (endTime > 0)) {
             clearInterval(countUp);
         }
     }
