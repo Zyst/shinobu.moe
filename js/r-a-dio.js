@@ -35,6 +35,8 @@ function loadAPI() {
         changeImage("../images/DJs/Shotacon.png");
     } else if (DJ == "Kilim") {
         changeImage("../images/DJs/Kilim.png");
+    } else if (DJ == "Kethsar") {
+        changeImage("../images/DJs/Kethsar.png");
     } else if (DJ == "DigitalHoarder") {
         changeImage("../images/DJs/DigitalHoarder.png")
     } else if (DJ == "ed") {
