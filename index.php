@@ -121,7 +121,7 @@
                     <a class="urlcolor" href="https://ankiweb.net/shared/decks/">Anki Shared Decks</a><br>
                     <a class="urlcolor" href="https://docs.google.com/document/d/1G5C7fCe07CDzYalZYZObzxv_fhw7RUNsLHiMAY-t7FA">DJT Guide</a><br>
                     <a class="urlcolor" href="https://docs.google.com/spreadsheet/lv?key=0Agk2IH0ZXhn7dDNmSW1BVFU5dVgyOHkzWjU4b2l2dkE">DJT Reading Guide</a><br>
-                    <a class="urlcolor" href="http://pastebin.com/w0gRFM0c">DJT Pastebin</a>
+                    <a class="urlcolor" href="http://shinobu.moe/DJT/">DJT Pastebin</a>
                 </div>
             </div>
         </div>
