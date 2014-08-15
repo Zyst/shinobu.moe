@@ -60,7 +60,7 @@ function loadAPI() {
     listeners = String(listeners);
     listeners = listeners.replace(/.*\":/, "");
     listeners = listeners.replace(/,.*/, "");
-    
+
     // Time Area
     var startTime = radioAPIString.match("\"isstreamdesk\":.*,\"end_time\"");
     var currentTime = radioAPIString.match("\"current\":.*,\"queue\"");
@@ -73,7 +73,7 @@ function loadAPI() {
     startTime = parseInt(startTime);
     // We get startTime, we will use this as a base to calculate
     //   time in actual minutes and seconds.
-  
+
     // Current Time Area
     currentTime = String(currentTime);
     currentTime = currentTime.replace(/.*\":/, "");
@@ -108,7 +108,7 @@ function loadAPI() {
     var endTimeMinutes = Math.floor(endTime / 60);
     var endTimeSeconds = endTime % 60;
     // We'll add a 0 pad
-    endTimeSeconds = zeroPadding(endTimeSeconds);   
+    endTimeSeconds = zeroPadding(endTimeSeconds);
 
     /**
      * Updates the inner html using the black
@@ -116,10 +116,10 @@ function loadAPI() {
      */
     document.getElementById("nowPlaying").innerHTML = nowPlaying;
     document.getElementById("DJ").innerHTML = DJ;
-    document.getElementById("listeners").innerHTML = "Listeners: " + listeners; 
+    document.getElementById("listeners").innerHTML = "Listeners: " + listeners;
     document.getElementById("time").innerHTML = currentTimeMinutes + ":" + currentTimeSeconds +
                                           "/" + endTimeMinutes     + ":" + endTimeSeconds;
-    
+
     // Added this so it updates on pageload because my OCD was killing me
     var playingPercentage = currentTime * 100 / endTime;
     document.getElementById("playingBar").style.width = playingPercentage + "%";
@@ -138,7 +138,7 @@ function loadAPI() {
      * This also handles the playing bar now.
      *   It multiplies by laws of threes to get percentages,
      *     so it multiplies Current Time by 100 and divides it by Endtime.
-     * 
+     *
      */
     function increaseTime() {
         currentTimeMinutes = Math.floor(currentTime / 60);
@@ -188,7 +188,7 @@ function changeImage(picture) {
  *                          Second case: 0+X with X = input
  */
 function zeroPadding(seconds) {
-    
+
     seconds = String(seconds);
 
     if (seconds.length > 1) {
@@ -199,5 +199,3 @@ function zeroPadding(seconds) {
         return padded;
     }
 }
-
-

@@ -41,7 +41,7 @@
                         curl_close($chandle);
                     ?>
                 </div>
-                
+
                 <!-- Play button block start -->
                 <button id = "playButton" style="display:none">
                     Play Stream
@@ -51,7 +51,7 @@
                     Stop Stream
                 </button>
                 <!-- Play button block end   -->
-                
+
                 <!-- Now playing block start -->
                 <div id = "nowPlaying" class="playing"></div>
                 <!-- Now playing block end   -->
