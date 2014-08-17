@@ -43,6 +43,8 @@ function loadAPI() {
         changeImage("../images/DJs/ed.png");
     } else if (DJ == "Eggmun") {
         changeImage("../images/DJs/Eggmun.png");
+    } else if (DJ == "Claud") {
+        changeImage("../images/DJs/Claud.png");
     } else if (DJ == "Ekureiru") {
         changeImage("../images/DJs/Ekureiru.png");
     } else if (DJ == "Kilim") {
