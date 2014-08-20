@@ -30,21 +30,7 @@ Hosted on [shinobu.moe](shinobu.moe)
 
 ## Screenshots
 
-There are now old, will update them soon. 
-
-![alt tag](http://puu.sh/aNE83/f2b97ab2ba.jpg)
-
-![alt tag](http://puu.sh/aNE0s/5564224226.jpg)
-
-![alt tag](http://puu.sh/aNE6T/1597ed61c6.jpg)
-
-![alt tag](http://puu.sh/aNE5H/e6f6f21454.jpg)
-
-![alt tag](http://puu.sh/aNE3k/fe6cfc441c.jpg)
-
-![alt tag](http://puu.sh/aNE4z/8f2e52acf9.jpg)
-
-![alt tag](http://puu.sh/aNE23/c4172bafa3.jpg)
+![alt tag](http://puu.sh/b12Nw/ee8632fac8.jpg)
 
 
 Distributed under the [MIT License](http://opensource.org/licenses/MIT) feel free to use this code however you want.
