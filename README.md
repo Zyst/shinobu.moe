@@ -30,6 +30,8 @@ Hosted on [shinobu.moe](shinobu.moe)
 
 ## Screenshots
 
+![alt tag](http://puu.sh/b19va/279952fbf2.jpg)
+
 ![alt tag](http://puu.sh/b12Nw/ee8632fac8.jpg)
 
 
