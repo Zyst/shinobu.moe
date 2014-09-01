@@ -106,7 +106,7 @@
                     <a class="urlcolor" href="http://www.twitch.tv/">Twitch</a><br>
                     <a class="urlcolor" href="http://www.ustream.tv/channel/mogra1">MOGRA</a><br>
                     <a class="urlcolor" href="http://livechart.me/">Ani Countdown</a><br>
-                    <a class="urlcolor" href="http://sleepyti.me/">Sleepyti.me</a>
+                    <a class="urlcolor" href="http://bato.to/myfollows">Batoto</a>
                 </div>
                 <div class="divurls">
                     <strong>Botnet:</strong><br>
@@ -128,7 +128,7 @@
                     <strong>Godlike:</strong><br>
                     <a class="urlcolor" href="http://loli.dance/">Illya Dance</a><br>
                     <a class="urlcolor" href="http://420.moe/">420.moe</a><br>
-                    <br>
+                    <a class="urlcolor" href="http://sleepyti.me/">Sleepyti.me</a><br>
                     <br>
                 </div>
             </div>
