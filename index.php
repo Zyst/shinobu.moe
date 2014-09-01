@@ -118,10 +118,16 @@
                 </div>
                 <div class="divurls">
                     <strong>Japanese:</strong><br>
-                    <a class="urlcolor" href="https://ankiweb.net/shared/decks/">Anki Shared Decks</a><br>
+                    <a class="urlcolor" href="https://ankiweb.net/decks/">Anki Decks</a><br>
                     <a class="urlcolor" href="https://docs.google.com/document/d/1G5C7fCe07CDzYalZYZObzxv_fhw7RUNsLHiMAY-t7FA">DJT Guide</a><br>
-                    <a class="urlcolor" href="https://docs.google.com/spreadsheet/lv?key=0Agk2IH0ZXhn7dDNmSW1BVFU5dVgyOHkzWjU4b2l2dkE">DJT Reading Guide</a><br>
+                    <a class="urlcolor" href="https://docs.google.com/spreadsheet/lv?key=0Agk2IH0ZXhn7dDNmSW1BVFU5dVgyOHkzWjU4b2l2dkE">DJT Reading</a><br>
                     <a class="urlcolor" href="http://shinobu.moe/DJT/">DJT Pastebin</a>
+                </div>
+
+                <div class="divurls">
+                    <strong>Godlike:</strong><br>
+                    <a class="urlcolor" href="http://420.moe/">420.moe</a><br>
+                    <a class="urlcolor" href="http://loli.dance/">Illya Dance</a><br>
                 </div>
             </div>
         </div>
