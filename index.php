@@ -128,6 +128,8 @@
                     <strong>Godlike:</strong><br>
                     <a class="urlcolor" href="http://loli.dance/">Illya Dance</a><br>
                     <a class="urlcolor" href="http://420.moe/">420.moe</a><br>
+                    <br>
+                    <br>
                 </div>
             </div>
         </div>
