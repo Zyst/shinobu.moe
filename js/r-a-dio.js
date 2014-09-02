@@ -53,6 +53,8 @@ function loadAPI() {
         changeImage("../images/DJs/oru.png");
     } else if (DJ == "Wessie") {
         changeImage("../images/DJs/Wessie.png");
+    } else if (DJ == "DJ Saotome") {
+        changeImage("../images/DJs/Saotome.png");
     } else {
         changeImage("../images/DJs/shinobu.png");
     }
