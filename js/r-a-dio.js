@@ -55,6 +55,8 @@ function loadAPI() {
         changeImage("../images/DJs/Wessie.png");
     } else if (DJ == "DJ Saotome") {
         changeImage("../images/DJs/Saotome.png");
+    } else if (DJ == "Chizu-nee") {
+        changeImage("../images/DJs/Chizu-nee.png");
     } else {
         changeImage("../images/DJs/shinobu.png");
     }
