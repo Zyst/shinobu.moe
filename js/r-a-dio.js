@@ -57,6 +57,8 @@ function loadAPI() {
         changeImage("../images/DJs/Saotome.png");
     } else if (DJ == "Chizu-nee") {
         changeImage("../images/DJs/Chizu-nee.png");
+    } else if (DJ == "TemporalMechanic") {
+        changeImage("../images/DJs/TemporalMechanic.png");
     } else {
         changeImage("../images/DJs/shinobu.png");
     }
