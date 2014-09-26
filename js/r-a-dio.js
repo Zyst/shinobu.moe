@@ -61,7 +61,7 @@ function loadAPI() {
         changeImage("../images/DJs/TemporalMechanic.png");
     } else if (DJ == "DJ Rocketwork") {
         changeImage("../images/DJs/DJ_Rocketwork.png");
-    } else if (DJ == "kuma-kun") {
+    } else if (DJ == "Kuma-kun") {
         changeImage("../images/DJs/Kuma-kun.png");
     } else {
         changeImage("../images/DJs/shinobu.png");
