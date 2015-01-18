@@ -29,7 +29,7 @@
                 <div id="hidePHP" style="display: none;">
                     <?php
                         $chandle = curl_init();
-                        $url = "http://r-a-d.io/api";
+                        $url = "https://r-a-d.io/api";
                         curl_setopt($chandle, CURLOPT_URL, $url);
                         curl_setopt($chandle, CURLOPT_RETURNTRANSFER, 1);
                         curl_setopt($chandle, CURLOPT_CONNECTTIMEOUT, 5);
