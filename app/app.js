@@ -1,4 +1,4 @@
-angular.module("shinobuApp")
+angular.module("shinobuApp", [])
 
     .controller("mainController", function() {
 
