@@ -16,8 +16,6 @@ angular.module("shinobuApp", [])
                 // to vm.radio
                 vm.radio = data;
                 
-                vm.np = data.np;
-                
             });
 
     });
