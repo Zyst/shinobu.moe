@@ -12,11 +12,11 @@ angular.module("shinobuApp", [])
         $http.get("https://r-a-d.io/api")
             .then(function(data) {
                 
-                // Bind the information we recieve
+                // Bind the information we receive
                 // to vm.radio
                 vm.radio = data;
                 
-                vm.nowPlaying = data.main.np;
+                vm.nowPlaying = data.np;
                 
             });
 
