@@ -1,13 +1,13 @@
 ErrorDocument 404 /404page.html 
 
-<IfModule mod_headers.c>
-    # MONTH
-    <FilesMatch "\.(jpg|jpeg|png|gif|swf)$">
-        Header set Cache-Control "max-age=2419200, public"
-    </FilesMatch>
-
-    # BI-WEEK
-    <FilesMatch "\.(js|css|swf)$">
-        Header set Cache-Control "max-age=1209600"
-    </FilesMatch>
-</IfModule>
+#<IfModule mod_headers.c>
+#    # MONTH
+#    <FilesMatch "\.(jpg|jpeg|png|gif|swf)$">
+#        Header set Cache-Control "max-age=2419200, public"
+#    </FilesMatch>
+#
+#    # BI-WEEK
+#    <FilesMatch "\.(js|css|swf)$">
+#        Header set Cache-Control "max-age=1209600"
+#    </FilesMatch>
+#</IfModule>
