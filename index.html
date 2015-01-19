@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="images/4chon.ico">
+        <title>Love</title>
+
+        <base href="/">
+
+        <!-- CSS  -->
+        <!-- Load bootstrap from CDN and custom CSS -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.1/paper/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- JS -->
+        <!-- Load angular via CDN -->
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+
+        <!-- Main Angular app files -->
+        <script src="app/app.js"></script>
+    </head>
+
+    <body ng-app="shinobuApp" ng-controller="mainController as main">
+        <div class="jumbotron">
+            <h2>{{ main.helloWorld }}</h2>
+        </div>
+    </body>
+</html>
