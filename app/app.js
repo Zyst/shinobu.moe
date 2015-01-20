@@ -20,7 +20,7 @@ angular.module("shinobuApp", [])
                 
                 // Bind the information we receive
                 // to vm.radio
-                vm.radio = data.toString();
+                vm.radio = data;
                 
                 var object = JSON.parse(vm.radio);
                 
