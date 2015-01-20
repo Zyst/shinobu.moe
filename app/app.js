@@ -22,9 +22,7 @@ angular.module("shinobuApp", [])
                 // to vm.radio
                 vm.radio = data;
                 
-                var object = JSON.parse(vm.radio);
-                
-                nowPlaying = object.np;
+                nowPlaying = data.main[0].np;
                 
             });
 
