@@ -42,7 +42,9 @@
                     <div id="bottomlefturls">
 
                         <!-- Now playing block start -->
-                        <div id = "nowPlaying" class="playing"></div>
+                        <div id = "nowPlaying" class="playing">
+                            {{ main.nowPlaying }}
+                        </div>
                         <!-- Now playing block end   -->
 
                         <!-- DJ block start -->
@@ -51,6 +53,7 @@
                                 <!-- Image goes here -->
                                 <img id="IMG_3" src="/images/DJs/shinobu.png" alt='' />
                                 <h4 id="DJ">
+                                    {{ main.dj }}
                                 </h4>
                             </div>
                         </div>
@@ -65,8 +68,12 @@
 
                         <!-- Listeners and time block start -->
                         <div id = "listenersAndTime">
-                            <span id="listeners"></span>
-                            <span id="time"></span>
+                            <span id="listeners">
+                                {{ main.listeners }}
+                            </span>
+                            <span id="time">
+                                00:00/00:00
+                            </span>
                         </div>
                         <!-- Listeners and time block end   -->
                     </div>
