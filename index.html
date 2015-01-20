@@ -23,17 +23,12 @@
 
     <body ng-app="shinobuApp" ng-controller="mainController as main">
         <div class="jumbotron container center-block">
-            <style>
-                .p {
-                    color: black;
-                }
-            </style>
-            <p>Now playing: {{ main.nowPlaying }}</p>
-            <p>DJ: {{ main.dj }}</p>
-            <p>Listeners: {{ main.listeners }}</p>
-            <p>Current Time: {{ main.currentTime }} </p>
-            <p>Start Time: {{ main.startTime }}</p>
-            <p>End Time: {{ main.endTime }}</p>
+            <p style="color: black; padding-left: 20px;">Now playing: {{ main.nowPlaying }}</p>
+            <p style="color: black; padding-left: 20px;">DJ: {{ main.dj }}</p>
+            <p style="color: black; padding-left: 20px;">Listeners: {{ main.listeners }}</p>
+            <p style="color: black; padding-left: 20px;">Current Time: {{ main.currentTime }} </p>
+            <p style="color: black; padding-left: 20px;">Start Time: {{ main.startTime }}</p>
+            <p style="color: black; padding-left: 20px;">End Time: {{ main.endTime }}</p>
         </div>
     </body>
 </html>
