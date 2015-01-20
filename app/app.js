@@ -22,7 +22,7 @@ angular.module("shinobuApp", [])
                 // to vm.radio
                 vm.radio = data;
                 
-                var object = JSON && JSON.parse(data) || $.parseJSON(data);
+                var object = JSON.parse(data);
                 
                 nowPlaying = object.np;
                 
