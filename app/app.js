@@ -4,13 +4,7 @@ angular.module("shinobuApp", [])
     .controller("mainController", function($http) {
 
         // Bind this to view model (vm)
-        var vm          = this;
-        var nowPlaying  = this,
-            dj          = this,
-            listeners   = this,
-            currentTime = this,
-            startTime   = this,
-            endTime     = this;
+        var vm = this;
 
         vm.helloWorld = "Success!";
         
@@ -21,18 +15,13 @@ angular.module("shinobuApp", [])
                 // Bind the information we receive
                 // to vm.radio
                 vm.radio = data.data;
-                
-                nowPlaying = vm.radio.main.np;
-                
-                dj = vm.radio.main.dj.djname;
-                
-                listeners = vm.radio.main.listeners;
-                
-                currentTime = vm.radio.main.current;
-                
-                startTime = vm.radio.main.start_time;
 
-                endTime = vm.radio.main.end_time;
+                vm.nowPlaying  = vm.radio.main.np;
+                vm.dj          = vm.radio.main.dj.djname;
+                vm.listeners   = vm.radio.main.listeners;
+                vm.currentTime = vm.radio.main.current;
+                vm.startTime   = vm.radio.main.start_time;
+                vm.endTime     = vm.radio.main.end_time;
                 
             });
 
