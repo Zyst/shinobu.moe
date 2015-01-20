@@ -5,6 +5,12 @@ angular.module("shinobuApp", [])
 
         // Bind this to view model (vm)
         var vm = this;
+        var nowPlaying,
+            dj,
+            listeners,
+            currentTime,
+            startTime,
+            endTime;
 
         vm.helloWorld = "Success!";
         
@@ -16,7 +22,9 @@ angular.module("shinobuApp", [])
                 // to vm.radio
                 vm.radio = data;
                 
-                vm.nowPlaying = data.main.np;
+                var object = JSON && JSON.parse(data) || $.parseJSON(data);
+                
+                nowPlaying = object.np;
                 
             });
 
