@@ -20,7 +20,7 @@ angular.module("shinobuApp", [])
                 
                 // Bind the information we receive
                 // to vm.radio
-                vm.radio = data.main;
+                vm.radio = data;
                 
                 nowPlaying = data.main[0].np;
                 
