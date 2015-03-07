@@ -73,6 +73,11 @@ a {
     padding-right: 5%;
 }
 
+.bootstrapPadOverride {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 /* I outright took these from r-a-d.io,
     claim 0 credit. */
 
