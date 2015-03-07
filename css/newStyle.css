@@ -9,6 +9,13 @@ a {
     text-decoration: none;
 }
 
+.topcolor{
+    opacity:0.5;
+    transition: opacity 0.5s;
+    padding-left:16px;
+    padding-right:16px;
+}
+
 .urlcolor{
     opacity:0.5;
     transition: opacity 0.5s;
