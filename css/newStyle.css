@@ -14,7 +14,6 @@ a {
     transition: opacity 0.5s;
     padding-left:16px;
     padding-right:16px;
-    text-decoration: none;
 }
 
 .urlcolor{
@@ -43,6 +42,7 @@ a {
     padding-top: 20px;
     font: 40px'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
     text-align: center;
+    text-decoration: none;
 }
 
 /* MID BG */
