@@ -23,12 +23,12 @@ a {
 
 .urlcolor:link {color: #eeeeee;}
 .urlcolor:visited{color: #eeeeee;}
-.urlcolor:hover{color: #eeeeee; opacity:1.0;}
+.urlcolor:hover{color: #eeeeee; opacity:1.0; text-decoration: none;}
 .urlcolor:active{color: #eeeeee;}
 
 .topcolor:link {color: #e7e7e7;}
 .topcolor:visited{color: #e7e7e7;}
-.topcolor:hover{color: #e7e7e7; opacity:1.0;}
+.topcolor:hover{color: #e7e7e7; opacity:1.0; text-decoration: none;}
 .topcolor:active{color: #e7e7e7;}
 
 /* LEFTMOST BG */
@@ -42,7 +42,6 @@ a {
     padding-top: 20px;
     font: 40px'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
     text-align: center;
-    text-decoration: none;
 }
 
 /* MID BG */
