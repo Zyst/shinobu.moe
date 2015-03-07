@@ -9,6 +9,11 @@ a {
     text-decoration: none;
 }
 
+.urlcolor{
+    opacity:0.5;
+    transition: opacity 0.5s;
+}
+
 .urlcolor:link {color: #eeeeee;}
 .urlcolor:visited{color: #eeeeee;}
 .urlcolor:hover{color: #eeeeee; opacity:1.0;}
