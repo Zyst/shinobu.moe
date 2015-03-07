@@ -8,8 +8,15 @@ a {
     text-decoration: none;
 }
 
-.leftbg {
+/* LEFTMOST BG */
+.leftBackground {
     background-color: rgba(25, 25, 25, 1);
+}
+
+/* MID BG */
+.middleBackground {
+    background-color: #282828;
+    opacity: 1.0;
 }
 
 .bootstrapPadOverride {
