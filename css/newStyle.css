@@ -15,8 +15,7 @@ a {
 
 /* MID BG */
 .middleBackground {
-    background-color: #282828;
-    opacity: 1.0;
+    background-color: rgba(40, 40, 40, 1);
 }
 
 .bootstrapPadOverride {
