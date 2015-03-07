@@ -53,9 +53,7 @@ a {
 .middleUrls{
     margin-top:20px;
     margin-bottom:20px;
-    padding:20px
-    min-width: 150px;
-    min-height:170px;
+    padding:20px;
     float: left;
     font-size:20px;
 }
