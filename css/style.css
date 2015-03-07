@@ -4,9 +4,20 @@ body {
     color: #e7e7e7;
 }
 
+/* URL COLORS */
 a {
     text-decoration: none;
 }
+
+.urlcolor:link {color: #eeeeee;}
+.urlcolor:visited{color: #eeeeee;}
+.urlcolor:hover{color: #eeeeee; opacity:1.0;}
+.urlcolor:active{color: #eeeeee;}
+
+.topcolor:link {color: #e7e7e7;}
+.topcolor:visited{color: #e7e7e7;}
+.topcolor:hover{color: #e7e7e7; opacity:1.0;}
+.topcolor:active{color: #e7e7e7;}
 
 #leftbg {
     background-color: rgba(25, 25, 25, 1);
