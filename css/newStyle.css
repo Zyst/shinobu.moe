@@ -1,0 +1,13 @@
+body {
+    background-color: #4c4c4c;
+    font: 13px'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
+    color: #e7e7e7;
+}
+
+a {
+    text-decoration: none;
+}
+
+#leftbg {
+    background-color: rgba(25, 25, 25, 1);
+}
