@@ -10,7 +10,8 @@
 
         <!-- CSS  -->
         <!-- Load bootstrap from CDN and custom CSS -->
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.1/paper/bootstrap.min.css">
+        <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.1/paper/bootstrap.min.css">-->
+        <link rel="stylesheet" href="assets/bootstrap/bootstrap.css">
         <link rel="stylesheet" href="css/newStyle.css">
 
         <!-- JS -->
@@ -22,20 +23,42 @@
         <script src="app/app.js"></script>
     </head>
     <body ng-app="shinobuApp" ng-controller="mainController as main">
+
         <div class="container-fluid">
             <div class="row">
 
                 <!-- Leftmost bar content -->
-                <div  style="height: 100%" class="col-md-3 bootstrapPadOverride">
+                <div class="col-md-3 bootstrapPadOverride">
                     <div class="leftBackground">
 
-                        One
+                        <div id="leftUrls">
+                            <p class="leftUrls">
+                                <strong>4chan</strong>
+                            </p>
+                            <p class="leftUrls">
+                                <a class="topcolor" href="https://boards.4chan.org/a/">/a/</a>
+                                <a class="topcolor" href="https://boards.4chan.org/g/">/g/</a>
+                                <a class="topcolor" href="https://boards.4chan.org/tg/">/tg/</a>
+                            </p>
+                            <p class="leftUrls">
+                                <a class="topcolor" href="https://app.roll20.net/home">Roll20</a>
+                            </p>
+                            <p class="leftUrls">
+                                <a class="topcolor" href="https://www.youtube.com/">Youtube</a>
+                            </p>
+                            <p class="leftUrls">
+                                <a class="topcolor" href="https://mail.google.com/">Gmail</a>
+                            </p>
+                            <p class="leftUrls">
+                                <a class="topcolor" href="http://bbsistema.tecmilenio.edu.mx/">School</a>
+                            </p>
+                        </div>
 
                     </div>
                 </div>
 
                 <!-- Middle bar content -->
-                <div style="height: 100%;" class="col-md-3 bootstrapPadOverride">
+                <div class="col-md-3 bootstrapPadOverride">
                     <div class="middleBackground">
 
                         Two
@@ -54,5 +77,6 @@
 
             </div>
         </div>
+
     </body>
 </html>
