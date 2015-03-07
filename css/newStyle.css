@@ -31,11 +31,10 @@ a {
 .topcolor:hover{color: #e7e7e7; opacity:1.0; text-decoration: none;}
 .topcolor:active{color: #e7e7e7;}
 
-/* LEFTMOST BG */
+/* LEFTMOST BOX */
 .leftBackground {
     background-color: rgba(25, 25, 25, 1);
     padding-top: 20px;
-    display: flex;
 }
 
 .leftUrls {
@@ -45,16 +44,17 @@ a {
     text-align: center;
 }
 
-/* MID BG */
+/* MID BOX */
 .middleBackground {
     background-color: rgba(40, 40, 40, 1);
     opacity: 1.0;
-    display: flex;
 }
 
 .middleUrls{
     margin-top:20px;
     margin-bottom:20px;
+    margin-left: auto;
+    margin-right: auto;
     padding:20px;
     float: left;
     font-size:20px;
