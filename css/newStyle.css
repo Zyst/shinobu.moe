@@ -11,3 +11,8 @@ a {
 #leftbg {
     background-color: rgba(25, 25, 25, 1);
 }
+
+.bootstrapPadOverride {
+    padding-left: 0;
+    padding-right: 0;
+}
