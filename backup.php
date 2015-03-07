@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 
         <link rel="icon" href="images/4chon.ico">
-        <link rel='stylesheet' href='css/style.css' type='text/css'>
+        <link rel='stylesheet' href='css/style%20-%20Copy.css' type='text/css'>
         <script src="js/togglerandomBG.js"></script>
         <script src="js/r-a-dio.js"></script>
         <title>Love</title>
