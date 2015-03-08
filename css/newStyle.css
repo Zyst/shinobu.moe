@@ -35,7 +35,7 @@ a {
 .leftBackground {
     background-color: rgba(25, 25, 25, 1);
     padding-top: 20px;
-    height: auto;
+    height: 100%;
 }
 
 .leftUrls {
@@ -49,6 +49,7 @@ a {
 .middleBackground {
     background-color: rgba(40, 40, 40, 1);
     opacity: 1.0;
+    height: 100%;
 }
 
 .middleUrls{
