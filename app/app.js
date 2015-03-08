@@ -32,13 +32,5 @@ angular.module("shinobuApp", [])
 
                 vm.djImage = "https://r-a-d.io/api/dj-image/" + vm.djId;
 
-                //$http.get(djIdForCall)
-                //    .then(function(imageResponse) {
-                //
-                //        // Bind the information we receive
-                //        // to vm.djImage
-                //        vm.djImage = imageResponse;
-                //
-                //    });
             });
     });
