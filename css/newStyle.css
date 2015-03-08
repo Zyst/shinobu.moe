@@ -1,8 +1,11 @@
 html, body {
+    height: 100%;
+}
+
+body {
     background-color: #4c4c4c;
     font:13px "Open Sans", "Segoe UI", "Verdana", "Arial";
     color: #e7e7e7;
-    height: 100%;
     display: flex;
 }
 
@@ -37,7 +40,6 @@ a {
 .leftBackground {
     background-color: rgba(25, 25, 25, 1);
     padding-top: 20px;
-    height: 100%;
     flex: 1;
 }
 
@@ -52,7 +54,6 @@ a {
 .middleBackground {
     background-color: rgba(40, 40, 40, 1);
     opacity: 1.0;
-    height: 100%;
     flex: 1;
 }
 
