@@ -25,7 +25,7 @@ angular.module("shinobuApp", [])
 
             });
 
-        var djIdForCall = JSON.parse(vm.dj);
+        var djIdForCall = JSON.stringify(vm.dj);
 
         alert(djIdForCall);
 
