@@ -30,15 +30,15 @@ angular.module("shinobuApp", [])
                 // Once we get the previous data
                 var djIdForCall = JSON.stringify(vm.dj);
 
-                djIdForCall = "https://r-a-d.io/api/dj-image/" + vm.djId;
+                vm.djImage = "https://r-a-d.io/api/dj-image/" + vm.djId;
 
-                $http.get(djIdForCall)
-                    .then(function(imageResponse) {
-
-                        // Bind the information we receive
-                        // to vm.djImage
-                        vm.djImage = imageResponse;
-
-                    });
+                //$http.get(djIdForCall)
+                //    .then(function(imageResponse) {
+                //
+                //        // Bind the information we receive
+                //        // to vm.djImage
+                //        vm.djImage = imageResponse;
+                //
+                //    });
             });
     });
