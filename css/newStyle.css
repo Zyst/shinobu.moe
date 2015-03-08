@@ -35,6 +35,7 @@ a {
 .leftBackground {
     background-color: rgba(25, 25, 25, 1);
     padding-top: 20px;
+    height: auto;
 }
 
 .leftUrls {
