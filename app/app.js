@@ -4,7 +4,8 @@ angular.module("shinobuApp", [])
     .controller("mainController", function($http) {
 
         // Bind this to view model (vm)
-        var vm = this;
+        var vm             = this;
+        vm.existanceCheck  = (typeof vm.djImage != "undefined");
         
         // Make the API call for the main information
         $http.get("https://r-a-d.io/api")
