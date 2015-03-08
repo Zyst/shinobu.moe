@@ -55,7 +55,7 @@
                         </div>
 
                         <!-- R-A-D.IO AREA -->
-                        <div id="r-a-dio" class="leftUrls leftBackground" ng-if = "main.apiGet">
+                        <div id="r-a-dio" class="leftUrls" ng-if = "main.apiGet">
                             <!-- Now playing block start -->
                             <div id = "nowPlaying" class="playing">
                                 {{ main.nowPlaying }}
@@ -74,23 +74,25 @@
                             </div>
                             <!-- DJ block end   -->
 
-                            <!-- Playing bar start -->
-                            <div id="outsideBar">
-                                <div id="playingBar">
+                            <div class="leftBackground">
+                                <!-- Playing bar start -->
+                                <div id="outsideBar">
+                                    <div id="playingBar">
+                                    </div>
                                 </div>
-                            </div>
-                            <!-- Playing bar end   -->
+                                <!-- Playing bar end   -->
 
-                            <!-- Listeners and time block start -->
-                            <div id = "listenersAndTime">
+                                <!-- Listeners and time block start -->
+                                <div id="listenersAndTime">
                                 <span id="listeners">
                                     Listeners: {{ main.listeners }}
                                 </span>
                                 <span id="time">
                                     DJ id: {{ main.djId }}
                                 </span>
+                                </div>
+                                <!-- Listeners and time block end   -->
                             </div>
-                            <!-- Listeners and time block end   -->
                         </div>
                     </div>
                 </div>
