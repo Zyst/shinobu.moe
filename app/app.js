@@ -27,9 +27,8 @@ angular.module("shinobuApp", [])
 
             .then(function(data) {
 
-                // Once we get the previous data
-                var djIdForCall = JSON.stringify(vm.dj);
-
+                // We bind the image link once we get a response, because
+                // we can't bind this until we are sure we have the data
                 vm.djImage = "https://r-a-d.io/api/dj-image/" + vm.djId;
 
             });
