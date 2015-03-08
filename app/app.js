@@ -30,11 +30,7 @@ angular.module("shinobuApp", [])
                 // Once we get the previous data
                 var djIdForCall = JSON.stringify(vm.dj);
 
-                alert(djIdForCall);
-
                 djIdForCall = "https://r-a-d.io/api/dj-image/" + vm.djId;
-
-                alert(djIdForCall);
 
                 $http.get(djIdForCall)
                     .then(function(imageResponse) {
