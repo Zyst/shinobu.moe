@@ -5,7 +5,7 @@ angular.module("shinobuApp", [])
 
         // Bind this to view model (vm)
         var vm             = this;
-        vm.existanceCheck  = (typeof vm.djImage != "undefined");
+        vm.existanceCheck  = false;
         
         // Make the API call for the main information
         $http.get("https://r-a-d.io/api")
@@ -32,6 +32,6 @@ angular.module("shinobuApp", [])
                 // we can't bind this until we are sure we have the data
                 vm.djImage = "https://r-a-d.io/api/dj-image/" + vm.djId;
 
-                vm.existanceCheck  = (typeof vm.djImage != "undefined");
+                vm.existanceCheck  = true;
             });
     });
