@@ -30,7 +30,8 @@
                 <!-- Leftmost bar content -->
                 <div class="col-md-4 bootstrapPadOverride">
                     <div class="leftBackground">
-                        <div id="leftUrls">
+                        <!-- TOP LEFT LINKS -->
+                        <div id="leftUrls" class="leftUrls">
                             <p class="leftUrls">
                                 <strong>4chan</strong>
                             </p>
@@ -53,7 +54,42 @@
                             </p>
                         </div>
 
+                        <!-- R-A-D.IO AREA -->
+                        <div id="r-a-dio" class="leftUrls">
+                            <!-- Now playing block start -->
+                            <div id = "nowPlaying" class="playing">
+                                {{ main.nowPlaying }}
+                            </div>
+                            <!-- Now playing block end   -->
+
+                            <!-- DJ block start -->
+                            <div id="DIV_1">
+                                <div id="DIV_2">
+                                    <!-- Image goes here -->
+                                    <img id="IMG_3" src="/images/DJs/shinobu.png" alt='' />
+                                    <h4 id="DJ">
+                                    </h4>
+                                </div>
+                            </div>
+                            <!-- DJ block end   -->
+
+                            <!-- Playing bar start -->
+                            <div id="outsideBar">
+                                <div id="playingBar">
+                                </div>
+                            </div>
+                            <!-- Playing bar end   -->
+
+                            <!-- Listeners and time block start -->
+                            <div id = "listenersAndTime">
+                                <span id="listeners"></span>
+                                <span id="time"></span>
+                            </div>
+                            <!-- Listeners and time block end   -->
+                        </div>
                     </div>
+
+
                 </div>
 
                 <!-- Middle bar content -->
@@ -229,7 +265,7 @@
                                     </p>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>

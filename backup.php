@@ -28,17 +28,17 @@
             <div id="bottomlefturls">
                 <div id="hidePHP" style="display: none;">
                     <?php
-                        $chandle = curl_init();
-                        $url = "https://r-a-d.io/api";
-                        curl_setopt($chandle, CURLOPT_URL, $url);
-                        curl_setopt($chandle, CURLOPT_RETURNTRANSFER, 1);
-                        curl_setopt($chandle, CURLOPT_CONNECTTIMEOUT, 5);
+                    $chandle = curl_init();
+                    $url = "https://r-a-d.io/api";
+                    curl_setopt($chandle, CURLOPT_URL, $url);
+                    curl_setopt($chandle, CURLOPT_RETURNTRANSFER, 1);
+                    curl_setopt($chandle, CURLOPT_CONNECTTIMEOUT, 5);
 
-                        $curlResult = curl_exec($chandle);
-                        $decodedString = html_entity_decode($curlResult, ENT_COMPAT, 'UTF-8');
+                    $curlResult = curl_exec($chandle);
+                    $decodedString = html_entity_decode($curlResult, ENT_COMPAT, 'UTF-8');
 
-                        echo $decodedString;
-                        curl_close($chandle);
+                    echo $decodedString;
+                    curl_close($chandle);
                     ?>
                 </div>
 
@@ -81,7 +81,7 @@
                 </div>
                 <!-- Listeners and time block end   -->
             </div>
-
+        </div>
         <div id="alldivs">
             <div id="anotherdiv">
                 <div class="divurls">

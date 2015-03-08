@@ -66,8 +66,177 @@ a {
     float: none;
 }
 
-
 .bootstrapPadOverride {
     padding-left: 0;
     padding-right: 0;
 }
+
+/* I outright took these from r-a-d.io,
+    claim 0 credit. */
+
+#DIV_1 {
+    box-sizing: border-box;
+    color: rgb(120, 120, 120);
+    float: center;
+    height: 272px;
+    min-height: 1px;
+    position: absolute center;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none solid rgb(120, 120, 120);
+    width: 262.5px;
+    perspective-origin: 131.25px 136px;
+    transform-origin: 131.25px 136px;
+    border: 0px none rgb(120, 120, 120);
+    font: normal normal normal 16px/22.85714340209961px'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
+    outline: rgb(120, 120, 120) none 0px;
+    padding: 0px 15px;
+}
+/*#DIV_1*/
+
+#DIV_2 {
+    box-sizing: border-box;
+    color: rgb(120, 120, 120);
+    height: 250px;
+    text-decoration: none solid rgb(120, 120, 120);
+    width: 232.5px;
+    perspective-origin: 116.25px 125px;
+    transform-origin: 116.25px 125px;
+    background: rgb(27, 27, 27) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 1px solid rgba(27, 27, 27, 0.0980392);
+    border-radius: 4px 4px 4px 4px;
+    font: normal normal normal 16px/22.85714340209961px'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
+    margin: 0px 0px 22px;
+    outline: rgb(120, 120, 120) none 0px;
+    padding: 4px;
+    transition: all 0.2s ease-in-out 0s;
+}
+/*#DIV_2*/
+
+#IMG_3 {
+    box-sizing: border-box;
+    color: rgb(120, 120, 120);
+    display: block;
+    height: 180px;
+    max-height: 180px;
+    max-width: 100%;
+    text-decoration: none solid rgb(120, 120, 120);
+    vertical-align: middle;
+    width: 180px;
+    perspective-origin: 90px 90px;
+    transform-origin: 90px 90px;
+    border: 0px none rgb(120, 120, 120);
+    border-radius: 6px 6px 6px 6px;
+    font: normal normal normal 16px/22.85714340209961px'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
+    margin: 16px 21.25px 0px;
+    outline: rgb(120, 120, 120) none 0px;
+}
+/*#IMG_3*/
+
+#DJ {
+    box-sizing: border-box;
+    color: rgb(140, 140, 140);
+    height: 22px;
+    text-align: center;
+    text-decoration: none solid rgb(120, 120, 120);
+    width: 222.5px;
+    perspective-origin: 111.25px 11px;
+    transform-origin: 111.25px 11px;
+    border: 0px none rgb(120, 120, 120);
+    font: normal normal 500 20px/22px'Source Sans Pro Bold', Helvetica, Arial, sans-serif;
+    margin: 11px 0px;
+    outline: rgb(120, 120, 120) none 0px;
+}
+/*#DJ*/
+
+#outsideBar {
+    box-shadow: rgba(0, 0, 0, 0.0980392) 0px 1px 2px 0px inset;
+    box-sizing: border-box;
+    color: rgb(40, 40, 40);
+    height: 22px;
+    text-decoration: none solid rgb(40, 40, 40);
+    width: 90%;
+    perspective-origin: 277.5px 11px;
+    transform-origin: 277.5px 11px;
+    background: rgb(40, 40, 40) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(40, 40, 40);
+    border-radius: 4px 4px 4px 4px;
+    font: normal normal normal 16px/22.85714340209961px 'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
+    margin: 0px 0px 22px;
+    outline: rgb(40, 40, 40) none 0px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*#outsideBar*/
+
+#playingBar {
+    box-shadow: rgba(0, 0, 0, 0.14902) 0px -1px 0px 0px inset;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    float: left;
+    height: 22px;
+    text-align: center;
+    text-decoration: none solid rgb(255, 255, 255);
+    width: 0%;
+    perspective-origin: 23.4375px 11px;
+    transform-origin: 23.4375px 11px;
+    background: rgb(73, 102, 127) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    font: normal normal normal 14px/22px 'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    transition: width 0.9s ease 0s;
+}
+/*#insideBar*/
+
+#playButton {
+    color: rgb(209, 209, 209);
+    cursor: pointer;
+    display: block;
+    height: 34px;
+    text-decoration: none solid rgb(209, 209, 209);
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 262.5px;
+    perspective-origin: 131.25px 17px;
+    transform-origin: 131.25px 17px;
+    background: rgb(73, 102, 127) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 0px none rgb(209, 209, 209);
+    border-radius: 4px 4px 4px 4px;
+    font: normal normal normal 16px/22.85714340209961px 'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
+    margin: 0px;
+    outline: rgb(209, 209, 209) none 0px;
+    padding: 6px 0px;
+    text-align: center;
+    padding-right: auto;
+    padding-left: auto;
+    margin-right: 30%;
+    margin-left: 30%;
+}
+/*#playButton*/
+
+#listeners {
+    box-sizing: border-box;
+    color: rgb(153, 153, 153);
+    float: left;
+    padding-left: 30%;
+    text-align: center;
+    text-decoration: none solid rgb(153, 153, 153);
+    border: 0px none rgb(153, 153, 153);
+    font: normal normal normal 16px/22.85714340209961px'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
+    outline: rgb(153, 153, 153) none 0px;
+}
+/*#listeners*/
+
+#time {
+    box-sizing: border-box;
+    color: rgb(153, 153, 153);
+    float: right;
+    padding-right: 30%;
+    text-align: center;
+    text-decoration: none solid rgb(153, 153, 153);
+    border: 0px none rgb(153, 153, 153);
+    font: normal normal normal 16px/22.85714340209961px'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
+    outline: rgb(153, 153, 153) none 0px;
+}
+/*#time*/
