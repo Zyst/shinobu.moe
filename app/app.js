@@ -23,23 +23,26 @@ angular.module("shinobuApp", [])
                 vm.startTime   = vm.radio.main.start_time;
                 vm.endTime     = vm.radio.main.end_time;
 
-            });
+            })
 
-        var djIdForCall = JSON.stringify(vm.dj);
-
-        alert(djIdForCall);
-
-        djIdForCall = "https://r-a-d.io/api/dj-image/" + vm.dj;
-
-        alert(djIdForCall);
-
-        $http.get(djIdForCall)
             .then(function(data) {
 
-                // Bind the information we receive
-                // to vm.djImage
-                vm.djImage = data;
+                // Once we get the previous data
+                var djIdForCall = JSON.stringify(vm.dj);
 
+                alert(djIdForCall);
+
+                djIdForCall = "https://r-a-d.io/api/dj-image/" + vm.dj;
+
+                alert(djIdForCall);
+
+                $http.get(djIdForCall)
+                    .then(function(imageResponse) {
+
+                        // Bind the information we receive
+                        // to vm.djImage
+                        vm.djImage = imageResponse;
+
+                    });
             });
-
     });
