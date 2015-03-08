@@ -69,8 +69,7 @@ a {
 
 /* IMG STYLING */
 .imageMaxHeight {
-    vertical-align: bottom;
-    float: none;
+    height:100vh;
 }
 
 .bootstrapPadOverride {
