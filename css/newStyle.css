@@ -62,8 +62,8 @@ a {
 
 /* IMG STYLING */
 .imageMaxHeight {
-    position: absolute;
-    bottom: 0;
+    vertical-align: bottom;
+    float: none;
 }
 
 
