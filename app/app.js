@@ -27,11 +27,10 @@ angular.module("shinobuApp", [])
 
         var djIdForCall = JSON.parse(vm.dj);
 
-        alert(vm.dj);
+        alert(djIdForCall);
 
         djIdForCall = "https://r-a-d.io/api/dj-image/" + vm.dj;
 
-        alert(vm.dj);
         alert(djIdForCall);
 
         $http.get(djIdForCall)
