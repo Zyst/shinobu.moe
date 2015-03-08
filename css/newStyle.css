@@ -236,6 +236,7 @@ a {
     border: 0px none rgb(153, 153, 153);
     font: normal normal normal 16px/22.85714340209961px'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
     outline: rgb(153, 153, 153) none 0px;
+    padding-bottom: 20px;
 }
 /*#listeners*/
 
@@ -249,5 +250,6 @@ a {
     border: 0px none rgb(153, 153, 153);
     font: normal normal normal 16px/22.85714340209961px'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
     outline: rgb(153, 153, 153) none 0px;
+    padding-bottom: 20px;
 }
 /*#time*/
