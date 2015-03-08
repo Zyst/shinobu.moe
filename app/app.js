@@ -32,5 +32,6 @@ angular.module("shinobuApp", [])
                 // we can't bind this until we are sure we have the data
                 vm.djImage = "https://r-a-d.io/api/dj-image/" + vm.djId;
 
+                vm.existanceCheck  = (typeof vm.djImage != "undefined");
             });
     });
