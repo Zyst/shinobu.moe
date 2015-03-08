@@ -32,7 +32,7 @@ angular.module("shinobuApp", [])
 
                 alert(djIdForCall);
 
-                djIdForCall = "https://r-a-d.io/api/dj-image/" + vm.dj;
+                djIdForCall = "https://r-a-d.io/api/dj-image/" + vm.djId;
 
                 alert(djIdForCall);
 
