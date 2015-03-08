@@ -75,7 +75,7 @@
                             <!-- DJ block end   -->
 
                             <!-- Playing bar start -->
-                            <div id="outsideBar">
+                            <div id="outsideBar" ng-if="main.build">
                                 <div id="playingBar">
                                 </div>
                             </div>
@@ -87,7 +87,7 @@
                                     Listeners: {{ main.listeners }}
                                 </span>
                                 <span id="time">
-                                    DJ id: {{ main.djId }}
+                                    
                                 </span>
                             </div>
                             <!-- Listeners and time block end   -->

@@ -6,6 +6,7 @@ angular.module("shinobuApp", [])
         // Bind this to view model (vm)
         var vm     = this;
         vm.apiGet  = false;
+        vm.build   = false;
         
         // Make the API call for the main information
         $http.get("https://r-a-d.io/api")
