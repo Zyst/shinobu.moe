@@ -4,8 +4,8 @@ angular.module("shinobuApp", [])
     .controller("mainController", function($http) {
 
         // Bind this to view model (vm)
-        var vm             = this;
-        vm.existanceCheck  = false;
+        var vm     = this;
+        vm.apiGet  = false;
         
         // Make the API call for the main information
         $http.get("https://r-a-d.io/api")
@@ -32,6 +32,6 @@ angular.module("shinobuApp", [])
                 // we can't bind this until we are sure we have the data
                 vm.djImage = "https://r-a-d.io/api/dj-image/" + vm.djId;
 
-                vm.existanceCheck  = true;
+                vm.apiGet  = true;
             });
     });
