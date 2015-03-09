@@ -117,6 +117,8 @@ angular.module("shinobuApp", [])
                         //     otherwise it gets stuck after the first update when time is 0
                         if ((vm.currentTime >= vm.endTime) && (vm.endTime > 0)) {
                             clearInterval(countUp);
+
+                            checkSongConcurrency();
                         }
                     }
 
