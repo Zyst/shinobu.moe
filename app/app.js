@@ -43,5 +43,76 @@ angular.module("shinobuApp", [])
                 // We get the end time (Song end) in seconds
                 vm.endTime = vm.endTime - vm.startTime;
 
-            });
+                // Starts the Timer
+                var countUp = setInterval(increaseTime, 1000);
+
+                /**
+                 * * * * TIME AND PLAYING BAR HANDLER * * * *
+                 *
+                 * Increases time in 1 second increments
+                 * @return {void} Will just keep going until
+                 *                  it's equal to endtime.
+                 *
+                 * This also handles the playing bar now.
+                 *   It multiplies by laws of threes to get percentages,
+                 *     so it multiplies Current Time by 100 and divides it by Endtime.
+                 *
+                 */
+                function increaseTime() {
+
+                    ++vm.currentTime;
+
+                    // Here we turn the numbers into Minutes and seconds
+                    vm.currentTimeMinutes = Math.floor(vm.currentTime / 60);
+                    vm.currentTimeSeconds = currentTime % 60;
+
+                    // We'll add a 0 pad
+                    vm.currentTimeSeconds = zeroPadding(vm.currentTimeSeconds);
+                    vm.endTimeMinutes = Math.floor(vm.endTime / 60);
+
+                    vm.endTimeSeconds = vm.endTime % 60;
+
+                    /**
+                     * We are now going to do the playing bar width adjustments.
+                     *   Percentage based and laws of threes
+                     */
+                    if (endTime > 0) {
+                        // If the 'endTime' of song is above 0 update as normal
+                        playingPercentage = currentTime * 100 / endTime;
+                    } else {
+                        // If the endTime is 0 which some DJs do pretty often
+                        //   it'll just show a full bar. This is mostly a stylistic choice.
+                        playingPercentage = 100;
+                    }
+
+                    document.getElementById("playingBar").style.width = playingPercentage + "%";
+
+                    // If time reaches end time this stops.
+                    //   It also makes sure endtime is not zero so it keeps going even if
+                    //     DJ didn't pass time metadata or for whatever reason that happens.
+                    //     otherwise it gets stuck after the first update when time is 0
+                    if ((currentTime > endTime) && (endTime > 0)) {
+                        clearInterval(countUp);
+                    }
+                }
+
+                /**
+                 * Adds a 0 if the seconds are in the 0X range
+                 * @param  {int} seconds    Initial Seconds input
+                 * @return {String}         First case: Same as input
+                 *                          Second case: 0+X with X = input
+                 */
+                function zeroPadding(seconds) {
+
+                    seconds = String(seconds);
+
+                    if (seconds.length > 1) {
+                        // Basically do nothing
+                        return seconds;
+                    } else {
+                        return "0" + seconds;
+                    }
+                }
+
+                });
     });
