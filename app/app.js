@@ -25,6 +25,12 @@ angular.module("shinobuApp", [])
                 vm.startTime   = vm.radio.main.start_time;
                 vm.endTime     = vm.radio.main.end_time;
 
+                // We create these variables at this point so they exist later on
+                vm.currentTimeMinutes = 0;
+                vm.currentTimeSeconds = 0;
+                vm.endTimeMinutes     = 0;
+                vm.endTimeSeconds     = 0;
+
             })
 
             .then(function(data) {
