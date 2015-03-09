@@ -1,7 +1,12 @@
+html, body {
+    height: 100%;
+}
+
 body {
     background-color: #4c4c4c;
-    font: 13px'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
+    font:13px "Open Sans", "Segoe UI", "Verdana", "Arial";
     color: #e7e7e7;
+    display: flex;
 }
 
 /* URL COLORS */
@@ -9,71 +14,67 @@ a {
     text-decoration: none;
 }
 
+.topcolor{
+    opacity:0.5;
+    transition: opacity 0.5s;
+    padding-left:16px;
+    padding-right:16px;
+}
 
+.urlcolor{
+    opacity:0.5;
+    transition: opacity 0.5s;
+}
 
 .urlcolor:link {color: #eeeeee;}
 .urlcolor:visited{color: #eeeeee;}
-.urlcolor:hover{color: #eeeeee; opacity:1.0;}
+.urlcolor:hover{color: #eeeeee; opacity:1.0; text-decoration: none;}
 .urlcolor:active{color: #eeeeee;}
 
 .topcolor:link {color: #e7e7e7;}
 .topcolor:visited{color: #e7e7e7;}
-.topcolor:hover{color: #e7e7e7; opacity:1.0;}
+.topcolor:hover{color: #e7e7e7; opacity:1.0; text-decoration: none;}
 .topcolor:active{color: #e7e7e7;}
 
-#leftbg {
+/* LEFTMOST BOX */
+.leftBackground {
     background-color: rgba(25, 25, 25, 1);
+    padding-top: 20px;
+    height:100vh;
 }
 
-#lefturls {
+.leftUrls {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
-    font: 40px'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
+    font:40px "Open Sans", "Segoe UI", "Verdana", "Arial";
     text-align: center;
 }
 
-#bottomlefturls {
-    margin-left: auto;
-    margin-right: auto;
-    font: 40px'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
-    text-align: center;
-}
-
-#leftbottom {
-    background-color: rgba(25, 25, 25, 1);
-}
-
-#alldivs {
-    background-color: #282828;
+/* MID BOX */
+.middleBackground {
+    background-color: rgba(40, 40, 40, 1);
     opacity: 1.0;
+    height:100vh;
 }
 
-#anotherdiv {
+.middleUrls{
+    margin-top:20px;
+    margin-bottom:20px;
     margin-left: auto;
     margin-right: auto;
-    min-width: 200px;
-    max-width: 380px;
-}
-
-.divurls {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 20px;
-    min-width: 150px;
-    min-height: 170px;
+    padding:20px;
     float: left;
-    font-size: 20px;
+    font-size:20px;
 }
 
-#toggle {
-    color: #e7e7e7;
-    font: 22px'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
+/* IMG STYLING */
+.imageMaxHeight {
+    height:100vh;
 }
 
-#random {
-    color: #e7e7e7;
-    font: 22px'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
+.bootstrapPadOverride {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .playing {
@@ -84,15 +85,7 @@ a {
     margin-right: auto;
     padding-left: 5%;
     padding-right: 5%;
-}
-
-.bootstrapPadOverride {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-.imageHeight {
-    height:100vh;
+    padding-top: 35px;
 }
 
 /* I outright took these from r-a-d.io,
@@ -249,6 +242,7 @@ a {
     border: 0px none rgb(153, 153, 153);
     font: normal normal normal 16px/22.85714340209961px'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
     outline: rgb(153, 153, 153) none 0px;
+    padding-bottom: 20px;
 }
 /*#listeners*/
 
@@ -262,52 +256,6 @@ a {
     border: 0px none rgb(153, 153, 153);
     font: normal normal normal 16px/22.85714340209961px'Source Sans Pro Regular', Helvetica, Arial, sans-serif;
     outline: rgb(153, 153, 153) none 0px;
+    padding-bottom: 20px;
 }
 /*#time*/
-
-.topcolor {
-    opacity: 0.5;
-    transition: opacity 0.5s;
-    padding-left: 16px;
-    padding-right: 16px;
-}
-.genericpad {
-    padding-left: 30px;
-    padding-right: 30px;
-}
-.urlcolor {
-    opacity: 0.5;
-    transition: opacity 0.5s;
-}
-.alignleft {
-    float: left;
-}
-.alignright {
-    float: right;
-}
-.urlcolor:link {
-    color: #eeeeee;
-}
-.urlcolor:visited {
-    color: #eeeeee;
-}
-.urlcolor:hover {
-    color: #eeeeee;
-    opacity: 1.0;
-}
-.urlcolor:active {
-    color: #eeeeee;
-}
-.topcolor:link {
-    color: #e7e7e7;
-}
-.topcolor:visited {
-    color: #e7e7e7;
-}
-.topcolor:hover {
-    color: #e7e7e7;
-    opacity: 1.0;
-}
-.topcolor:active {
-    color: #e7e7e7;
-}
