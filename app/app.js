@@ -149,6 +149,8 @@ angular.module("shinobuApp", [])
                                 vm.equal = data.data;
 
                                 if (vm.equal.main.np != vm.nowPlaying) {
+                                    clearInterval(countUp);
+                                    
                                     callApi();
                                 }
 
