@@ -6,10 +6,21 @@ It cycles backgrounds randomly on load using togglerandomBG.js from the images n
 
 Hosted on [shinobu.moe](shinobu.moe)
 
+##What is happening?
+Currently I'm updating the entire site so it runs on Angular instead of PHP (Improved response time by 900% since it doesn't need to wait for the PHP response to render the page, instead handling it with the angular promise)
+
+The current 'to-do' actions are:
+
+<ul>
+    <li>Finish polishing the reactive aspect of the site (It'll now work on mobile)</li>
+    <li>Fix the random background, that should take a few seconds</li>
+</ul>
+
+On the bright side, auto updates now work. Meaning when the song changes it'll change the song by itself. On the downside I added the bootstrap library to make this work. That does add like 130 kb to page load. I'll minify the modified version I'm using once I'm done which will hopefully take that down to around 34 kb. Will keep updating.
+
 ##Current Goals:
 <ul>
     <li>A button that launches Foobar/AIMP3 with the r/a/dio stream or the r/a/dio stream in-browser after the button press</li>
-    <li>Ultimately auto-updates from API (Song Changes and time updates)</li>
     <li>Possibly a mobile/smaller resolution version, as this is my personal site it doesn't really display well with small resolutions.</li>
 </ul>
 
@@ -25,6 +36,7 @@ Hosted on [shinobu.moe](shinobu.moe)
     <li>Starting time/Ending Time (Song)</li>
     <li>Make Starting time tick 'up' with JS</li>
     <li>Progress bar based on Starting time progress</li>
+    <li>Ultimately auto-updates from API (Song Changes and time updates)</li>
 </ul>
 
 
