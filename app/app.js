@@ -53,6 +53,9 @@ angular.module("shinobuApp", [])
                     vm.endTimeMinutes = Math.floor(vm.endTime / 60);
                     vm.endTimeSeconds = vm.endTime % 60;
 
+                    // We add a 0 pad
+                    vm.endTimeSeconds = zeroPadding(vm.endTimeSeconds);
+
                     document.getElementById("time").innerHTML = vm.currentTimeMinutes + ":" + vm.currentTimeSeconds +
                     "/" + vm.endTimeMinutes     + ":" + vm.endTimeSeconds;
 
