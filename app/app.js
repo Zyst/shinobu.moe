@@ -60,8 +60,6 @@ angular.module("shinobuApp", [])
                  */
                 function increaseTime() {
 
-                    ++vm.currentTime;
-
                     // Here we turn the numbers into Minutes and seconds
                     vm.currentTimeMinutes = Math.floor(vm.currentTime / 60);
                     vm.currentTimeSeconds = vm.currentTime % 60;
@@ -71,6 +69,8 @@ angular.module("shinobuApp", [])
                     vm.endTimeMinutes = Math.floor(vm.endTime / 60);
 
                     vm.endTimeSeconds = vm.endTime % 60;
+
+                    ++vm.currentTime;
 
                     /**
                      * We are now going to do the playing bar width adjustments.
