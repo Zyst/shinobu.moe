@@ -11,7 +11,7 @@ angular.module("shinobuApp", [])
         function callApi() {
 
             // Make sure the interval has been cleared
-            if (typeof countUp != undefined) {
+            if (typeof countUp != "undefined") {
                 clearInterval(countUp);
             }
 
