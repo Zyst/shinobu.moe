@@ -9,6 +9,10 @@ angular.module("shinobuApp", [])
         callApi();
 
         function callApi() {
+
+            // Make sure the interval has been cleared
+            clearInterval(countUp);
+
             // Make the API call for the main information
             $http.get("https://r-a-d.io/api")
                 .then(function(data) {
