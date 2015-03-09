@@ -78,7 +78,7 @@ angular.module("shinobuApp", [])
                      */
                     if (vm.endTime > 0) {
                         // If the 'endTime' of song is above 0 update as normal
-                        playingPercentage = currentTime * 100 / endTime;
+                        playingPercentage = vm.currentTime * 100 / vm.endTime;
                     } else {
                         // If the endTime is 0 which some DJs do pretty often
                         //   it'll just show a full bar. This is mostly a stylistic choice.
