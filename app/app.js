@@ -25,12 +25,6 @@ angular.module("shinobuApp", [])
                 vm.startTime   = vm.radio.main.start_time;
                 vm.endTime     = vm.radio.main.end_time;
 
-                // We create these variables at this point so they exist later on
-                vm.currentTimeMinutes = 0;
-                vm.currentTimeSeconds = 0;
-                vm.endTimeMinutes     = 0;
-                vm.endTimeSeconds     = 0;
-
             })
 
             .then(function(data) {
@@ -39,15 +33,25 @@ angular.module("shinobuApp", [])
                 // we can't bind this until we are sure we have the data
                 vm.djImage = "https://r-a-d.io/api/dj-image/" + vm.djId;
 
-                vm.apiGet  = true; // Show the element we hid previously
-
                 // vm.startTime = parseInt(vm.startTime);
 
                 // We get the current time (Song position) in seconds
                 vm.currentTime = vm.currentTime - vm.startTime;
 
+                // Here we turn the numbers into Minutes and seconds
+                vm.currentTimeMinutes = Math.floor(vm.currentTime / 60);
+                vm.currentTimeSeconds = vm.currentTime % 60;
+
+                // We'll add a 0 pad
+                vm.currentTimeSeconds = zeroPadding(vm.currentTimeSeconds);
+
                 // We get the end time (Song end) in seconds
-                vm.endTime     = vm.endTime - vm.startTime;
+                vm.endTime = vm.endTime - vm.startTime;
+
+                vm.endTimeMinutes = Math.floor(vm.endTime / 60);
+                vm.endTimeSeconds = vm.endTime % 60;
+
+                vm.apiGet  = true; // Show the element we hid previously
 
                 // Starts the Timer
                 var countUp = setInterval(increaseTime, 1000);
@@ -66,17 +70,15 @@ angular.module("shinobuApp", [])
                  */
                 function increaseTime() {
 
+                    ++vm.currentTime;
+
                     // Here we turn the numbers into Minutes and seconds
                     vm.currentTimeMinutes = Math.floor(vm.currentTime / 60);
+
                     vm.currentTimeSeconds = vm.currentTime % 60;
 
                     // We'll add a 0 pad
                     vm.currentTimeSeconds = zeroPadding(vm.currentTimeSeconds);
-                    vm.endTimeMinutes = Math.floor(vm.endTime / 60);
-
-                    vm.endTimeSeconds = vm.endTime % 60;
-
-                    ++vm.currentTime;
 
                     /**
                      * We are now going to do the playing bar width adjustments.
