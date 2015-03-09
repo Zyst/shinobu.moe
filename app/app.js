@@ -76,7 +76,7 @@ angular.module("shinobuApp", [])
                      * We are now going to do the playing bar width adjustments.
                      *   Percentage based and laws of threes
                      */
-                    if (endTime > 0) {
+                    if (vm.endTime > 0) {
                         // If the 'endTime' of song is above 0 update as normal
                         playingPercentage = currentTime * 100 / endTime;
                     } else {
@@ -91,7 +91,7 @@ angular.module("shinobuApp", [])
                     //   It also makes sure endtime is not zero so it keeps going even if
                     //     DJ didn't pass time metadata or for whatever reason that happens.
                     //     otherwise it gets stuck after the first update when time is 0
-                    if ((currentTime > endTime) && (endTime > 0)) {
+                    if ((vm.currentTime > vm.endTime) && (vm.endTime > 0)) {
                         clearInterval(countUp);
                     }
                 }
