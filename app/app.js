@@ -11,7 +11,9 @@ angular.module("shinobuApp", [])
         function callApi() {
 
             // Make sure the interval has been cleared
-            clearInterval(countUp);
+            if (typeof countUp != undefined) {
+                clearInterval(countUp);
+            }
 
             // Make the API call for the main information
             $http.get("https://r-a-d.io/api")
