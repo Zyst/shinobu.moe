@@ -51,10 +51,10 @@ angular.module("shinobuApp", [])
                 vm.endTimeMinutes = Math.floor(vm.endTime / 60);
                 vm.endTimeSeconds = vm.endTime % 60;
 
+                vm.apiGet  = true; // Show the element we hid previously
+
                 document.getElementById("time").innerHTML = currentTimeMinutes + ":" + currentTimeSeconds +
                                                       "/" + endTimeMinutes     + ":" + endTimeSeconds;
-
-                vm.apiGet  = true; // Show the element we hid previously
 
                 // Starts the Timer
                 var countUp = setInterval(increaseTime, 1000);
