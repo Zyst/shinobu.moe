@@ -1,6 +1,6 @@
 #My homepage
 
-Loads r/a/dio currently playing info. currently updates everything with JS and thus cannot 'change' tracks dynamically. Fixing that is one of the current goals.
+Loads r/a/dio currently playing information.
 
 It cycles backgrounds randomly on load using togglerandomBG.js from the images numbered 1 - n in the /images folder.
 
@@ -40,7 +40,7 @@ On the bright side, auto updates now work. Meaning when the song changes it'll c
 </ul>
 
 
-## Screenshots
+## (Old) Screenshots
 ![alt tag](http://puu.sh/b1arK/37b46b228a.jpg)
 
 ![alt tag](http://puu.sh/b4cCB/eb57b062b3.jpg)
