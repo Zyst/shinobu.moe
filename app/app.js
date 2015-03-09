@@ -5,7 +5,7 @@ angular.module("shinobuApp", [])
 
         // Bind this to view model (vm)
         var vm     = this;
-        vm.apiGet  = false // Hide stuff until successful response
+        vm.apiGet  = false; // Hide stuff until successful response
         vm.build   = false;
         
         // Make the API call for the main information
@@ -85,6 +85,10 @@ angular.module("shinobuApp", [])
 
                     document.getElementById("time").innerHTML = vm.currentTimeMinutes + ":" + vm.currentTimeSeconds +
                                                           "/" + vm.endTimeMinutes     + ":" + vm.endTimeSeconds;
+
+                    // Added this so it updates on pageload because my OCD was killing me
+                    var playingPercentage = currentTime * 100 / endTime;
+                    document.getElementById("playingBar").style.width = playingPercentage + "%";
 
                     /**
                      * We are now going to do the playing bar width adjustments.
