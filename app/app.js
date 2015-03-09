@@ -41,7 +41,7 @@ angular.module("shinobuApp", [])
                 vm.currentTime = vm.currentTime - vm.startTime;
 
                 // We get the end time (Song end) in seconds
-                vm.endTime = vm.endTime - vm.startTime;
+                vm.endTime     = vm.endTime - vm.startTime;
 
                 // Starts the Timer
                 var countUp = setInterval(increaseTime, 1000);
