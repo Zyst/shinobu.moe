@@ -5,7 +5,7 @@ angular.module("shinobuApp", [])
 
         // Bind this to view model (vm)
         var vm     = this;
-        vm.apiGet  = false;
+        vm.apiGet  = false // Hide stuff until successful response
         vm.build   = false;
         
         // Make the API call for the main information
@@ -33,6 +33,15 @@ angular.module("shinobuApp", [])
                 // we can't bind this until we are sure we have the data
                 vm.djImage = "https://r-a-d.io/api/dj-image/" + vm.djId;
 
-                vm.apiGet  = true;
+                vm.apiGet  = true; // Show the element we hid previously
+
+                // vm.startTime = parseInt(vm.startTime);
+
+                // We get the current time (Song position) in seconds
+                vm.currentTime = vm.currentTime - vm.startTime;
+
+                // We get the end time (Song end) in seconds
+                vm.endTime = vm.endTime - vm.startTime;
+
             });
     });
