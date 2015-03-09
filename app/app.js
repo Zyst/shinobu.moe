@@ -51,6 +51,9 @@ angular.module("shinobuApp", [])
                 vm.endTimeMinutes = Math.floor(vm.endTime / 60);
                 vm.endTimeSeconds = vm.endTime % 60;
 
+                document.getElementById("time").innerHTML = currentTimeMinutes + ":" + currentTimeSeconds +
+                                                      "/" + endTimeMinutes     + ":" + endTimeSeconds;
+
                 vm.apiGet  = true; // Show the element we hid previously
 
                 // Starts the Timer
@@ -79,6 +82,9 @@ angular.module("shinobuApp", [])
 
                     // We'll add a 0 pad
                     vm.currentTimeSeconds = zeroPadding(vm.currentTimeSeconds);
+
+                    document.getElementById("time").innerHTML = currentTimeMinutes + ":" + currentTimeSeconds +
+                                                          "/" + endTimeMinutes     + ":" + endTimeSeconds;
 
                     /**
                      * We are now going to do the playing bar width adjustments.
