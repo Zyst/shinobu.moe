@@ -64,7 +64,7 @@ angular.module("shinobuApp", [])
 
                     // Here we turn the numbers into Minutes and seconds
                     vm.currentTimeMinutes = Math.floor(vm.currentTime / 60);
-                    vm.currentTimeSeconds = currentTime % 60;
+                    vm.currentTimeSeconds = vm.currentTime % 60;
 
                     // We'll add a 0 pad
                     vm.currentTimeSeconds = zeroPadding(vm.currentTimeSeconds);
