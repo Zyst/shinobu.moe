@@ -56,6 +56,10 @@ angular.module("shinobuApp", [])
                 document.getElementById("time").innerHTML = vm.currentTimeMinutes + ":" + vm.currentTimeSeconds +
                                                       "/" + vm.endTimeMinutes     + ":" + vm.endTimeSeconds;
 
+                // Added this so it updates on pageload because my OCD was killing me
+                var playingPercentage = vm.currentTime * 100 / vm.endTime;
+                document.getElementById("playingBar").style.width = playingPercentage + "%";
+
                 // Starts the Timer
                 var countUp = setInterval(increaseTime, 1000);
 
@@ -85,10 +89,6 @@ angular.module("shinobuApp", [])
 
                     document.getElementById("time").innerHTML = vm.currentTimeMinutes + ":" + vm.currentTimeSeconds +
                                                           "/" + vm.endTimeMinutes     + ":" + vm.endTimeSeconds;
-
-                    // Added this so it updates on pageload because my OCD was killing me
-                    var playingPercentage = vm.currentTime * 100 / vm.endTime;
-                    document.getElementById("playingBar").style.width = playingPercentage + "%";
 
                     /**
                      * We are now going to do the playing bar width adjustments.
