@@ -15,6 +15,10 @@ angular.module("shinobuApp", [])
                 clearInterval(countUp);
             }
 
+            if (typeof concurrent != "undefined") {
+                clearInterval(concurrent);
+            }
+
             // Make the API call for the main information
             $http.get("https://r-a-d.io/api")
                 .then(function(data) {
