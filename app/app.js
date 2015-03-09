@@ -45,8 +45,6 @@ angular.module("shinobuApp", [])
                     // we can't bind this until we are sure we have the data
                     vm.djImage = "https://r-a-d.io/api/dj-image/" + vm.djId;
 
-                    // vm.startTime = parseInt(vm.startTime);
-
                     // We get the current time (Song position) in seconds
                     vm.currentTime = vm.currentTime - vm.startTime;
 
@@ -148,6 +146,13 @@ angular.module("shinobuApp", [])
                         }
                     }
 
+                    /**
+                     * Checks if the 'now playing' song has changed, if it has
+                     * it calls the api once more to update the data on the site
+                     * 
+                     * @return {void} [Doesn't return anything, just calls the api when it finds a difference and
+                     *                 clears the interval to avoid some Interval errors]
+                     */
                     function checkSongConcurrency() {
                         $http.get("https://r-a-d.io/api")
                             .then(function(data) {
@@ -165,11 +170,8 @@ angular.module("shinobuApp", [])
 
                                     callApi();
                                 }
-
                             });
                     }
-
                 });
         }
-
     });
