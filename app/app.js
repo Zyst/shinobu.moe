@@ -148,9 +148,12 @@ angular.module("shinobuApp", [])
                                 // to vm.equal to check if it's still the same
                                 vm.equal = data.data;
 
+                                // Might as well update listeners, doing nothing with the query would be a waste.
+                                vm.listeners = vm.equal.main.listeners;
+
                                 if (vm.equal.main.np != vm.nowPlaying) {
                                     clearInterval(countUp);
-                                    
+
                                     callApi();
                                 }
 
