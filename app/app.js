@@ -87,7 +87,7 @@ angular.module("shinobuApp", [])
                                                           "/" + vm.endTimeMinutes     + ":" + vm.endTimeSeconds;
 
                     // Added this so it updates on pageload because my OCD was killing me
-                    var playingPercentage = currentTime * 100 / endTime;
+                    var playingPercentage = vm.currentTime * 100 / vm.endTime;
                     document.getElementById("playingBar").style.width = playingPercentage + "%";
 
                     /**
