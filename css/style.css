@@ -15,8 +15,9 @@ a {
 }
 
 .imageBottom {
-    float: none;
-    vertical-align: bottom;
+    position: relative;
+    bottom: 0px;
+    right: 0%;
 }
 
 .topcolor {
