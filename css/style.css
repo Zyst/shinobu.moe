@@ -15,8 +15,9 @@ a {
 }
 
 .imageBottom {
-    position: static;
-    bottom: 0px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .topcolor {
