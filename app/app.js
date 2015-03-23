@@ -4,7 +4,9 @@ angular.module("shinobuApp", [])
     .controller("mainController", function($http) {
 
         // Bind this to view model (vm)
-        var vm     = this;
+        var vm = this;
+        
+        vm.randomImage = Math.floor((Math.random() * (14)) + 1);
 
         callApi();
 
@@ -125,6 +127,8 @@ angular.module("shinobuApp", [])
                         //     otherwise it gets stuck after the first update when time is 0
                         if ((vm.currentTime >= vm.endTime) && (vm.endTime > 0)) {
                             clearInterval(countUp);
+
+                            checkSongConcurrency();
                         }
                     }
 
