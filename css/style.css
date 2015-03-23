@@ -16,6 +16,7 @@ a {
 
 .imageWrapper {
     position: relative;
+    height: 100vh;
 }
 
 .imageBottom {
