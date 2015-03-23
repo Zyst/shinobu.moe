@@ -14,10 +14,13 @@ a {
     text-decoration: none;
 }
 
-.imageBottom {
+.imageWrapper {
     position: relative;
-    bottom: 0px;
-    right: 0%;
+}
+
+.imageBottom {
+    position: absolute;
+    bottom: 0;
 }
 
 .topcolor {
