@@ -15,7 +15,7 @@ a {
 }
 
 .imageBottom {
-    position: absolute;
+    position: static;
     bottom: 0px;
 }
 
