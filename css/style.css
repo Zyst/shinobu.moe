@@ -14,7 +14,12 @@ a {
     text-decoration: none;
 }
 
-.topcolor{
+.imageBottom {
+    position: absolute;
+    bottom: 5px;
+}
+
+.topcolor {
     opacity:0.5;
     transition: opacity 0.5s;
     padding-left:16px;
