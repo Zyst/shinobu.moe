@@ -1,284 +1,275 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--suppress HtmlUnknownAttribute -->
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="icon" href="images/4chon.ico">
-        <title>Love</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="My waifu is objectively better than your waifu. Shinobu is the best waifu.">
 
-        <base href="/">
+    <link rel="icon" href="images/4chon.ico">
+    <title>Love</title>
 
-        <!-- CSS  -->
-        <!-- Load bootstrap from CDN and custom CSS -->
-        <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.1/paper/bootstrap.min.css">-->
-        <link rel="stylesheet" href="assets/bootstrap/bootstrap.css">
-        <link rel="stylesheet" href="css/style.css">
+    <base href="/">
 
-        <!-- JS -->
-        <!-- Load angular via CDN -->
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
-        <script src="js/togglerandomBG.js"></script>
+    <!-- CSS  -->
+    <link rel="stylesheet" href="css/style.min.css">
 
-        <!-- Main Angular app files -->
-        <script src="app/app.js"></script>
-    </head>
-    <body ng-app="shinobuApp" ng-controller="mainController as main">
+    <!-- JS -->
+    <!-- Load angular via CDN -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
 
-        <div class="container-fluid">
-            <div class="row">
+    <!-- Main Angular app files -->
+    <script src="app/app.js"></script>
+</head>
+<body ng-app="shinobuApp" ng-controller="mainController as main">
+    <!-- Left Side -->
+    <div id="left-side">
+        <div id="left-container">
+            <!-- Left Side URLs -->
+            <p class="left-urls">
+                <strong>
+                    4chan
+                </strong>
+            </p>
+            <p class="left-urls">
+                <a class="top-color" href="https://boards.4chan.org/a/">/a/</a>
+                <a class="top-color" href="https://boards.4chan.org/g/">/g/</a>
+                <a class="top-color" href="https://boards.4chan.org/tg/">/tg/</a>
+            </p>
+            <p class="left-urls">
+                <a class="top-color" href="https://www.smashladder.com/netplay">Ladder</a>
+            </p>
+            <p class="left-urls">
+                <a class="top-color" href="https://www.youtube.com/">Youtube</a>
+            </p>
+            <p class="left-urls">
+                <a class="top-color" href="https://inbox.google.com/">Email</a>
+            </p>
+            <p class="left-urls">
+                <a class="top-color" href="http://bbsistema.tecmilenio.edu.mx/">School</a>
+            </p>
+        </div>
 
-                <!-- Leftmost bar content -->
-                <div class="col-md-4 bootstrapPadOverride">
-                    <div class="leftBackground">
-                        <!-- TOP LEFT LINKS -->
-                        <div id="leftUrls" class="leftUrls">
-                            <p class="leftUrls">
-                                <strong>4chan</strong>
-                            </p>
-                            <p class="leftUrls">
-                                <a class="topcolor" href="https://boards.4chan.org/a/">/a/</a>
-                                <a class="topcolor" href="https://boards.4chan.org/g/">/g/</a>
-                                <a class="topcolor" href="https://boards.4chan.org/tg/">/tg/</a>
-                            </p>
-                            <p class="leftUrls">
-                                <a class="topcolor" href="https://app.roll20.net/home">Roll20</a>
-                            </p>
-                            <p class="leftUrls">
-                                <a class="topcolor" href="https://www.youtube.com/">Youtube</a>
-                            </p>
-                            <p class="leftUrls">
-                                <a class="topcolor" href="https://mail.google.com/">Gmail</a>
-                            </p>
-                            <p class="leftUrls">
-                                <a class="topcolor" href="http://bbsistema.tecmilenio.edu.mx/">School</a>
-                            </p>
-                        </div>
+        <!-- r/a/dio container -->
+        <div id="r-a-dio-container" class="left-urls" ng-if="main.playingRadio && main.started">
+            <!-- Now playing block start -->
+            <div id="nowPlaying" class="playing">
+                {{ main.display.playing }}
+            </div>
 
-                        <!-- R-A-D.IO AREA -->
-                        <div id="r-a-dio" class="leftUrls">
-                            <!-- Now playing block start -->
-                            <div id = "nowPlaying" class="playing">
-                                {{ main.nowPlaying }}
-                            </div>
-                            <!-- Now playing block end   -->
-
-                            <!-- DJ block start -->
-                            <div id="DIV_1">
-                                <div id="DIV_2">
-                                    <!-- Image goes here -->
-                                    <img id="IMG_3" src="{{ main.djImage }}" alt='' />
-                                    <h4 id="DJ">
-                                        {{ main.dj }}
-                                    </h4>
-                                </div>
-                            </div>
-                            <!-- DJ block end   -->
-
-                            <!-- Playing bar start -->
-                            <div id="outsideBar">
-                                <div id="playingBar">
-                                </div>
-                            </div>
-                            <!-- Playing bar end   -->
-
-                            <!-- Listeners and time block start -->
-                            <div id="listenersAndTime">
-                                <span id="listeners">
-                                    Listeners: {{ main.listeners }}
-                                </span>
-                                <span id="time">
-                                </span>
-                            </div>
-                            <!-- Listeners and time block end   -->
-                        </div>
-                    </div>
+            <!-- DJ block start -->
+            <div id="DIV_1">
+                <div id="DIV_2">
+                    <!-- Image goes here -->
+                    <img id="IMG_3" src="{{ main.display.image }}" alt='' />
+                    <h4 id="DJ">
+                        {{ main.display.dj }}
+                    </h4>
                 </div>
+            </div>
 
-                <!-- Middle bar content -->
-                <div class="col-md-3 bootstrapPadOverride">
-                    <div class="middleBackground">
-
-                        <!-- Internal row for reformatting middle links -->
-                        <div class="row center-block">
-
-                            <!-- TECHNOLOGY -->
-                            <div class="col-md-6 col-sm-6 col-xs-12 container">
-                                <div class="middleUrls">
-                                    <p>
-                                        <strong>Technology:</strong>
-                                    </p>
-
-                                    <p>
-                                        <a class="urlcolor" href="http://arstechnica.com/">Ars Technica</a>
-                                    </p>
-
-                                    <p>
-                                        <a class="urlcolor" href="https://stackoverflow.com/">Stack Overflow</a>
-                                    </p>
-
-                                    <p>
-                                        <a class="urlcolor" href="https://github.com/">Github</a>
-                                    </p>
-
-                                    <p>
-                                        <a class="urlcolor" href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md">Prog. Books</a>
-                                    </p>
-
-                                    <p>
-                                        <a class="urlcolor" href="http://slashdot.org/">Slashdot</a>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- WEEABOO -->
-                            <div class="col-md-6 col-sm-6 col-xs-12 container">
-                                <div class="middleUrls">
-                                    <p>
-                                        <strong>Weeaboo:</strong>
-                                    </p>
-
-                                    <p>
-                                        <a class="urlcolor" href="http://www.nyaa.se">Nyaa</a>
-                                    </p>
-
-                                    <p>
-                                        <a class="urlcolor" href="http://myanimelist.net/profile/Zyst">MyAnimeList</a>
-                                    </p>
-
-                                    <p>
-                                        <a class="urlcolor" href="https://animebytes.tv/">Anime Bytes</a>
-                                    </p>
-
-                                    <p>
-                                        <a class="urlcolor" href="http://bakabt.me/">BakaBT</a>
-                                    </p>
-
-                                    <p>
-                                        <a class="urlcolor" href="http://www.amiami.com/">AmiAmi</a>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- ENTERTAINMENT -->
-                            <div class="col-md-6 col-sm-6 col-xs-12 container">
-                                <div class="middleUrls">
-                                    <p>
-                                        <strong>Entertainment:</strong>
-                                    </p>
-
-                                    <p>
-                                        <a class="urlcolor" href="http://r-a-d.io/">R/a/dio</a>
-                                    </p>
-
-                                    <p>
-                                        <a class="urlcolor" href="http://www.twitch.tv/">Twitch</a>
-                                    </p>
-
-                                    <p>
-                                        <a class="urlcolor" href="http://www.ustream.tv/channel/mogra1">MOGRA</a>
-                                    </p>
-
-                                    <p>
-                                        <a class="urlcolor" href="http://livechart.me/">Ani Countdown</a>
-                                    </p>
-
-                                    <p>
-                                        <a class="urlcolor" href="http://bato.to/myfollows">Batoto</a>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- BOTNET -->
-                            <div class="col-md-6 col-sm-6 col-xs-12 container">
-                                <div class="middleUrls">
-                                    <p>
-                                        <strong>Botnet:</strong>
-                                    </p>
-
-                                    <p>
-                                        <a class="urlcolor" href="https://www.facebook.com/">Facebook</a>
-                                    </p>
-
-                                    <p>
-                                        <a class="urlcolor" href="https://www.linkedin.com/">LinkedIn</a>
-                                    </p>
-
-                                    <p>
-                                        <a class="urlcolor" href="https://twitter.com/">Twitter</a>
-                                    </p>
-
-                                    <p>
-                                        <a class="urlcolor" href="https://plus.google.com/">Plus</a><br>
-                                    </p>
-
-                                    <p>
-                                        <!-- EMPTY to avoid breaking continuity -->
-                                        <br />
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- JAPANESE -->
-                            <div class="col-md-6 col-sm-6 col-xs-12 container">
-                                <div class="middleUrls">
-                                    <p>
-                                        <strong>Japanese:</strong>
-                                    </p>
-
-                                    <p>
-                                        <a class="urlcolor" href="https://ankiweb.net/decks/">Anki Decks</a>
-                                    </p>
-
-                                    <p>
-                                        <a class="urlcolor" href="https://docs.google.com/document/d/1G5C7fCe07CDzYalZYZObzxv_fhw7RUNsLHiMAY-t7FA">DJT Guide</a>
-                                    </p>
-
-                                    <p>
-                                        <a class="urlcolor" href="https://docs.google.com/spreadsheet/lv?key=0Agk2IH0ZXhn7dDNmSW1BVFU5dVgyOHkzWjU4b2l2dkE">DJT Reading</a>
-                                    </p>
-
-                                    <p>
-                                        <a class="urlcolor" href="http://shinobu.moe/DJT/">DJT Pastebin</a>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- GODLIKE -->
-                            <div class="col-md-6 col-sm-6 col-xs-12 container">
-                                <div class="middleUrls">
-                                    <p>
-                                        <strong>Godlike:</strong>
-                                    </p>
-
-                                    <p>
-                                        <a class="urlcolor" href="http://loli.dance/">Illya Dance</a>
-                                    </p>
-
-                                    <p>
-                                        <a class="urlcolor" href="http://420.moe/">420.moe</a>
-                                    </p>
-
-                                    <p>
-                                        <a class="urlcolor" href="http://sleepyti.me/">Sleepyti.me</a>
-                                    </p>
-                                    <p>
-                                        <!-- EMPTY to avoid breaking continuity -->
-                                        <br />
-                                    </p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+            <!-- Playing bar start -->
+            <div id="outside-bar">
+                <div id="playing-bar">
                 </div>
+            </div>
 
-                <!-- BG Image -->
-                <div class="col-md-5 bootstrapPadOverride">
-                    <div>
-                        <img alt="Waifu" class="img-responsive pull-right" src="images/{{ main.randomImage }}.png">
-                    </div>
+            <!-- Listeners and time block start -->
+            <div id="listeners-and-time">
+                <span id="listeners">
+                    Listeners: {{ main.display.listeners }}
+                </span>
+                <span id="time">
+                </span>
+
+                <br />
+            </div>
+        </div>
+
+        <!-- Last.fm container -->
+        <div id="r-a-dio-container" class="left-urls" ng-if="main.playingLastFm && main.started">
+            <!-- Now playing block start -->
+            <div id="nowPlaying" class="playing">
+                {{ main.display.playing }}
+            </div>
+
+            <!-- DJ block start -->
+            <div id="DIV_1">
+                <div id="DIV_2">
+                    <!-- Image goes here -->
+                    <img id="IMG_3" src="{{ main.display.image }}" alt='DJ' />
+                    <h4 id="DJ">
+                        {{ main.display.dj }}
+
+                        <br />
+
+                        <img src="images/scrobbling.gif" alt="Scrobbling" />
+                        Scrobbling now
+                    </h4>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+
+    <div id="middle">
+        <div id="middle-container">
+
+            <!-- TECHNOLOGY -->
+            <div class="links-box">
+                <p class="links-style">
+                    <strong>Technology:</strong>
+                </p>
+
+                <p class="links-style">
+                    <a class="url-color" href="http://arstechnica.com/">Ars Technica</a>
+                </p>
+
+                <p class="links-style">
+                    <a class="url-color" href="https://stackoverflow.com/">Stack Overflow</a>
+                </p>
+
+                <p class="links-style">
+                    <a class="url-color" href="https://github.com/">Github</a>
+                </p>
+
+                <p class="links-style">
+                    <a class="url-color" href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md">Prog. Books</a>
+                </p>
+
+                <p class="links-style">
+                    <a class="url-color" href="http://slashdot.org/">Slashdot</a>
+                </p>
+            </div>
+
+            <!-- WEEABOO -->
+            <div class="links-box">
+                <p class="links-style">
+                    <strong>Weeaboo:</strong>
+                </p>
+
+                <p class="links-style">
+                    <a class="url-color" href="http://www.nyaa.se">Nyaa</a>
+                </p>
+
+                <p class="links-style">
+                    <a class="url-color" href="http://myanimelist.net/profile/Zyst">MyAnimeList</a>
+                </p>
+
+                <p class="links-style">
+                    <a class="url-color" href="https://animebytes.tv/">Anime Bytes</a>
+                </p>
+
+                <p class="links-style">
+                    <a class="url-color" href="http://bakabt.me/">BakaBT</a>
+                </p>
+
+                <p class="links-style">
+                    <a class="url-color" href="http://www.amiami.com/">AmiAmi</a>
+                </p>
+            </div>
+
+            <!-- ENTERTAINMENT -->
+            <div class="links-box booster-links-box">
+                <p class="links-style">
+                    <strong>Entertainment:</strong>
+                </p>
+
+                <p class="links-style">
+                    <a class="url-color" href="http://r-a-d.io/">R/a/dio</a>
+                </p>
+
+                <p class="links-style">
+                    <a class="url-color" href="http://www.twitch.tv/">Twitch</a>
+                </p>
+
+                <p class="links-style">
+                    <a class="url-color" href="http://www.ustream.tv/channel/mogra1">MOGRA</a>
+                </p>
+
+                <p class="links-style">
+                    <a class="url-color" href="http://livechart.me/">Ani Countdown</a>
+                </p>
+
+                <p class="links-style">
+                    <a class="url-color" href="http://bato.to/myfollows">Batoto</a>
+                </p>
+            </div>
+
+            <!-- BOTNET -->
+            <div class="links-box booster-links-box">
+                <p class="links-style">
+                    <strong>Botnet:</strong>
+                </p>
+
+                <p class="links-style">
+                    <a class="url-color" href="https://www.facebook.com/">Facebook</a>
+                </p>
+
+                <p class="links-style">
+                    <a class="url-color" href="https://www.linkedin.com/">LinkedIn</a>
+                </p>
+
+                <p class="links-style">
+                    <a class="url-color" href="https://twitter.com/">Twitter</a>
+                </p>
+
+                <p class="links-style">
+                    <a class="url-color" href="https://plus.google.com/">Plus</a><br>
+                </p>
+
+                <p class="links-style">
+                    <!-- EMPTY to avoid breaking continuity -->
+                    <br />
+                </p>
+            </div>
+
+            <!-- JAPANESE -->
+            <div class="links-box booster-links-box">
+                <p class="links-style">
+                    <strong>Japanese:</strong>
+                </p>
+
+                <p class="links-style">
+                    <a class="url-color" href="https://ankiweb.net/decks/">Anki Decks</a>
+                </p>
+
+                <p class="links-style">
+                    <a class="url-color" href="https://docs.google.com/document/d/1G5C7fCe07CDzYalZYZObzxv_fhw7RUNsLHiMAY-t7FA">DJT Guide</a>
+                </p>
+
+                <p class="links-style">
+                    <a class="url-color" href="https://docs.google.com/spreadsheet/lv?key=0Agk2IH0ZXhn7dDNmSW1BVFU5dVgyOHkzWjU4b2l2dkE">DJT Reading</a>
+                </p>
+
+                <p class="links-style">
+                    <a class="url-color" href="http://shinobu.moe/DJT/">DJT Pastebin</a>
+                </p>
+            </div>
+
+            <!-- GODLIKE -->
+            <div class="links-box booster-links-box">
+                <p class="links-style">
+                    <strong>Godlike:</strong>
+                </p>
+
+                <p class="links-style">
+                    <a class="url-color" href="http://loli.dance/">Illya Dance</a>
+                </p>
+
+                <p class="links-style">
+                    <a class="url-color" href="http://420.moe/">420.moe</a>
+                </p>
+
+                <p class="links-style">
+                    <a class="url-color" href="http://sleepyti.me/">Sleepyti.me</a>
+                </p>
+                <p class="links-style">
+                    <!-- EMPTY to avoid breaking continuity -->
+                    <br />
+                </p>
+            </div>
+
+        </div>
+    </div>
+</body>
 </html>
