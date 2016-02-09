@@ -1,28 +1,15 @@
 #My homepage
 
-Loads r/a/dio currently playing information.
+Loads r/a/dio currently playing information. As of 2.0 it also checks your Last.fm profile.
 
-It cycles backgrounds randomly on load using togglerandomBG.js from the images numbered 1 - n in the /images folder.
+It cycles backgrounds randomly on load using `randomBG()` in `app/app.js` from the images numbered 1 - n in the `/images` folder.
 
 Hosted on [shinobu.moe](shinobu.moe)
 
 ##What is happening?
-Currently I'm updating the entire site so it runs on Angular instead of PHP (Improved response time by 900% since it doesn't need to wait for the PHP response to render the page, instead handling it with the angular promise)
+Just released [2.0](https://github.com/Zyst/shinobu.moe/releases/tag/2.0) which added Last.fm support, completely switched to AngularJS which greatly improved response time from the PHP version, along with a couple other goodies.
 
-The current 'to-do' actions are:
-
-<ul>
-    <li>Finish polishing the reactive aspect of the site (It'll now work on mobile)</li>
-    <li>Fix the random background, that should take a few seconds</li>
-</ul>
-
-On the bright side, auto updates now work. Meaning when the song changes it'll change the song by itself. On the downside I added the bootstrap library to make this work. That does add like 130 kb to page load. I'll minify the modified version I'm using once I'm done which will hopefully take that down to around 34 kb. Will keep updating.
-
-##Current Goals:
-<ul>
-    <li>A button that launches Foobar/AIMP3 with the r/a/dio stream or the r/a/dio stream in-browser after the button press</li>
-    <li>Possibly a mobile/smaller resolution version, as this is my personal site it doesn't really display well with small resolutions.</li>
-</ul>
+Auto updates also work now, for both Last.fm and r/a/dio
 
 ##Completed Goals:
 <ul>
@@ -36,18 +23,23 @@ On the bright side, auto updates now work. Meaning when the song changes it'll c
     <li>Starting time/Ending Time (Song)</li>
     <li>Make Starting time tick 'up' with JS</li>
     <li>Progress bar based on Starting time progress</li>
-    <li>Ultimately auto-updates from API (Song Changes and time updates)</li>
+    <li>Auto-updates from API (Song Changes and time updates)</li>
+    <li>Possibly a mobile/smaller resolution version.</li>
+    <li>Last.fm support</li>
 </ul>
 
 
-## (Old) Screenshots
-![alt tag](http://puu.sh/b1arK/37b46b228a.jpg)
+## Screenshots
+### Normal r/a/dio
+![alt tag](http://puu.sh/n14OX/2685d8ba62.jpg)
 
-![alt tag](http://puu.sh/b4cCB/eb57b062b3.jpg)
+### Playing Last.fm also auto grabs album art when available
+![alt tag](http://puu.sh/n14TQ/6bdbab9917.jpg)
 
-![alt tag](http://puu.sh/b19va/279952fbf2.jpg)
+### If you aren't playing anything on Last.fm it shows what's playing in r/a/dio
+![alt tag](http://puu.sh/n15cG/2d3f7995a9.jpg)
 
-![alt tag](http://puu.sh/b12Nw/ee8632fac8.jpg)
-
+### If what you are scrobbling to Last.fm what is playing in r/a/dio you get the r/a/dio view instead of the Last.fm view
+![alt tag](http://puu.sh/n15mc/0a6f83fdfe.jpg)
 
 Distributed under the [MIT License](http://opensource.org/licenses/MIT) feel free to use this code however you want.
