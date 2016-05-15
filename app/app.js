@@ -115,6 +115,7 @@
       });
     }
 
+    // Binds our Last.fm view model variables
     function setLastFmGlobals(lastfm) {
       vm.lastfm = lastfm;
 
