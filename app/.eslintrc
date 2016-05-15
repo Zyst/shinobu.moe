@@ -1,0 +1,20 @@
+{
+  "parser": "babel-eslint",
+  "globals": {
+    "angular": true
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": "airbnb",
+  "rules": {
+    "quotes": [2, "single"],
+    "no-var": 0,
+    "func-names": 0,
+    "prefer-template": 0,
+    "prefer-arrow-callback": 0,
+    "vars-on-top": "warn",
+    "no-console": 0,
+  }
+}
