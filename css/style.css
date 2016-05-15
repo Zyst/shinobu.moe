@@ -1,4 +1,4 @@
-﻿/******************************* Variables *******************************/
+/******************************* Variables *******************************/
 /* Colors */
 /* Width stuff */
 /******************************* CSS *******************************/
@@ -265,7 +265,7 @@ a {
 }
 @media (min-width: 1110px) and (min-width: 1680px) {
   body {
-    background-image: url("../../images/6.png");
+    background-image: url("../../images/0.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: bottom right;
