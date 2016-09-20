@@ -1,4 +1,7 @@
-.DS_Store
+DS_Store
 shinobu.moe.sublime-project
 shinobu.moe.sublime-workspace
 .idea
+.DS_Store
+npm-debug.log
+
