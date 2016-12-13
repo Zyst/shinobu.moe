@@ -146,7 +146,7 @@
       $http({
         method: 'GET',
         url: 'http://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=Zystx' +
-          '&api_key=5b801a66d1a34e73b6e563afc27ef06b&limit=1&format=json',
+          '&api_key=57ee3318536b23ee81d6b27e36997cde&limit=1&format=json',
       }).then(function successCallback(data) {
         setLastFmGlobals(data.data.recenttracks);
 
@@ -173,7 +173,7 @@
         method: 'GET',
         // Replace user=Zystx here with your Lastfm user name
         url: 'http://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=Zystx' +
-          '&api_key=5b801a66d1a34e73b6e563afc27ef06b&limit=1&format=json',
+          '&api_key=57ee3318536b23ee81d6b27e36997cde&limit=1&format=json',
       }).then(function successLastfm(lastfm) {
         // We bind the Last.fm data
         vm.lastfm = lastfm.data.recenttracks;
