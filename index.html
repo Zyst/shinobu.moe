@@ -35,16 +35,9 @@
 
     <!-- CSS  -->
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- JS -->
-    <!-- Load angular via CDN -->
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-
-    <!-- Main Angular app files -->
-    <script src="app/app.js"></script>
 </head>
 
-<body ng-app="shinobuApp" ng-controller="mainController as main">
+<body>
     <!-- Left Side -->
     <div id="left-side">
         <div id="left-container">
@@ -66,8 +59,8 @@
             </p>
         </div>
 
-        <!-- r/a/dio container -->
-        <div id="r-a-dio-container" class="left-urls" ng-if="main.playingRadio && main.started">
+        <!-- playing container -->
+        <div id="playing-container" class="left-urls">
             <!-- Now playing block start -->
             <div id="nowPlaying" class="playing">
                 {{ main.display.playing }}
@@ -80,30 +73,38 @@
                     <img id="IMG_3" src="{{ main.display.image }}" alt='' />
                     <h4 id="DJ">
                         {{ main.display.dj }}
+
+                        <div id="last-fm-scrobbling" style="display: none">
+                            <br />
+
+                            <img src="images/scrobbling.gif" alt="Scrobbling" /> Scrobbling now
+                        </div>
                     </h4>
                 </div>
             </div>
 
-            <!-- Playing bar start -->
-            <div id="outside-bar">
-                <div id="playing-bar">
+            <div id="bar-and-listeners">
+                <!-- Playing bar start -->
+                <div id="outside-bar">
+                    <div id="playing-bar">
+                    </div>
                 </div>
-            </div>
 
-            <!-- Listeners and time block start -->
-            <div id="listeners-and-time">
-                <span id="listeners">
-                    Listeners: {{ main.display.listeners }}
-                </span>
-                <span id="time">
-                </span>
+                <!-- Listeners and time block start -->
+                <div id="listeners-and-time">
+                    <span id="listeners">
+                        Listeners: {{ main.display.listeners }}
+                    </span>
+                    <span id="time">
+                    </span>
 
-                <br />
+                    <br />
+                </div>
             </div>
         </div>
 
         <!-- Last.fm container -->
-        <div id="r-a-dio-container" class="left-urls" ng-if="main.playingLastFm && main.started">
+        <div id="r-a-dio-container" class="left-urls" style="display: none">
             <!-- Now playing block start -->
             <div id="nowPlaying" class="playing">
                 {{ main.display.playing }}
