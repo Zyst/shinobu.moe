@@ -17,7 +17,7 @@
 /******************************* General *******************************/
 body {
   background-color: @background-color;
-  font: 13px "Open Sans", "Segoe UI", "Verdana", "Arial";
+  font: 13px 'Open Sans', 'Segoe UI', 'Verdana', 'Arial';
   color: @main-text-color;
   margin: 0;
   background-repeat: no-repeat;
@@ -46,7 +46,7 @@ a {
 
   &:hover {
     color: @link-focus-color;
-    opacity: 1.0;
+    opacity: 1;
     text-decoration: none;
   }
 }
@@ -63,7 +63,7 @@ a {
 
   &:hover {
     color: @link-focus-color;
-    opacity: 1.0;
+    opacity: 1;
     text-decoration: none;
   }
 }
@@ -86,7 +86,7 @@ a {
 .left-urls {
   margin-left: auto;
   margin-right: auto;
-  font: 40px "Open Sans", "Segoe UI", "Verdana", "Arial";
+  font: 40px 'Open Sans', 'Segoe UI', 'Verdana', 'Arial';
   text-align: center;
   padding: 0;
 }
@@ -258,7 +258,7 @@ a {
 }
 
 .links-box {
-  font: 40px "Open Sans", "Segoe UI", "Verdana", "Arial";
+  font: 40px 'Open Sans', 'Segoe UI', 'Verdana', 'Arial';
   text-align: center;
   padding-top: 1.5em;
 }
@@ -269,16 +269,13 @@ a {
   padding: 0;
 }
 
-.booster-links-box {
-}
-
 /******************************* Bigger Resolutions *******************************/
 /* Minimum width is the combined first two panels, this is for big screens */
 @media (min-width: @min-screen-size) {
   /* We only show and load the image in even higher resolutions */
   @media (min-width: @min-screen-image) {
     body {
-      background-image: url("../../images/0.png");
+      background-image: url('../../images/0.png');
       background-attachment: fixed;
       background-position: bottom right;
     }
@@ -308,7 +305,7 @@ a {
   }
 
   .links-box {
-    font: 13px "Open Sans", "Segoe UI", "Verdana", "Arial";
+    font: 13px 'Open Sans', 'Segoe UI', 'Verdana', 'Arial';
     text-align: left;
     padding-top: 3em;
     min-width: 200px;
