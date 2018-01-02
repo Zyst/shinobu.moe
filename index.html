@@ -301,9 +301,6 @@
 
             navigator.serviceWorker
                 .register('service-worker.js')
-                .then(registration => {
-                    console.log('SW successfully registered');
-                })
                 .catch(error => {
                     console.log('registration failed', error);
                 });
