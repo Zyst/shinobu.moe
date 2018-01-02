@@ -1,24 +1,24 @@
 ﻿/******************************* Variables *******************************/
 /* Colors */
-@main-text-color: #e7e7e7;
-@link-focus-color: #eeeeee;
+$main-text-color: #e7e7e7;
+$link-focus-color: #eeeeee;
 
-@background-color: #4c4c4c;
-@left-side-background: rgba(25, 25, 25, 1);
-@middle-background: rgba(40, 40, 40, 1);
+$background-color: #4c4c4c;
+$left-side-background: rgba(25, 25, 25, 1);
+$middle-background: rgba(40, 40, 40, 1);
 
 /* Width stuff */
-@left-side-width: 635px;
-@middle-side-width: 475px;
-@min-screen-size: (@left-side-width + @middle-side-width);
-@min-screen-image: 1680px;
+$left-side-width: 635px;
+$middle-side-width: 475px;
+$min-screen-size: ($left-side-width + $middle-side-width);
+$min-screen-image: 1680px;
 
 /******************************* CSS *******************************/
 /******************************* General *******************************/
 body {
-  background-color: @background-color;
+  background-color: $background-color;
   font: 13px 'Open Sans', 'Segoe UI', 'Verdana', 'Arial';
-  color: @main-text-color;
+  color: $main-text-color;
   margin: 0;
   background-repeat: no-repeat;
 }
@@ -41,11 +41,11 @@ a {
   &:link,
   &:visited,
   &:active {
-    color: @main-text-color;
+    color: $main-text-color;
   }
 
   &:hover {
-    color: @link-focus-color;
+    color: $link-focus-color;
     opacity: 1;
     text-decoration: none;
   }
@@ -58,11 +58,11 @@ a {
   &:link,
   &:visited,
   &:active {
-    color: @link-focus-color;
+    color: $link-focus-color;
   }
 
   &:hover {
-    color: @link-focus-color;
+    color: $link-focus-color;
     opacity: 1;
     text-decoration: none;
   }
@@ -75,7 +75,7 @@ a {
 
 /******************************* Left Side *******************************/
 #left-side {
-  background-color: @left-side-background;
+  background-color: $left-side-background;
 }
 
 #left-container {
@@ -89,6 +89,14 @@ a {
   font: 40px 'Open Sans', 'Segoe UI', 'Verdana', 'Arial';
   text-align: center;
   padding: 0;
+}
+
+#playing-container {
+  display: none;
+}
+
+#last-fm-scrobbling {
+  display: none;
 }
 
 /******************************* R/a/dio *******************************/
@@ -142,7 +150,6 @@ a {
   max-height: 180px;
   max-width: 100%;
   text-decoration: none solid rgb(120, 120, 120);
-  vertical-align: middle;
   width: 180px;
   perspective-origin: 90px 90px;
   transform-origin: 90px 90px;
@@ -228,7 +235,7 @@ a {
     Helvetica, Arial, sans-serif;
   outline: rgb(153, 153, 153) none 0px;
   padding-bottom: 20px;
-  background-color: @left-side-background;
+  background-color: $left-side-background;
 }
 /*#listeners*/
 
@@ -244,17 +251,13 @@ a {
     Helvetica, Arial, sans-serif;
   outline: rgb(153, 153, 153) none 0px;
   padding-bottom: 20px;
-  background-color: @left-side-background;
+  background-color: $left-side-background;
 }
 /*#time*/
 
 /******************************* Middle *******************************/
 #middle {
-  background-color: @middle-background;
-}
-
-#middle-container {
-  /*none*/
+  background-color: $middle-background;
 }
 
 .links-box {
@@ -271,9 +274,9 @@ a {
 
 /******************************* Bigger Resolutions *******************************/
 /* Minimum width is the combined first two panels, this is for big screens */
-@media (min-width: @min-screen-size) {
+@media (min-width: $min-screen-size) {
   /* We only show and load the image in even higher resolutions */
-  @media (min-width: @min-screen-image) {
+  @media (min-width: $min-screen-image) {
     body {
       background-image: url('../../images/0.png');
       background-attachment: fixed;
@@ -287,16 +290,16 @@ a {
     left: 0;
     top: 0;
     position: fixed;
-    width: @left-side-width;
+    width: $left-side-width;
   }
 
   /* Middle */
   #middle {
     bottom: 0;
-    left: @left-side-width;
+    left: $left-side-width;
     top: 0;
     position: fixed;
-    width: @middle-side-width;
+    width: $middle-side-width;
   }
 
   #middle-container {
