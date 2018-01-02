@@ -4,8 +4,6 @@
     'https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=Zystx&api_key=57ee3318536b23ee81d6b27e36997cde&limit=1&format=json'
   const RADIO_URL = 'https://r-a-d.io/api'
 
-  let lastFmCurrent = {}
-
   const zeroPadding = seconds => {
     var secondsString = String(seconds)
 
@@ -17,10 +15,10 @@
     return '0' + secondsString
   }
 
-  const fetchThenRender = (url, render) =>
+  const fetchThenRender = (url, render, playing) =>
     fetch(url)
       .then(response => response.json())
-      .then(response => render(response))
+      .then(response => render(response, playing))
 
   const setupRadio = radio => {
     document.getElementById('playing-container').style.display = 'block'
@@ -41,18 +39,35 @@
   }
 
   // TODO: Implement this
-  const renderRadio = radio => {
-    return radio
+  const renderRadio = (radio, lastPlaying) => {
+    const playing = radio.main.np
+    const dj = radio.main.dj.djname
+    const image = `https://r-a-d.io/api/dj-image/${radio.main.dj.id}`
+    const listeners = radio.main.listeners
+
+    // We always update listeners
+    document.getElementById('listeners').innerText = `Listeners: ${listeners}`
+
+    if (playing !== lastPlaying) {
+      document.getElementById('now-playing').innerText = playing
+      document.getElementById('IMG_3').src = image
+      document.getElementById('DJ-name').innerText = dj
+    }
+
+    const RECHECK_IN_MILISECONDS = 5000
+
+    return setTimeout(() => {
+      fetchThenRender(RADIO_URL, renderRadio, lastPlaying)
+    }, RECHECK_IN_MILISECONDS)
   }
 
-  // TODO: Implement this
-  const renderLastFm = lastFm => {
+  const renderLastFm = (lastFm, lastPlaying) => {
     const CURRENT_SONG_INDEX = 0
     const lastFmSong = lastFm.recenttracks.track[CURRENT_SONG_INDEX]
 
     const playing = `${lastFmSong.artist['#text']} - ${lastFmSong.name}`
     const image = lastFmSong.image.reduce((current, img) => {
-      // We overwrite the older image with current, since it's higher resolution
+      // Overwrite the older image with current, it has a higher resolution
       if (img['#text']) return img['#text']
 
       return current
@@ -60,14 +75,7 @@
     const DJ = 'Zyst'
 
     // If the image changed we re-render
-    if (playing !== lastFmCurrent.playing) {
-      // Update global variable to the newest values
-      lastFmCurrent = {
-        playing,
-        image,
-        DJ
-      }
-
+    if (playing !== lastPlaying) {
       document.getElementById('now-playing').innerText = playing
       document.getElementById('IMG_3').src = image
       document.getElementById('DJ-name').innerText = DJ
@@ -76,7 +84,7 @@
     const RECHECK_IN_MILISECONDS = 5000
 
     return setTimeout(() => {
-      fetchThenRender(LAST_FM_URL, renderLastFm)
+      fetchThenRender(LAST_FM_URL, renderLastFm, lastPlaying)
     }, RECHECK_IN_MILISECONDS)
   }
 
@@ -116,15 +124,18 @@
       .then(responses => {
         const [lastFm, radio] = responses
 
+        const lastFmError = lastFm.error || lastFm instanceof Error
+        const radioError = radio instanceof Error
+
         // If everything went wrong, we retry in 5 seconds
-        if (lastFm instanceof Error && radio instanceof Error) {
+        if (lastFmError && radioError) {
           const RETRY_IN_MILISECONDS = 5000
 
           return setTimeout(start, RETRY_IN_MILISECONDS)
         }
 
         // If Last.fm is an error, and r/a/dio isn't
-        if (lastFm instanceof Error && !(radio instanceof Error)) {
+        if (lastFmError && !radioError) {
           return setupRadio(radio)
         }
 
@@ -132,7 +143,7 @@
         const lastFmSong = lastFm.recenttracks.track[CURRENT_SONG_INDEX]
 
         // If radio is an error, and last.fm isn't
-        if (radio instanceof Error && !(lastFm instanceof Error)) {
+        if (radioError && !lastFmError) {
           return setupLastFm(lastFm)
         }
 
