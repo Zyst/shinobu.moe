@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html>
-<!--suppress HtmlUnknownAttribute -->
 <html lang="en">
 
 <head>
@@ -59,6 +58,16 @@
             </p>
         </div>
 
+        <!-- Spinner -->
+        <div id="spinner">
+            <div class="sk-folding-cube">
+                <div class="sk-cube1 sk-cube"></div>
+                <div class="sk-cube2 sk-cube"></div>
+                <div class="sk-cube4 sk-cube"></div>
+                <div class="sk-cube3 sk-cube"></div>
+            </div>
+        </div>
+
         <!-- playing container -->
         <div id="playing-container" class="left-urls">
             <!-- Now playing block start -->
@@ -74,7 +83,7 @@
                     <h4 id="DJ">
                         {{ main.display.dj }}
 
-                        <div id="last-fm-scrobbling" style="display: none">
+                        <div id="last-fm-scrobbling">
                             <br />
 
                             <img src="images/scrobbling.gif" alt="Scrobbling" /> Scrobbling now
@@ -99,29 +108,6 @@
                     </span>
 
                     <br />
-                </div>
-            </div>
-        </div>
-
-        <!-- Last.fm container -->
-        <div id="r-a-dio-container" class="left-urls" style="display: none">
-            <!-- Now playing block start -->
-            <div id="nowPlaying" class="playing">
-                {{ main.display.playing }}
-            </div>
-
-            <!-- DJ block start -->
-            <div id="DIV_1">
-                <div id="DIV_2">
-                    <!-- Image goes here -->
-                    <img id="IMG_3" src="{{ main.display.image }}" alt='DJ' />
-                    <h4 id="DJ">
-                        {{ main.display.dj }}
-
-                        <br />
-
-                        <img src="images/scrobbling.gif" alt="Scrobbling" /> Scrobbling now
-                    </h4>
                 </div>
             </div>
         </div>
