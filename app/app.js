@@ -183,9 +183,6 @@
       .then(responses => {
         const [lastFm, radio] = responses
 
-        // TODO: Remove this once we are done testing r/a/dio
-        return setupRadio(radio)
-
         const lastFmError = lastFm.error || lastFm instanceof Error
         const radioError = radio instanceof Error
 
