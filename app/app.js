@@ -1,263 +1,235 @@
-﻿angular.module('shinobuApp', []).controller('mainController', function($http) {
-  // Our view model
-  var vm = this;
+// eslint-disable-next-line no-extra-semi
+;(() => {
+  const LAST_FM_URL =
+    'https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=Zystx&api_key=57ee3318536b23ee81d6b27e36997cde&limit=1&format=json'
+  const RADIO_URL = 'https://r-a-d.io/api'
 
-  // Have we started? To show/hide our divs
-  vm.started = false;
+  let radioTimeTimeout
 
-  // What we'll use to contain our front end display
-  vm.display = {};
+  const zeroPadding = seconds => {
+    const secondsString = String(seconds)
+    const GREATER_THAN_9 = 1
 
-  // We add a 0 to numbers below 10 ie: 09, 03
-  function zeroPadding(seconds) {
-    var secondsString = String(seconds);
-
-    if (secondsString.length > 1) {
-      // Basically do nothing
-      return secondsString;
+    if (secondsString.length > GREATER_THAN_9) {
+      return secondsString
     }
-    return '0' + secondsString;
+
+    return `0${secondsString}`
   }
 
-  // Clears timeouts and calls r/a/dio
-  function clearTimeoutsAndRestart() {
-    clearTimeout(vm.timeTimeout);
-    clearTimeout(vm.concurrencyTimeout);
+  const fetchThenRender = (url, render, playing) =>
+    fetch(url)
+      .then(response => response.json())
+      .then(response => render(response, playing))
 
-    callRadio();
+  const setupRadio = radio => {
+    document.getElementById('playing-container').style.display = 'block'
+    document.getElementById('bar-and-listeners').style.display = 'block'
+
+    document.getElementById('spinner').style.display = 'none'
+
+    return renderRadio(radio)
   }
 
-  // Checks if we are still playing the same song
-  function checkRadioConcurrency() {
-    $http({
-      method: 'GET',
-      url: 'https://r-a-d.io/api',
-    }).then(
-      function successCallback(data) {
-        vm.display.listeners = data.data.main.listeners;
+  const setupLastFm = lastFm => {
+    document.getElementById('playing-container').style.display = 'block'
+    document.getElementById('last-fm-scrobbling').style.display = 'block'
 
-        if (data.data.main.np !== vm.display.playing) {
-          clearTimeoutsAndRestart();
-        } else {
-          vm.concurrencyTimeout = setTimeout(checkRadioConcurrency, 5000);
-        }
-      },
-      function errorCallback(err) {
-        console.log('Somebody messed up', err);
-      }
-    );
+    document.getElementById('spinner').style.display = 'none'
+
+    return renderLastFm(lastFm)
   }
 
-  // Increases seconds in our playing, also handles the playing bar
-  function increaseTime() {
+  const increaseRadioTime = ({ currentTime, endTime, endTimeDisplay }) => {
     // Play bar is 100% by default
-    var playingPercentage = 100;
+    let playingPercentage = 100
 
-    vm.time.currentTime++;
+    const ONE_SECOND = 1
+    const current = currentTime + ONE_SECOND
 
-    // We turn time into Minutes and seconds
-    vm.time.currentTimeMinutes = Math.floor(vm.time.currentTime / 60);
-    vm.time.currentTimeSeconds = zeroPadding(vm.time.currentTime % 60);
+    const SECONDS_IN_MINUTE = 60
+    const currentTimeDisplay = `${Math.floor(
+      current / SECONDS_IN_MINUTE
+    )}:${zeroPadding(current % SECONDS_IN_MINUTE)}`
 
-    document.getElementById('time').innerHTML = vm.time.currentTimeMinutes +
-      ':' +
-      vm.time.currentTimeSeconds +
-      '/' +
-      vm.time.endTimeMinutes +
-      ':' +
-      vm.time.endTimeSeconds;
+    document.getElementById(
+      'time'
+    ).innerText = `${currentTimeDisplay}/${endTimeDisplay}`
 
-    if (vm.time.endTime > 0) {
-      playingPercentage = vm.time.currentTime * 100 / vm.time.endTime;
+    const NO_SONG_TIME = 0
+
+    if (endTime > NO_SONG_TIME) {
+      const ONE_HUNDRED_PERCENT = 100
+
+      playingPercentage = current * ONE_HUNDRED_PERCENT / endTime
     }
 
-    document.getElementById('playing-bar').style.width = playingPercentage +
-      '%';
+    document.getElementById('playing-bar').style.width = `${playingPercentage}%`
 
-    if (vm.time.currentTime >= vm.time.endTime && vm.time.endTime > 0) {
-      clearTimeout(vm.timeTimeout);
+    if (current >= endTime && endTime > NO_SONG_TIME) {
+      clearTimeout(radioTimeTimeout)
     } else {
-      vm.timeTimeout = setTimeout(increaseTime, 1000);
+      const ONE_SECOND_IN_MILLISECONDS = 1000
+
+      radioTimeTimeout = setTimeout(() => {
+        increaseRadioTime({
+          currentTime: current,
+          endTime,
+          endTimeDisplay
+        })
+      }, ONE_SECOND_IN_MILLISECONDS)
     }
   }
 
-  // Binds our r/a/dio view model variables
-  function setRadioGlobals(radio) {
-    vm.radio = radio;
+  // TODO: Implement this
+  const renderRadio = ({ main }, lastPlaying) => {
+    const playing = main.np
+    const dj = main.dj.djname
+    const image = `https://r-a-d.io/api/dj-image/${main.dj.id}`
+    const listeners = main.listeners
 
-    vm.display.playing = vm.radio.main.np;
+    // We always update listeners
+    document.getElementById('listeners').innerText = `Listeners: ${listeners}`
 
-    // Our commonly used JSON entries get bound
-    vm.display.playing = vm.radio.main.np;
-    vm.display.dj = vm.radio.main.dj.djname;
-    vm.display.image = 'https://r-a-d.io/api/dj-image/' + vm.radio.main.dj.id;
-    vm.display.listeners = vm.radio.main.listeners;
+    if (playing !== lastPlaying) {
+      clearTimeout(radioTimeTimeout)
 
-    // Object with our 'time' information
-    vm.time = {
-      currentTime: vm.radio.main.current - vm.radio.main.start_time,
-      endTime: vm.radio.main.end_time - vm.radio.main.start_time,
-      endTimeMinutes: Math.floor(
-        (vm.radio.main.end_time - vm.radio.main.start_time) / 60
-      ),
-      endTimeSeconds: zeroPadding(
-        (vm.radio.main.end_time - vm.radio.main.start_time) % 60
-      ),
-    };
-  }
+      document.getElementById('now-playing').innerText = playing
+      document.getElementById('IMG_3').src = image
+      document.getElementById('DJ-name').innerText = dj
 
-  // r/a/dio path
-  function callRadio() {
-    vm.playingRadio = true;
+      const SECONDS_IN_MINUTE = 60
 
-    vm.started = true;
-
-    $http({
-      method: 'GET',
-      url: 'https://r-a-d.io/api',
-    }).then(
-      function successCallback(data) {
-        setRadioGlobals(data.data);
-
-        // We call the increase time function
-        increaseTime();
-        checkRadioConcurrency();
-      },
-      function errorCallback(err) {
-        console.log('Somebody messed up', err);
+      const time = {
+        currentTime: main.current - main.start_time,
+        endTime: main.end_time - main.start_time,
+        endTimeDisplay: `${Math.floor(
+          (main.end_time - main.start_time) / SECONDS_IN_MINUTE
+        )}:${zeroPadding(
+          (main.end_time - main.start_time) % SECONDS_IN_MINUTE
+        )}`
       }
-    );
+
+      increaseRadioTime(time)
+    }
+
+    const RECHECK_IN_MILISECONDS = 5000
+
+    return setTimeout(() => {
+      fetchThenRender(RADIO_URL, renderRadio, lastPlaying)
+    }, RECHECK_IN_MILISECONDS)
   }
 
-  // Binds our Last.fm view model variables
-  function setLastFmGlobals(lastfm) {
-    vm.lastfm = lastfm;
+  const renderLastFm = (lastFm, lastPlaying) => {
+    const CURRENT_SONG_INDEX = 0
+    const lastFmSong = lastFm.recenttracks.track[CURRENT_SONG_INDEX]
 
-    // We save the currenly playing song and artist
-    vm.display.playing = vm.lastfm.track[0].artist['#text'] +
-      ' - ' +
-      vm.lastfm.track[0].name;
+    const playing = `${lastFmSong.artist['#text']} - ${lastFmSong.name}`
+    const image = lastFmSong.image.reduce((current, img) => {
+      // Overwrite the older image with current, it has a higher resolution
+      if (img['#text']) return img['#text']
 
-    // A default image in case there's no artwork in our Last.fm
-    vm.display.image = 'images/dj.jpg';
+      return current
+    }, 'images/dj.jpg')
+    const DJ = 'Zyst'
 
-    // We grab the largest image that exists
-    vm.lastfm.track[0].image.forEach(
-      function(image) {
-        // If the image is different from 'empty' this is our new image
-        if (image['#text'] !== '') {
-          vm.display.image = image['#text'];
-        }
-      },
-      this
-    );
+    // If the image changed we re-render
+    if (playing !== lastPlaying) {
+      document.getElementById('now-playing').innerText = playing
+      document.getElementById('IMG_3').src = image
+      document.getElementById('DJ-name').innerText = DJ
+    }
 
-    // DJ is hardcoded for Last.fm
-    vm.display.dj = 'Zyst';
-  }
+    const RECHECK_IN_MILISECONDS = 5000
 
-  // Last.fm path
-  function callLastfm() {
-    vm.playingLastFm = true;
-
-    vm.started = true;
-
-    $http({
-      method: 'GET',
-      url: 'https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=Zystx' +
-        '&api_key=57ee3318536b23ee81d6b27e36997cde&limit=1&format=json',
-    }).then(
-      function successCallback(data) {
-        setLastFmGlobals(data.data.recenttracks);
-
-        setTimeout(callLastfm, 5000);
-      },
-      function errorCallback(err) {
-        console.log('Somebody messed up', err);
-      }
-    );
+    return setTimeout(() => {
+      fetchThenRender(LAST_FM_URL, renderLastFm, lastPlaying)
+    }, RECHECK_IN_MILISECONDS)
   }
 
   // Determines which image is our Background randomly
-  function randomBG() {
-    var bg = document.body;
-    var randomNumber = Math.floor(Math.random() * 14 + 1);
+  const randomBG = () => {
+    const NUMBER_OF_IMAGES = 14
+    const MAKE_IT_NOT_ZERO = 1
 
-    bg.style.backgroundImage = "url('images/" + randomNumber + ".png')";
+    const randomNumber = Math.floor(
+      Math.random() * NUMBER_OF_IMAGES + MAKE_IT_NOT_ZERO
+    )
+
+    const bg = document.body
+
+    bg.style.backgroundImage = `url('images/${randomNumber}.png')`
   }
 
-  // Start getting data
-  function start() {
-    // Random background
-    randomBG();
+  const start = () => {
+    randomBG()
 
-    $http({
-      method: 'GET',
-      // Replace user=Zystx here with your Lastfm user name
-      url: 'https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=Zystx' +
-        '&api_key=57ee3318536b23ee81d6b27e36997cde&limit=1&format=json',
-    }).then(
-      function successLastfm(lastfm) {
-        // We bind the Last.fm data
-        vm.lastfm = lastfm.data.recenttracks;
+    const promiseArray = [fetch(LAST_FM_URL), fetch(RADIO_URL)]
 
-        $http({
-          method: 'GET',
-          url: 'https://r-a-d.io/api',
-        }).then(
-          function successRadio(radio) {
-            // We bind the r/a/dio data
-            vm.radio = radio.data;
+    /**
+     * We don't want to give up if one fails, r/a/dio or last.fm might be
+     * down, but not the other
+     */
+    Promise.all(promiseArray.map(p => p.catch(e => e)))
+      .then(responses => {
+        return Promise.all(
+          responses.map(r => {
+            if (!r.json) return r
 
-            // We create variables for comparison
-            var radioPlaying = vm.radio.main.np;
-            var lastFmPlaying = vm.lastfm.track[0].artist['#text'] +
-              ' - ' +
-              vm.lastfm.track[0].name;
+            return r.json()
+          })
+        )
+      })
+      .then(responses => {
+        const [lastFm, radio] = responses
 
-            // We see that the last.fm response doesn't have undefined to prevent an exception
-            var notUndefined = vm.lastfm.track[0] !== undefined &&
-              vm.lastfm.track[0]['@attr'] !== undefined &&
-              vm.lastfm.track[0]['@attr'].nowplaying !== undefined;
+        const lastFmError = lastFm.error || lastFm instanceof Error
+        const radioError = radio instanceof Error
 
-            // If you are playing the same thing as r/a/dio
-            if (
-              radioPlaying.toUpperCase() === lastFmPlaying.toUpperCase() &&
-              notUndefined &&
-              vm.lastfm.track[0]['@attr'].nowplaying === 'true'
-            ) {
-              setRadioGlobals(radio.data);
-              callRadio();
+        // If everything went wrong, we retry in 5 seconds
+        if (lastFmError && radioError) {
+          const RETRY_IN_MILISECONDS = 5000
 
-              // You are playing something in Last.fm (Different from r/a/dio)
-            } else if (
-              notUndefined && vm.lastfm.track[0]['@attr'].nowplaying === 'true'
-            ) {
-              setLastFmGlobals(lastfm.data.recenttracks);
-              callLastfm();
+          return setTimeout(start, RETRY_IN_MILISECONDS)
+        }
 
-              // We aren't playing anything so we show r/a/dio
-            } else {
-              setRadioGlobals(radio.data);
-              callRadio();
-            }
-          },
-          function playLastFm(err) {
-            console.log('r/a/dio is down', err);
+        // If Last.fm is an error, and r/a/dio isn't
+        if (lastFmError && !radioError) {
+          return setupRadio(radio)
+        }
 
-            // We use Last.fm
-            callLastfm();
-          }
-        );
-      },
-      function playRadio(err) {
-        console.log('Last.fm is down', err);
+        const CURRENT_SONG_INDEX = 0
+        const lastFmSong = lastFm.recenttracks.track[CURRENT_SONG_INDEX]
 
-        // Last fm is down so we do r/a/dio
-        callRadio();
-      }
-    );
+        // If radio is an error, and last.fm isn't
+        if (radioError && !lastFmError) {
+          return setupLastFm(lastFm)
+        }
+
+        // If we got here, that means both calls finished successfully
+        const radioPlaying = radio.main.np
+        const lastFmPlaying = `${lastFmSong.artist['#text']} - ${
+          lastFmSong.name
+        }`
+
+        const currentlyPlaying =
+          lastFmSong !== undefined &&
+          lastFmSong['@attr'] !== undefined &&
+          lastFmSong['@attr'].nowplaying !== undefined &&
+          lastFmSong['@attr'].nowplaying === 'true'
+
+        if (
+          currentlyPlaying &&
+          radioPlaying.toUpperCase() === lastFmPlaying.toUpperCase()
+        ) {
+          return setupRadio(radio)
+        } else if (currentlyPlaying) {
+          return setupLastFm(lastFm)
+        } else {
+          return setupRadio(radio)
+        }
+      })
   }
 
-  start();
-});
+  start()
+})()

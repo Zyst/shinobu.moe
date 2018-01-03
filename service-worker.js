@@ -2,7 +2,6 @@ const FILES_TO_CACHE = [
   'css/style.css',
   'index.html',
   'app/app.js',
-  '//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js',
   // Images
   'images/0.png',
   'images/1.png',
@@ -25,7 +24,7 @@ const FILES_TO_CACHE = [
   'images/4chon.ico'
 ]
 
-const CACHE_NAME = 'shinobu-cache-v1'
+const CACHE_NAME = 'shinobu-cache-v2'
 
 self.addEventListener('install', event => {
   event.waitUntil(

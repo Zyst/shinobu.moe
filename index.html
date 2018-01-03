@@ -71,21 +71,18 @@
         <!-- playing container -->
         <div id="playing-container" class="left-urls">
             <!-- Now playing block start -->
-            <div id="nowPlaying" class="playing">
-                {{ main.display.playing }}
+            <div id="now-playing" class="playing">
             </div>
 
             <!-- DJ block start -->
             <div id="DIV_1">
                 <div id="DIV_2">
                     <!-- Image goes here -->
-                    <img id="IMG_3" src="{{ main.display.image }}" alt='' />
+                    <img id="IMG_3" src="" alt='' />
                     <h4 id="DJ">
-                        {{ main.display.dj }}
+                        <span id="DJ-name"></span>
 
                         <div id="last-fm-scrobbling">
-                            <br />
-
                             <img src="images/scrobbling.gif" alt="Scrobbling" /> Scrobbling now
                         </div>
                     </h4>
@@ -102,11 +99,11 @@
                 <!-- Listeners and time block start -->
                 <div id="listeners-and-time">
                     <span id="listeners">
-                        Listeners: {{ main.display.listeners }}
                     </span>
                     <span id="time">
                     </span>
 
+                    <!-- TODO: Remove this br -->
                     <br />
                 </div>
             </div>
@@ -293,7 +290,7 @@
                 });
         })();
     </script>
-    <script src="app/app-vanilla.js"></script>
+    <script src="app/app.js"></script>
 </body>
 
 </html>
