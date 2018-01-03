@@ -4,15 +4,17 @@
     'https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=Zystx&api_key=57ee3318536b23ee81d6b27e36997cde&limit=1&format=json'
   const RADIO_URL = 'https://r-a-d.io/api'
 
-  const zeroPadding = seconds => {
-    var secondsString = String(seconds)
+  let radioTimeTimeout
 
-    if (secondsString.length > 1) {
-      // Do nothing
+  const zeroPadding = seconds => {
+    const secondsString = String(seconds)
+    const GREATER_THAN_9 = 1
+
+    if (secondsString.length > GREATER_THAN_9) {
       return secondsString
     }
 
-    return '0' + secondsString
+    return `0${secondsString}`
   }
 
   const fetchThenRender = (url, render, playing) =>
@@ -38,20 +40,77 @@
     return renderLastFm(lastFm)
   }
 
+  const increaseRadioTime = ({ currentTime, endTime, endTimeDisplay }) => {
+    // Play bar is 100% by default
+    let playingPercentage = 100
+
+    const ONE_SECOND = 1
+    const current = currentTime + ONE_SECOND
+
+    const SECONDS_IN_MINUTE = 60
+    const currentTimeDisplay = `${Math.floor(
+      current / SECONDS_IN_MINUTE
+    )}:${zeroPadding(current % SECONDS_IN_MINUTE)}`
+
+    document.getElementById(
+      'time'
+    ).innerText = `${currentTimeDisplay}/${endTimeDisplay}`
+
+    const NO_SONG_TIME = 0
+
+    if (endTime > NO_SONG_TIME) {
+      const ONE_HUNDRED_PERCENT = 100
+
+      playingPercentage = current * ONE_HUNDRED_PERCENT / endTime
+    }
+
+    document.getElementById('playing-bar').style.width = `${playingPercentage}%`
+
+    if (current >= endTime && endTime > NO_SONG_TIME) {
+      clearTimeout(radioTimeTimeout)
+    } else {
+      const ONE_SECOND_IN_MILLISECONDS = 1000
+
+      radioTimeTimeout = setTimeout(() => {
+        increaseRadioTime({
+          currentTime: current,
+          endTime,
+          endTimeDisplay
+        })
+      }, ONE_SECOND_IN_MILLISECONDS)
+    }
+  }
+
   // TODO: Implement this
-  const renderRadio = (radio, lastPlaying) => {
-    const playing = radio.main.np
-    const dj = radio.main.dj.djname
-    const image = `https://r-a-d.io/api/dj-image/${radio.main.dj.id}`
-    const listeners = radio.main.listeners
+  const renderRadio = ({ main }, lastPlaying) => {
+    const playing = main.np
+    const dj = main.dj.djname
+    const image = `https://r-a-d.io/api/dj-image/${main.dj.id}`
+    const listeners = main.listeners
 
     // We always update listeners
     document.getElementById('listeners').innerText = `Listeners: ${listeners}`
 
     if (playing !== lastPlaying) {
+      clearTimeout(radioTimeTimeout)
+
       document.getElementById('now-playing').innerText = playing
       document.getElementById('IMG_3').src = image
       document.getElementById('DJ-name').innerText = dj
+
+      const SECONDS_IN_MINUTE = 60
+
+      const time = {
+        currentTime: main.current - main.start_time,
+        endTime: main.end_time - main.start_time,
+        endTimeDisplay: `${Math.floor(
+          (main.end_time - main.start_time) / SECONDS_IN_MINUTE
+        )}:${zeroPadding(
+          (main.end_time - main.start_time) % SECONDS_IN_MINUTE
+        )}`
+      }
+
+      increaseRadioTime(time)
     }
 
     const RECHECK_IN_MILISECONDS = 5000
@@ -123,6 +182,9 @@
       })
       .then(responses => {
         const [lastFm, radio] = responses
+
+        // TODO: Remove this once we are done testing r/a/dio
+        return setupRadio(radio)
 
         const lastFmError = lastFm.error || lastFm instanceof Error
         const radioError = radio instanceof Error
