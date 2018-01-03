@@ -81,7 +81,6 @@
     }
   }
 
-  // TODO: Implement this
   const renderRadio = ({ main }, lastPlaying) => {
     const playing = main.np
     const dj = main.dj.djname
