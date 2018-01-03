@@ -24,7 +24,7 @@ const FILES_TO_CACHE = [
   'images/4chon.ico'
 ]
 
-const CACHE_NAME = 'shinobu-cache-v2'
+const CACHE_NAME = 'shinobu-cache-v3'
 
 self.addEventListener('install', event => {
   event.waitUntil(
